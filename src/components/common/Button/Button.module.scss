@@ -10,12 +10,12 @@
   line-height: 24px;
   font-weight: 600;
   padding: 10px 30px;
+  transition:$head-transition;
 
   &:not(.noHover):hover {
     color: #ffffff !important;
     background-color: $primary;
     text-decoration: none;
-
   }
 }
 
@@ -34,10 +34,10 @@
   color: #2a2a2a;
   font-size: 13px;
   line-height: 22px;
-  transition: $placeholder;
+  transition: $head-transition;
 
   svg{
-    transition: $placeholder;
+    transition: $head-transition;
   }
 
   &:not(.noHover):hover {

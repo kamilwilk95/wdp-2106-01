@@ -48,8 +48,8 @@
             text-decoration: none;
             font-size: 18px;
             display: block;
-            transition: $placeholder;
-
+            transition: $head-transition;
+            
             &.active,
             &:hover {
               &::before {
@@ -89,7 +89,7 @@
             border-radius: 6px;
             background-color: #e1e1e1;
             font-size: 0;
-            transition: $placeholder;
+            transition: $head-transition;
 
             &.active,
             &:hover {
