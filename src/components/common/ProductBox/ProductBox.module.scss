@@ -29,14 +29,15 @@
     }
 
     .buttons {
-      display: none;
+      visibility: hidden;
+      display: flex;
       justify-content: space-between;
     }
   }
 
   &:hover {
     .buttons {
-      display: flex;
+      visibility: visible;
     }
     .price > * {
       background-color: #d58e32;
