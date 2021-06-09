@@ -1,30 +1,29 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  background-color: #ffffff;
-  border: 1px solid #e1e1e1;
+  background-color: $productbox-bg;
+  border: 1px solid $productbox-border-color;
   margin-bottom: 2rem;
   
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
     background: {
-      color: #f4f5f7;
+      color: $productbox-photo-bg;
       size: contain;
       position: center;
       repeat: no-repeat;
     }
     overflow: hidden;
     align-items: flex-end;
-
     .sale {
       position: absolute;
       top: -30px;
       left: 50%;
       transform: translateX(-50%);
-      background-color: #292929;
+      background-color: $productbox-sale-bg;
       border-radius: 50%;
-      color: #ffffff;
+      color: $productbox-sale-color;
       padding: 30px 15px 5px 15px;
     }
 
@@ -47,25 +46,23 @@
   .content {
     text-align: center;
     padding: 20px;
-
     h5 {
       color: $primary;
       font-size: 16px;
       line-height: 24px;
       letter-spacing: 1px;
     }
-
     .stars {
       a {
         text-decoration: none;
-        color: rgb(42, 42, 42);
+        color: $productbox-stars-color;
       }
     }
   }
 
   .line {
     margin: 0 10px;
-    border-bottom: 1px solid #2a2a2a;
+    border-bottom: 1px solid $productbox-color;
     position: relative;
 
     &::before {
@@ -78,14 +75,38 @@
       transform: translateX(-50%);
     }
   }
-
   .actions {
     padding: 15px 10px 10px 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
-}
+
+  .price_old {
+    padding-left: 60px;
+
+    .price_old_value {
+      font-size: 17px;
+      color: $productbox-oldprice;
+      position: relative;
+      padding: 5px;
+      text-decoration: line-through;
+      text-decoration-color: $productbox-stars-color;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        display: block;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
+    }
+  }
+
   .active{
     background-color: #2a2a2a;
     color: #ffffff;
