@@ -17,6 +17,14 @@
     overflow: hidden;
     align-items: flex-end;
 
+    .image {
+      position: absolute;
+      top: 0;
+      left: 0;
+      object-fit: fill;
+      width: 100%;
+    }
+
     .sale {
       position: absolute;
       top: -30px;
