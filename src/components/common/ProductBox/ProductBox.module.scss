@@ -70,14 +70,31 @@
     justify-content: space-between;
     align-items: center;
   }
+
   .price_old {
-    font-style: italic;
-    text-align: right;
-    padding-right: 10px;
-    span {
+    padding-left: 60px;
+
+    .price_old_value {
+      font-size: 17px;
+      color: $productbox-oldprice;
+      position: relative;
+      padding: 5px;
       text-decoration: line-through;
-      color: $productbox-color;
+      text-decoration-color: $productbox-stars-color;
+
+      &:after {
+        content: '';
+        width: 100%;
+        height: 2px;
+        display: block;
+        align-items: center;
+        position: absolute;
+        top: 50%;
+        left: 0;
+        transform: translateY(-50%);
+      }
     }
+  }
   .active{
     background-color: #2a2a2a;
     color: #ffffff;
