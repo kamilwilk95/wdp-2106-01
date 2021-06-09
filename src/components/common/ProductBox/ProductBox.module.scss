@@ -4,7 +4,7 @@
   background-color: #ffffff;
   border: 1px solid #e1e1e1;
   margin-bottom: 2rem;
-
+  
   .photo {
     position: relative;
     padding: 80% 10px 0 10px;
@@ -29,8 +29,17 @@
     }
 
     .buttons {
-      display: flex;
+      display: none;
       justify-content: space-between;
+    }
+  }
+
+  &:hover {
+    .buttons {
+      display: flex;
+    }
+    .price > * {
+      background-color: #d58e32;
     }
   }
 
