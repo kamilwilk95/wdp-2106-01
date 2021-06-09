@@ -15,6 +15,7 @@
       a {
         color: #ffffff;
         font-size: 13px;
+        transition: $head-transition;
 
         &:hover {
           color: $primary;
