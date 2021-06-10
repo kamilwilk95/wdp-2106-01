@@ -13,6 +13,7 @@ import Button from '../Button/Button';
 
 const ProductBox = ({
   name,
+  id,
   price,
   promo,
   stars,
@@ -50,8 +51,8 @@ const ProductBox = ({
         <Button
           onClick={
             favourite === true
-              ? () => setFavouriteValue(false)
-              : () => setFavouriteValue(true)
+              ? () => setFavouriteValue(id, false)
+              : () => setFavouriteValue(id, true)
           }
           className={favourite ? styles.active : ''}
           variant='outline'
@@ -73,6 +74,7 @@ const ProductBox = ({
 
 ProductBox.propTypes = {
   children: PropTypes.node,
+  id: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
   promo: PropTypes.string,

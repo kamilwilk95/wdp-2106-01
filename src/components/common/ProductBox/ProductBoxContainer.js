@@ -3,7 +3,8 @@ import { createAction_changeFavouriteValue } from '../../../redux/productsRedux.
 import ProductBox from './ProductBox.js';
 
 const mapDispatchToProps = dispatch => ({
-  setFavouriteValue: value => dispatch(createAction_changeFavouriteValue(value)),
+  setFavouriteValue: (id, value) =>
+    dispatch(createAction_changeFavouriteValue(id, value)),
 });
 
 export default connect(null, mapDispatchToProps)(ProductBox);
