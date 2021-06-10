@@ -5,3 +5,13 @@
 body {
   font-family: "Poppins", sans-serif;
 }
+
+//RWD//
+$tablet-width: 768px;
+$mobile-width: 767px;
+
+@mixin mobile {
+  @media (max-width: $mobile-width) {
+    @content;
+  }
+}
