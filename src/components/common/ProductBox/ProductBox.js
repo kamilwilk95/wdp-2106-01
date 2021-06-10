@@ -20,6 +20,7 @@ const ProductBox = ({
   favourite,
   addToCompare,
   setFavouriteValue,
+  setaddToCompareValue,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -59,7 +60,15 @@ const ProductBox = ({
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button className={addToCompare ? styles.active : ''} variant='outline'>
+        <Button
+          onClick={
+            addToCompare === true
+              ? () => setaddToCompareValue(id, false)
+              : () => setaddToCompareValue(id, true)
+          }
+          className={addToCompare ? styles.active : ''}
+          variant='outline'
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -82,6 +91,7 @@ ProductBox.propTypes = {
   favourite: PropTypes.bool,
   addToCompare: PropTypes.bool,
   setFavouriteValue: PropTypes.func,
+  setaddToCompareValue: PropTypes.func,
 };
 
 export default ProductBox;

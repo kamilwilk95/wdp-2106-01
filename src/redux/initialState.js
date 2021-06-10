@@ -10,6 +10,8 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-1',
       name: 'Aenean Ru Bristique 1',
+      photo:
+        'https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       category: 'bed',
       price: 30,
       stars: 2,
@@ -21,6 +23,8 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique 2',
+      photo:
+        'https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       category: 'bed',
       price: 30,
       stars: 2,
@@ -32,24 +36,28 @@ const initialState = {
     {
       id: 'aenean-ru-bristique-3',
       name: 'Aenean Ru Bristique 3',
+      photo:
+        'https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       category: 'bed',
       price: 30,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: true,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-4',
       name: 'Aenean Ru Bristique 4',
+      photo:
+        'https://images.pexels.com/photos/572897/pexels-photo-572897.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
       category: 'bed',
       price: 30,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       favourite: true,
-      addToCompare: true,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-5',
