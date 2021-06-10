@@ -13,9 +13,9 @@
       line-height: 55px;
 
       a {
-        color: #ffffff;
+        color: $header-topbar-color;
         font-size: 13px;
-        transition: $placeholder;
+        transition: $head-transition;
 
         &:hover {
           color: $primary;
