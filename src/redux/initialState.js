@@ -16,16 +16,21 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-2',
       name: 'Aenean Ru Bristique 2',
       category: 'bed',
       price: 30,
+      oldprice: 45,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/3fZ8LXx/pexels-emre-can-2079246-1.jpg',
+      favourite: true,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-3',
@@ -36,16 +41,21 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/TLfsWCB/pexels-martin-p-chy-1866149-1.jpg',
+      favourite: false,
+      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-4',
       name: 'Aenean Ru Bristique 4',
       category: 'bed',
       price: 30,
+      oldprice: 50,
       stars: 2,
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: true,
+      addToCompare: true,
     },
     {
       id: 'aenean-ru-bristique-5',
@@ -56,6 +66,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/3fZ8LXx/pexels-emre-can-2079246-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-6',
@@ -66,6 +78,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-7',
@@ -76,6 +90,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/TLfsWCB/pexels-martin-p-chy-1866149-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-8',
@@ -86,6 +102,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-9',
@@ -96,6 +114,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/3fZ8LXx/pexels-emre-can-2079246-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-10',
@@ -106,6 +126,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-11',
@@ -116,6 +138,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/TLfsWCB/pexels-martin-p-chy-1866149-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-12',
@@ -126,6 +150,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/3fZ8LXx/pexels-emre-can-2079246-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-13',
@@ -136,6 +162,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-14',
@@ -146,6 +174,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-15',
@@ -156,6 +186,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/3fZ8LXx/pexels-emre-can-2079246-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-16',
@@ -166,6 +198,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-17',
@@ -176,6 +210,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/TLfsWCB/pexels-martin-p-chy-1866149-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-18',
@@ -186,6 +222,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-19',
@@ -196,6 +234,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/TLfsWCB/pexels-martin-p-chy-1866149-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-20',
@@ -206,6 +246,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-21',
@@ -216,6 +258,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-22',
@@ -226,6 +270,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-23',
@@ -236,6 +282,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/3fZ8LXx/pexels-emre-can-2079246-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-24',
@@ -246,6 +294,8 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       photo: 'https://i.ibb.co/fvYvTtM/pexels-donald-tong-189333-1.jpg',
+      favourite: false,
+      addToCompare: false,
     },
   ],
   cart: {
