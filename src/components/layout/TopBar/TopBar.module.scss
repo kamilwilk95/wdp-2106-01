@@ -1,5 +1,13 @@
 @import "../../../styles/settings.scss";
 
+$tablet-width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
 .root {
   background-color: $header-topbar-bg;
 
@@ -20,6 +28,11 @@
         &:hover {
           color: $primary;
           text-decoration: none;
+        }
+        @include mobile {
+          span {
+            display: none;
+          }
         }
       }
     }

@@ -1,5 +1,13 @@
 @import "../../../styles/settings.scss";
 
+$tablet-width: 768px;
+
+@mixin mobile {
+  @media (max-width: #{$tablet-width - 1px}) {
+    @content;
+  }
+}
+
 .root {
   background-color: $header-bg;
 
@@ -8,12 +16,23 @@
   }
 
   .phoneNumber {
+
+    @include mobile {
+      order: 3;
+      flex: 100%;
+    }
+
     p {
       margin: 0;
       font-size: 17px;
       line-height: 42px;
       color: $company-phone-color;
       font-weight: 500;
+
+      @include mobile {
+        font-size: 14px;
+        text-align: right;
+      }
 
       .icon {
         font-size: 32px;
@@ -42,7 +61,6 @@
         font-size: 20px;
         transition: $head-transition;
 
-
         .icon {
           margin-right: 5px;
         }
@@ -62,14 +80,19 @@
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
+
       }
 
       &:hover {
         .cartIcon {
           background-color: lighten($primary, 10%);
-          transform: rotate(360deg);
         }
       }
     }
+  }
+}
+.logo{
+  @include mobile {
+    order: -1;
   }
 }
