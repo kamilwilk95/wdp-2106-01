@@ -16,6 +16,7 @@ const ProductBox = ({
   name,
   id,
   price,
+  oldprice,
   promo,
   stars,
   favourite,
@@ -86,9 +87,6 @@ const ProductBox = ({
           $ {price}
         </Button>
       </div>
-    </div>
-    <div className={styles.price_old}>
-      <span> $ {oldprice} </span>
     </div>
   </div>
 );
