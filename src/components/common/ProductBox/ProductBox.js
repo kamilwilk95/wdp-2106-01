@@ -69,7 +69,6 @@ const ProductBox = ({
     </div>
   </div>
 );
-
 ProductBox.propTypes = {
   children: PropTypes.node,
   name: PropTypes.string,
