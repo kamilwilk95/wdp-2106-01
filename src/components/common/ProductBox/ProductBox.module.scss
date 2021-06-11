@@ -7,21 +7,20 @@
 
   .photo {
     position: relative;
+    display: flex;
     background: {
       color: $productbox-photo-bg;
-      size: contain;
+      size: cover;
       position: center;
       repeat: no-repeat;
     }
     overflow: hidden;
     align-items: flex-end;
+    justify-content: center;
 
     .image {
-      top: 0;
-      left: 0;
       object-fit: cover;
-      height: 100%;
-      width: 100%;
+      max-height: 250px;
     }
 
     .sale {
@@ -36,6 +35,9 @@
     }
 
     .buttons {
+      width: 100%;
+      bottom: 0;
+      position: absolute;
       visibility: hidden;
       display: flex;
       justify-content: space-between;
