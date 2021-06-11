@@ -1,8 +1,9 @@
 import React from 'react';
 import styles from './StickyBar.module.scss';
-import { BsFillTrashFill } from 'react-icons/bs';
 import Button from '../../common/Button/Button.js';
 import PropTypes from 'prop-types';
+import { faTrashAlt } from '@fortawesome/free-solid-svg-icons';
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function StickyBar(props) {
   const listOfComparingProducts = props.products.filter(
@@ -18,8 +19,9 @@ function StickyBar(props) {
       {listOfComparingProducts.map(product => (
         <div className={styles.photoWrapper} key={product.id}>
           <img src={product.photo} alt={product.id} />
-          <BsFillTrashFill
-            onClick={() => props.setaddToCompareValue(product.id, false)}
+          <FontAwesomeIcon
+            icon={faTrashAlt}
+            onClick={() => props.setAddToCompareValue(product.id, false)}
             className={styles.icon}
           />
         </div>
@@ -31,7 +33,7 @@ function StickyBar(props) {
 
 StickyBar.propTypes = {
   products: PropTypes.array,
-  setaddToCompareValue: PropTypes.func,
+  setAddToCompareValue: PropTypes.func,
 };
 
 export default StickyBar;

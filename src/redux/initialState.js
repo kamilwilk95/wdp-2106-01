@@ -17,6 +17,8 @@ const initialState = {
       newFurniture: true,
       favourite: false,
       addToCompare: false,
+      photo:
+        'https://images.pexels.com/photos/3408744/pexels-photo-3408744.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
     },
     {
       id: 'aenean-ru-bristique-2',

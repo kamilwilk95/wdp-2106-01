@@ -21,7 +21,7 @@ const ProductBox = ({
   favourite,
   addToCompare,
   setFavouriteValue,
-  setaddToCompareValue,
+  setAddToCompareValue,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -64,8 +64,8 @@ const ProductBox = ({
         <Button
           onClick={
             addToCompare === true
-              ? () => setaddToCompareValue(id, false)
-              : () => setaddToCompareValue(id, true)
+              ? () => setAddToCompareValue(id, false)
+              : () => setAddToCompareValue(id, true)
           }
           className={addToCompare ? styles.active : ''}
           variant='outline'
@@ -100,7 +100,7 @@ ProductBox.propTypes = {
   favourite: PropTypes.bool,
   addToCompare: PropTypes.bool,
   setFavouriteValue: PropTypes.func,
-  setaddToCompareValue: PropTypes.func,
+  setAddToCompareValue: PropTypes.func,
 };
 
 export default ProductBox;

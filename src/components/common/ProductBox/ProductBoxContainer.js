@@ -8,7 +8,7 @@ import ProductBox from './ProductBox.js';
 const mapDispatchToProps = dispatch => ({
   setFavouriteValue: (id, value) =>
     dispatch(createAction_changeFavouriteValue(id, value)),
-  setaddToCompareValue: (id, value) =>
+  setAddToCompareValue: (id, value) =>
     dispatch(createAction_changeAddToCompareValue(id, value)),
 });
 
