@@ -49,3 +49,46 @@
     }
   }
 }
+
+@media (min-width: 576px) and (max-width: 991px) {
+  .root {
+    :global(.container) > :global(.row) {
+      height: 150px;
+    }
+    .menu {
+      justify-content: center;
+    }
+  }
+}
+
+@media (max-width: 575px) {
+  .root {
+    :global(.container) > :global(.row) {
+      height: 78px;
+      padding-top: 2px;
+    }
+    .menu {
+      display: flex;
+      visibility: hidden;
+      
+      ul {
+        width: 500px;
+        flex-direction: column;
+        flex-wrap: wrap;
+        z-index: 1;  
+        background: #fff;
+      }
+      a {
+        width: 100%;
+      }
+    }
+    .showMenu {
+      visibility: visible;
+    }
+    .icon {
+      margin-left: 10px;
+      color: $primary;
+      cursor: pointer;
+    }
+  }
+}

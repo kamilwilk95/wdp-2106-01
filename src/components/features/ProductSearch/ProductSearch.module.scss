@@ -8,7 +8,7 @@
 
   .category {
     border-right: 1px solid $form-border-color;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     position: relative;
 
@@ -55,6 +55,17 @@
       border: 0;
       background-color: transparent;
       outline: none;
+    }
+  }
+}
+
+
+@media (max-width: 575px) {
+  .root {
+    flex-direction: column;
+    height: 72px;
+    .category {
+      border-right: none;
     }
   }
 }
