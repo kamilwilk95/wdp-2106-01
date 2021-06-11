@@ -13,12 +13,15 @@ import Button from '../Button/Button';
 
 const ProductBox = ({
   name,
+  id,
   price,
   oldprice,
   promo,
   stars,
   favourite,
   addToCompare,
+  setFavouriteValue,
+  setaddToCompareValue,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
@@ -47,10 +50,26 @@ const ProductBox = ({
     <div className={styles.line}></div>
     <div className={styles.actions}>
       <div className={styles.outlines}>
-        <Button className={favourite ? styles.active : ''} variant='outline'>
+        <Button
+          onClick={
+            favourite === true
+              ? () => setFavouriteValue(id, false)
+              : () => setFavouriteValue(id, true)
+          }
+          className={favourite ? styles.active : ''}
+          variant='outline'
+        >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button className={addToCompare ? styles.active : ''} variant='outline'>
+        <Button
+          onClick={
+            addToCompare === true
+              ? () => setaddToCompareValue(id, false)
+              : () => setaddToCompareValue(id, true)
+          }
+          className={addToCompare ? styles.active : ''}
+          variant='outline'
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -72,6 +91,7 @@ const ProductBox = ({
 
 ProductBox.propTypes = {
   children: PropTypes.node,
+  id: PropTypes.string,
   name: PropTypes.string,
   price: PropTypes.number,
   oldprice: PropTypes.number,
@@ -79,6 +99,8 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   favourite: PropTypes.bool,
   addToCompare: PropTypes.bool,
+  setFavouriteValue: PropTypes.func,
+  setaddToCompareValue: PropTypes.func,
 };
 
 export default ProductBox;

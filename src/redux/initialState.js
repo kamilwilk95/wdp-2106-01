@@ -39,7 +39,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: true,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-4',
@@ -51,7 +51,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: true,
-      addToCompare: true,
+      addToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-5',
