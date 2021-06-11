@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .root {
   background-color: $header-topbar-bg;
@@ -13,12 +14,18 @@
       line-height: 55px;
 
       a {
-        color: #ffffff;
+        color: $header-topbar-color;
         font-size: 13px;
+        transition: $head-transition;
 
         &:hover {
           color: $primary;
           text-decoration: none;
+        }
+        @include mobile {
+          span {
+            display: none;
+          }
         }
       }
     }
