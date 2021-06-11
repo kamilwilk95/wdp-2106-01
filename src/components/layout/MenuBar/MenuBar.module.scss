@@ -1,9 +1,10 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .root {
   box-shadow: 2px 3.464px 6px rgba(1, 2, 2, 0.2);
   background-color: $menubar-bg;
-
+  
   :global(.container) > :global(.row) {
     height: 84px;
   }
@@ -11,12 +12,13 @@
   .menu {
     display: flex;
     align-self: stretch;
-
+    
     ul {
       margin: 0;
       padding: 0;
       display: flex;
-
+      transition: $head-transition;
+      
       li {
         list-style: none;
         display: flex;
@@ -35,7 +37,7 @@
       border-top: 4px solid $menubar-bg;
       font-weight: 500;
       letter-spacing: 1px;
-      transition: $head-transition;
+      
 
       &:hover,
       &.active {
@@ -52,7 +54,7 @@
   }
 }
 
-@media (min-width: 576px) and (max-width: 991px) {
+@include tablet {
   .root {
     :global(.container) > :global(.row) {
       height: 150px;
@@ -63,7 +65,7 @@
   }
 }
 
-@media (max-width: 575px) {
+@include mobile {
   .root {
     :global(.container) > :global(.row) {
       height: 78px;
@@ -72,13 +74,12 @@
     .menu {
       display: flex;
       visibility: hidden;
-      
       ul {
         width: 500px;
         flex-direction: column;
         flex-wrap: wrap;
         z-index: 1;  
-        background: #fff;
+        background: $menubar-bg;
       }
       a {
         width: 100%;

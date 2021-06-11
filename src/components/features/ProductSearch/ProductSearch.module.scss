@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .root {
   border: 1px solid $form-border-color;
@@ -130,7 +131,7 @@
 }
 
 
-@media (max-width: 575px) {
+@include mobile {
   .root {
     flex-direction: column;
     height: 72px;
