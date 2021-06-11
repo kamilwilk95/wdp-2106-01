@@ -19,9 +19,11 @@ const ProductBox = ({
   stars,
   favourite,
   addToCompare,
+  photo,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
+      <img className={styles.image} src={photo} alt='furniture' />
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
@@ -79,6 +81,7 @@ ProductBox.propTypes = {
   stars: PropTypes.number,
   favourite: PropTypes.bool,
   addToCompare: PropTypes.bool,
+  photo: PropTypes.string,
 };
 
 export default ProductBox;
