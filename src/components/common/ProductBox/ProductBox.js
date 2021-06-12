@@ -52,7 +52,7 @@ const ProductBox = ({
       <div className={styles.outlines}>
         <Button
           onClick={
-            favourite === true
+            favourite
               ? () => setFavouriteValue(id, false)
               : () => setFavouriteValue(id, true)
           }
@@ -64,7 +64,7 @@ const ProductBox = ({
         </Button>
         <Button
           onClick={
-            addToCompare === true
+            addToCompare
               ? () => setAddToCompareValue(id, false)
               : () => setAddToCompareValue(id, true)
           }
