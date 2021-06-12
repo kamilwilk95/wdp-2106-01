@@ -22,7 +22,7 @@ function StickyBar(props) {
           <FontAwesomeIcon
             icon={faTrashAlt}
             onClick={() => props.setAddToCompareValue(product.id, false)}
-            className={styles.icon}
+            className={product.photo ? styles.photoExist : styles.photoNoExist}
           />
         </div>
       ))}

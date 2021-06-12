@@ -42,8 +42,8 @@
   }
 
   &:not(.noHover):hover {
-    background-color: $pink;
-    color: $darkGray;
+    background-color: $button-bg;
+    color: $button-color;
     svg{
       transform: scale(1.5)
     }

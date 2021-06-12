@@ -1,3 +1,5 @@
+/*eslint no-script-url: 0*/
+
 import React from 'react';
 import PropTypes from 'prop-types';
 
@@ -18,8 +20,11 @@ const Button = ({ children, variant, noHover, className: propClassName, ...props
     Comp = 'div';
   }
 
+  let adress;
+  props.hrefAdress ? (adress = props.hrefAdress) : (adress = '/#');
+
   return (
-    <Comp {...props} className={classes.join(' ')}>
+    <Comp href={adress} {...props} className={classes.join(' ')}>
       {children}
     </Comp>
   );
@@ -30,6 +35,7 @@ Button.propTypes = {
   noHover: PropTypes.bool,
   className: PropTypes.string,
   variant: PropTypes.string,
+  hrefAdress: PropTypes.string,
 };
 
 export default Button;

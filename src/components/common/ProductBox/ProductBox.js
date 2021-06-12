@@ -58,6 +58,7 @@ const ProductBox = ({
           }
           className={favourite ? styles.active : ''}
           variant='outline'
+          hrefAdress='javascript: void(0)'
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
@@ -69,6 +70,7 @@ const ProductBox = ({
           }
           className={addToCompare ? styles.active : ''}
           variant='outline'
+          hrefAdress='javascript: void(0)'
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
