@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .root {
   border: 1px solid $form-border-color;
@@ -8,7 +9,7 @@
 
   .category {
     border-right: 1px solid $form-border-color;
-    display: flex;
+    display: inline-flex;
     align-items: center;
     position: relative;
     font-size: 14px;
@@ -125,6 +126,17 @@
       border: 0;
       background-color: transparent;
       outline: none;
+    }
+  }
+}
+
+
+@include mobile {
+  .root {
+    flex-direction: column;
+    height: 72px;
+    .category {
+      border-right: none;
     }
   }
 }
