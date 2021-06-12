@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
+import Swipeable from '../../layout/Swipeable/Swipeable';
 
 class NewFurniture extends React.Component {
   state = {
@@ -19,6 +20,7 @@ class NewFurniture extends React.Component {
   }
 
   handleCategoryChange(newCategory) {
+    console.log(newCategory);
     this.setState({ activePageStyle: styles.fadeOut });
     setTimeout(() => {
       this.setState({ activeCategory: newCategory, activePageStyle: styles.fadeIn });
@@ -55,17 +57,33 @@ class NewFurniture extends React.Component {
               </div>
               <div className={'col ' + styles.menu}>
                 <ul>
-                  {categories.map(item => (
-                    <li key={item.id}>
-                      <a
-                        className={item.id === activeCategory && styles.active}
-                        onClick={() => this.handleCategoryChange(item.id)}
-                      >
-                        {item.name}
-                      </a>
-                    </li>
-                  ))}
+                  <Swipeable
+                    className='row'
+                    profiles={categories}
+                    parentCallback={this.handleCategoryChange.bind(this)}
+                  >
+                    {categories.map(item => (
+                      <li key={item.id}>
+                        <a
+                          className={item.id === activeCategory && styles.active}
+                          onClick={() => this.handleCategoryChange(item.id)}
+                        >
+                          {item.name}
+                        </a>
+                      </li>
+                    ))}
+                  </Swipeable>
                 </ul>
+              </div>
+              <div>
+                <Swipeable
+                  params={{
+                    navigation: {
+                      nextEl: '.swiper-button-next',
+                      prevEl: '.swiper-button-prev',
+                    },
+                  }}
+                />
               </div>
               <div className={'col-auto ' + styles.dots}>
                 <ul>{dots}</ul>
