@@ -20,11 +20,11 @@ const Button = ({ children, variant, noHover, className: propClassName, ...props
     Comp = 'div';
   }
 
-  let adress;
-  props.hrefAdress ? (adress = props.hrefAdress) : (adress = '/#');
+  //let adress;
+  //props.hrefAdress ? (adress = props.hrefAdress) : (adress = '/#');
 
   return (
-    <Comp href={adress} {...props} className={classes.join(' ')}>
+    <Comp href='/#' {...props} className={classes.join(' ')}>
       {children}
     </Comp>
   );

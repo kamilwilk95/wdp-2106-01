@@ -53,8 +53,8 @@ const ProductBox = ({
         <Button
           onClick={
             favourite
-              ? () => setFavouriteValue(id, false)
-              : () => setFavouriteValue(id, true)
+              ? e => (setFavouriteValue(id, false), e.preventDefault())
+              : e => (setFavouriteValue(id, true), e.preventDefault())
           }
           className={favourite ? styles.active : ''}
           variant='outline'
@@ -65,8 +65,8 @@ const ProductBox = ({
         <Button
           onClick={
             addToCompare
-              ? () => setAddToCompareValue(id, false)
-              : () => setAddToCompareValue(id, true)
+              ? e => (setAddToCompareValue(id, false), e.preventDefault())
+              : e => (setAddToCompareValue(id, true), e.preventDefault())
           }
           className={addToCompare ? styles.active : ''}
           variant='outline'
