@@ -1,3 +1,25 @@
 @import "../../../styles/settings.scss";
 @import '~react-slidy/lib/index';
 
+.switchContainer svg{
+  cursor: pointer;
+  transition: $head-transition
+}
+
+.switchContainer svg:hover{
+  color:$primary;
+}
+.switchContainer button{
+  background-color: inherit;
+  outline: none;
+  border:none;
+}
+
+button:disabled{
+ outline:none;
+ border:none;
+}
+
+button:disabled svg:hover{
+  color:inherit;
+}

@@ -10,6 +10,7 @@ class NewFurniture extends React.Component {
     activePage: 0,
     activeCategory: 'bed',
     activePageStyle: styles.fadeIn,
+    index: 0,
   };
 
   handlePageChange(newPage) {
@@ -20,7 +21,6 @@ class NewFurniture extends React.Component {
   }
 
   handleCategoryChange(newCategory) {
-    console.log(newCategory);
     this.setState({ activePageStyle: styles.fadeOut });
     setTimeout(() => {
       this.setState({ activeCategory: newCategory, activePageStyle: styles.fadeIn });
@@ -47,6 +47,9 @@ class NewFurniture extends React.Component {
         </li>
       );
     }
+
+    //console.log(categories.includes(Object.values(activeCategory)))
+
     return (
       <div className={styles.root}>
         <div className='container'>
@@ -61,6 +64,7 @@ class NewFurniture extends React.Component {
                     className='row'
                     profiles={categories}
                     parentCallback={this.handleCategoryChange.bind(this)}
+                    currentValue={activeCategory}
                   >
                     {categories.map(item => (
                       <li key={item.id}>
