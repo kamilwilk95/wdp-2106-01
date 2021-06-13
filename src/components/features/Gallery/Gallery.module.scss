@@ -1,1 +1,100 @@
 @import "../../../styles/settings.scss";
+
+.root {
+  margin: 20px 0;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+
+    .galleryFeature {
+      width: 49%;
+    }
+  }
+
+  .heading {
+    position: relative;
+    border-bottom: 4px solid #e2e2e2;
+
+    h3 {
+      color: $primary;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 38px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 0;
+      width: 45px;
+      border-bottom: 4px solid $primary;
+    }
+  }
+
+  .menuBtns {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+
+    .btn {
+      flex-grow: 1;
+      padding: 10px;
+      border-top: 1px solid $gray-5;
+      border-left: 1px solid $gray-5;
+      border-bottom: 1px solid $gray-5;
+      text-align: center;
+
+      &:last-of-type {
+        border-right: 1px solid $gray-5;
+      }
+
+      &:active {
+        border-top: 4px solid $primary;
+        background: $gray-6;
+      }
+    }
+  }
+
+  .gallery {
+    padding: 0;
+    display: block;
+    border-bottom: 1px solid $gray-5;
+    border-left: 1px solid $gray-5;
+    border-right: 1px solid $gray-5;
+
+    .galleryBtns {
+      background: chocolate;
+    }
+
+    .pictures {
+      background: red;
+    }
+  }
+
+  .image {
+    width: 100%;
+    height: 350px;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .advertisement {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}

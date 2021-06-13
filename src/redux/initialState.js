@@ -739,6 +739,12 @@ const initialState = {
       description: 'Kitchen designer',
     },
   ],
+  gallery: {
+    advertisementImg: 'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg',
+    pic1: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
+    pic2: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
+    pic3: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
+  },
 };
 
 export default initialState;
