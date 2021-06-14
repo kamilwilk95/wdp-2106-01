@@ -16,7 +16,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -29,7 +29,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: true,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -41,7 +41,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: true,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -54,7 +54,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: true,
-      addToCompare: true,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -66,7 +66,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -78,7 +78,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -90,7 +90,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -102,7 +102,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -114,7 +114,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -126,7 +126,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -138,7 +138,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -150,7 +150,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -162,7 +162,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -174,7 +174,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -186,7 +186,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -198,7 +198,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -210,7 +210,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -222,7 +222,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -234,7 +234,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -246,7 +246,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -258,7 +258,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -270,7 +270,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -282,7 +282,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -294,7 +294,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
@@ -308,7 +308,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-26',
@@ -321,7 +321,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-27',
@@ -334,7 +334,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-28',
@@ -347,7 +347,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-29',
@@ -360,7 +360,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-30',
@@ -373,7 +373,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-31',
@@ -386,7 +386,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-32',
@@ -399,7 +399,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-33',
@@ -412,7 +412,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-34',
@@ -425,7 +425,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-35',
@@ -438,7 +438,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-36',
@@ -451,7 +451,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-37',
@@ -464,7 +464,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-38',
@@ -477,7 +477,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-39',
@@ -490,7 +490,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-40',
@@ -503,7 +503,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-41',
@@ -516,7 +516,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-42',
@@ -529,7 +529,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-43',
@@ -542,7 +542,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-44',
@@ -555,7 +555,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-45',
@@ -568,7 +568,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-46',
@@ -581,7 +581,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-47',
@@ -594,7 +594,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-48',
@@ -607,7 +607,7 @@ const initialState = {
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-49',
@@ -618,7 +618,7 @@ const initialState = {
       price: 30,
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-50',
@@ -629,7 +629,7 @@ const initialState = {
       price: 30,
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-51',
@@ -640,7 +640,7 @@ const initialState = {
       price: 30,
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-52',
@@ -651,7 +651,7 @@ const initialState = {
       price: 30,
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-53',
@@ -662,7 +662,7 @@ const initialState = {
       price: 30,
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
     {
       id: 'aenean-ru-bristique-54',
@@ -672,7 +672,7 @@ const initialState = {
       price: 30,
       newFurniture: true,
       favourite: false,
-      addToCompare: false,
+      addedToCompare: false,
     },
   ],
   cart: {

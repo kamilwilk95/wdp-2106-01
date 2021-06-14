@@ -3,10 +3,12 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import StickyBarContainer from '../StickyBar/StickyBarContainer';
 
 const MainLayout = ({ children }) => (
   <div>
     <Header />
+    <StickyBarContainer />
     {children}
     <Footer />
   </div>
