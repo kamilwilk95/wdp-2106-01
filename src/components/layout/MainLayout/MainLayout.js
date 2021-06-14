@@ -3,11 +3,13 @@ import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
+import Brands from '../../features/Brands/BrandsContainer';
 
 const MainLayout = ({ children }) => (
   <div>
     <Header />
     {children}
+    <Brands />
     <Footer />
   </div>
 );

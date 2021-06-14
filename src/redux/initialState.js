@@ -678,6 +678,29 @@ const initialState = {
   cart: {
     products: [],
   },
+  brands: [
+    {
+      id: 1,
+      src:
+        'https://cdn.pixabay.com/photo/2016/11/23/14/29/living-room-1853203_1280.jpg',
+    },
+    {
+      id: 2,
+      src: 'https://cdn.pixabay.com/photo/2016/04/18/13/53/room-1336497_1280.jpg',
+    },
+    {
+      id: 3,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 4,
+      src: 'https://cdn.pixabay.com/photo/2016/11/29/08/43/blank-1868502_1280.jpg',
+    },
+    {
+      id: 5,
+      src: 'https://cdn.pixabay.com/photo/2015/12/08/00/26/desk-1081708_1280.jpg',
+    },
+  ],
 };
 
 export default initialState;
