@@ -19,7 +19,7 @@ const ProductBox = ({
   promo,
   stars,
   favourite,
-  addToCompare,
+  addedToCompare,
   setFavouriteValue,
   setAddToCompareValue,
   photo,
@@ -60,19 +60,17 @@ const ProductBox = ({
           }
           className={favourite ? styles.active : ''}
           variant='outline'
-          hrefAdress='javascript: void(0)'
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
         <Button
           onClick={
-            addToCompare
+            addedToCompare
               ? e => (setAddToCompareValue(id, false), e.preventDefault())
               : e => (setAddToCompareValue(id, true), e.preventDefault())
           }
-          className={addToCompare ? styles.active : ''}
+          className={addedToCompare ? styles.active : ''}
           variant='outline'
-          hrefAdress='javascript: void(0)'
         >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
@@ -102,7 +100,7 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   favourite: PropTypes.bool,
-  addToCompare: PropTypes.bool,
+  addedToCompare: PropTypes.bool,
   setFavouriteValue: PropTypes.func,
   setAddToCompareValue: PropTypes.func,
   photo: PropTypes.string,

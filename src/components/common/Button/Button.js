@@ -19,7 +19,7 @@ const Button = ({ children, variant, noHover, className: propClassName, ...props
   }
 
   return (
-    <Comp href='/#' {...props} className={classes.join(' ')}>
+    <Comp href='#' {...props} className={classes.join(' ')}>
       {children}
     </Comp>
   );
@@ -30,7 +30,6 @@ Button.propTypes = {
   noHover: PropTypes.bool,
   className: PropTypes.string,
   variant: PropTypes.string,
-  hrefAdress: PropTypes.string,
 };
 
 export default Button;
