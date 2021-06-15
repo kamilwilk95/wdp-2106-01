@@ -1,19 +1,26 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 
-import styles from './Stars.module.scss';
+import styles from './Promotion.module.scss';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faStar } from '@fortawesome/free-solid-svg-icons';
 import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
 
-const Stars = gallery => (
+const Promotion = ({ promo }) => (
   <div className={styles.content}>
-    <h5>{gallery.name}</h5>
+    <div className={styles.triangle1}></div>
+    <div className={styles.discount}>
+      <div>
+        <p>$120.00</p>
+        <p>$160.00</p>
+      </div>
+    </div>
+    <h5>{promo.name}</h5>
     <div className={styles.stars}>
       {[1, 2, 3, 4, 5].map(i => (
         <a key={i} href='#'>
-          {i <= gallery.stars ? (
+          {i <= promo.stars ? (
             <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
           ) : (
             <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
@@ -21,11 +28,12 @@ const Stars = gallery => (
         </a>
       ))}
     </div>
+    <div className={styles.triangle2}></div>
   </div>
 );
 
-Stars.propTypes = {
-  stars: PropTypes.number,
+Promotion.propTypes = {
+  promo: PropTypes.object,
 };
 
-export default Stars;
+export default Promotion;

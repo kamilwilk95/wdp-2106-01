@@ -766,6 +766,21 @@ const initialState = {
         id: '3',
         active: false,
       },
+      {
+        pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
+        id: '4',
+        active: false,
+      },
+      {
+        pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
+        id: '5',
+        active: false,
+      },
+      {
+        pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
+        id: '6',
+        active: false,
+      },
     ],
   },
 };

@@ -1,11 +1,11 @@
 import { connect } from 'react-redux';
 
-import Stars from './Stars';
+import Promotion from './Promotion';
 
 import { getAll } from '../../../redux/galleryRedux.js';
 
 const mapStateToProps = state => ({
-  gallery: getAll(state),
+  promo: getAll(state),
 });
 
-export default connect(mapStateToProps)(Stars);
+export default connect(mapStateToProps)(Promotion);

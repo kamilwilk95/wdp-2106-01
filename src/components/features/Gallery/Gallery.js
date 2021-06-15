@@ -4,16 +4,6 @@ import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import Button from '../../common/Button/Button';
 
-// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-// import { faStar } from '@fortawesome/free-solid-svg-icons';
-// import {
-//   faStar as farStar,
-//   faHeart,
-//   faExchangeAlt,
-//   faEye,
-//   faShoppingBasket,
-// } from '@fortawesome/free-regular-svg-icons';
-
 import { AiOutlineHeart } from 'react-icons/ai';
 import { AiFillEye } from 'react-icons/ai';
 import { FaExchangeAlt } from 'react-icons/fa';
@@ -21,7 +11,7 @@ import { BiBasket } from 'react-icons/bi';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
 
-import Stars from '../../common/Stars/StarsContainer';
+import Stars from '../../common/Promotion/PromotionContainer';
 
 const Gallery = ({ gallery }) => {
   return (
@@ -40,23 +30,30 @@ const Gallery = ({ gallery }) => {
             </div>
             <div className={styles.gallery}>
               <div className={styles.galleryBtns}>
-                {/* {gallery.icons.map(item => (
-                  <a href='#' key={item.id}>
-                    <FontAwesomeIcon icon={item.icon} className={styles.icon} />
+                <div className={styles.tooltip}>
+                  <a href='#'>
+                    <AiOutlineHeart className={styles.icon} />
                   </a>
-                ))} */}
-                <a href='#'>
-                  <AiOutlineHeart className={styles.icon} />
-                </a>
-                <a href='#'>
-                  <FaExchangeAlt className={styles.icon} />
-                </a>
-                <a href='#'>
-                  <AiFillEye className={styles.icon} />
-                </a>
-                <a href='#'>
-                  <BiBasket className={styles.icon} />
-                </a>
+                  <span className={styles.tooltiptext}>Like</span>
+                </div>
+                <div className={styles.tooltip}>
+                  <a href='#'>
+                    <FaExchangeAlt className={styles.icon} />
+                  </a>
+                  <span className={styles.tooltiptext}>Change view</span>
+                </div>
+                <div className={styles.tooltip}>
+                  <a href='#'>
+                    <AiFillEye className={styles.icon} />
+                  </a>
+                  <span className={styles.tooltiptext}>See more</span>
+                </div>
+                <div className={styles.tooltip}>
+                  <a href='#'>
+                    <BiBasket className={styles.icon} />
+                  </a>
+                  <span className={styles.tooltiptext}>Add to basket</span>
+                </div>
               </div>
               <div className={styles.image}>
                 <img src={gallery.sale} alt='furniture-sale' />
@@ -95,8 +92,6 @@ const Gallery = ({ gallery }) => {
 };
 
 Gallery.propTypes = {
-  // stars: PropTypes.number,
-  // name: PropTypes.string,
   gallery: PropTypes.object,
 };
 
