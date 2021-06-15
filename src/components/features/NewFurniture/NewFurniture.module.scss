@@ -108,8 +108,15 @@
   -moz-transition: opacity 1s;
   -ms-transition: opacity 1s;
   -o-transition: opacity 1s;
+  display: flex;
+  flex-wrap: wrap;
 }
 .fadeOut {
     opacity: 0;
     transition: opacity 1s
+}
+
+.swipeWrap{
+  display: flex;
+  flex-wrap: wrap;
 }
