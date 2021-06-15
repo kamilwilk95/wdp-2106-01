@@ -19,7 +19,7 @@ const ProductBox = ({
   promo,
   stars,
   favourite,
-  addToCompare,
+  addedToCompare,
   setFavouriteValue,
 }) => (
   <div className={styles.root}>
@@ -52,15 +52,15 @@ const ProductBox = ({
         <Button
           onClick={
             favourite === true
-              ? () => setFavouriteValue(id, false)
-              : () => setFavouriteValue(id, true)
+              ? e => (setFavouriteValue(id, false), e.preventDefault())
+              : e => (setFavouriteValue(id, true), e.preventDefault())
           }
           className={favourite ? styles.active : styles.fav}
           variant='outline'
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button className={addToCompare ? styles.active : ''} variant='outline'>
+        <Button className={addedToCompare ? styles.active : ''} variant='outline'>
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -89,7 +89,7 @@ ProductBox.propTypes = {
   promo: PropTypes.string,
   stars: PropTypes.number,
   favourite: PropTypes.bool,
-  addToCompare: PropTypes.bool,
+  addedToCompare: PropTypes.bool,
   setFavouriteValue: PropTypes.func,
 };
 
