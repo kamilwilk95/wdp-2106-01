@@ -3,11 +3,17 @@ import PropTypes from 'prop-types';
 
 import styles from './Gallery.module.scss';
 import Button from '../../common/Button/Button';
-// import ProductBox from '../../common/ProductBox/ProductBox';
 
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+// import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+// import { faStar } from '@fortawesome/free-solid-svg-icons';
+// import {
+//   faStar as farStar,
+//   faHeart,
+//   faExchangeAlt,
+//   faEye,
+//   faShoppingBasket,
+// } from '@fortawesome/free-regular-svg-icons';
+
 import { AiOutlineHeart } from 'react-icons/ai';
 import { AiFillEye } from 'react-icons/ai';
 import { FaExchangeAlt } from 'react-icons/fa';
@@ -15,7 +21,9 @@ import { BiBasket } from 'react-icons/bi';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
 
-const Gallery = ({ stars, name, advImgs }) => {
+import Stars from '../../common/Stars/StarsContainer';
+
+const Gallery = ({ gallery }) => {
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -26,12 +34,17 @@ const Gallery = ({ stars, name, advImgs }) => {
             </div>
             <div className={styles.menuBtns}>
               <Button className={styles.btn}>Featured</Button>
-              <Button className={styles.btn}>Top seller</Button>
+              <Button className={styles.btn + ' active'}>Top seller</Button>
               <Button className={styles.btn}>Sale off</Button>
               <Button className={styles.btn}>Top rated</Button>
             </div>
             <div className={styles.gallery}>
               <div className={styles.galleryBtns}>
+                {/* {gallery.icons.map(item => (
+                  <a href='#' key={item.id}>
+                    <FontAwesomeIcon icon={item.icon} className={styles.icon} />
+                  </a>
+                ))} */}
                 <a href='#'>
                   <AiOutlineHeart className={styles.icon} />
                 </a>
@@ -46,50 +59,25 @@ const Gallery = ({ stars, name, advImgs }) => {
                 </a>
               </div>
               <div className={styles.image}>
-                <img
-                  src='https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg'
-                  alt='furniture-sale'
-                />
-                <div className={styles.content}>
-                  <h5>{name}</h5>
-                  <div className={styles.stars}>
-                    {[1, 2, 3, 4, 5].map(i => (
-                      <a key={i} href='#'>
-                        {i <= stars ? (
-                          <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-                        ) : (
-                          <FontAwesomeIcon icon={farStar}>{i} stars</FontAwesomeIcon>
-                        )}
-                      </a>
-                    ))}
-                  </div>
-                </div>
+                <img src={gallery.sale} alt='furniture-sale' />
+                <Stars />
               </div>
             </div>
             <div className={styles.slider}>
               <button className={styles.sliderBtnLeft}>
                 <AiOutlineLeft className={styles.icon} />
               </button>
-              <div className={styles.slide}>
-                <img
-                  src='https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg'
-                  alt='furniture-sale'
-                />
-              </div>
-              <div className={styles.slide}>
-                <img
-                  className={styles.inactive}
-                  src='https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg'
-                  alt='furniture-sale'
-                />
-              </div>
-              <div className={styles.slide}>
-                <img
-                  className={styles.inactive}
-                  src='https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg'
-                  alt='furniture-sale'
-                />
-              </div>
+              {gallery.advImgs.map(photo => (
+                <div className={styles.slide} key={photo.id}>
+                  <div className={styles.slide}>
+                    <img
+                      className={photo.active ? '' : ' ' + styles.inactive}
+                      src={photo.pic}
+                      alt={'furniture-sale-' + photo.id}
+                    />
+                  </div>
+                </div>
+              ))}
               <button className={styles.sliderBtnRight}>
                 <AiOutlineRight className={styles.icon} />
               </button>
@@ -113,9 +101,9 @@ const Gallery = ({ stars, name, advImgs }) => {
 };
 
 Gallery.propTypes = {
-  stars: PropTypes.number,
-  name: PropTypes.string,
-  advImgs: PropTypes.object,
+  // stars: PropTypes.number,
+  // name: PropTypes.string,
+  gallery: PropTypes.object,
 };
 
 export default Gallery;

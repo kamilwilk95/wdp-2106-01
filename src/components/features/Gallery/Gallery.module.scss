@@ -28,12 +28,11 @@
           }
 
           .inactive {
-            height: 100%;
-            opacity: 0.3;
+            height: 126px;
+            opacity: 0.75;
             background: $white;
             left: 0;
             top: 0;
-            z-index: 999;
           }
         }
 
@@ -86,25 +85,23 @@
     .btn {
       flex-grow: 1;
       padding: 10px;
-      border-top: 1px solid $gray-5;
-      border-left: 1px solid $gray-5;
-      border-bottom: 1px solid $gray-5;
+      border-top: 1px solid $gray-3;
+      border-left: 1px solid $gray-3;
+      border-bottom: 1px solid $gray-3;
       text-align: center;
 
-      &:last-of-type {
-        border-right: 1px solid $gray-5;
-      }
-
-      &:active {
+      &:nth-child(2) {
         border-top: 4px solid $primary;
-        background: $gray-6;
+        background: $gray-2;
+      }
+      &:last-of-type {
+        border-right: 1px solid $gray-3;
       }
     }
   }
 
   .gallery {
     padding: 0;
-
     display: flex;
     align-items: center;
 
@@ -115,10 +112,10 @@
       z-index: 100;
 
       a {
-        margin: 2px;
+        margin: 2px 5px;
 
         .icon {
-          background: $white;
+          background: $gray-2;
           padding: 5px;
           border: 1px solid $darkGray;
           font-size: 30px;
@@ -126,6 +123,7 @@
 
           &:hover {
             color: $darkOrange;
+            border: 1px solid $darkOrange;
           }
         }
       }
@@ -140,37 +138,13 @@
     position: relative;
     width: 100%;
     height: 350px;
-    border-left: 1px solid $gray-5;
-    border-right: 1px solid $gray-5;
+    border-left: 1px solid $gray-3;
+    border-right: 1px solid $gray-3;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
-    }
-
-    .content {
-      background: $white;
-      position: absolute;
-      text-align: center;
-      padding: 20px;
-      z-index: 100;
-      bottom: 10px;
-      right: 10px;
-
-      h5 {
-        color: $primary;
-        font-size: 16px;
-        line-height: 24px;
-        letter-spacing: 1px;
-      }
-
-      .stars {
-        a {
-          text-decoration: none;
-          color: $productbox-stars-color;
-        }
-      }
     }
   }
 

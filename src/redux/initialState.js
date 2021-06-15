@@ -740,14 +740,32 @@ const initialState = {
     },
   ],
   gallery: {
+    sale: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
     name: 'Aenean Ru Bristique 1',
     stars: 2,
-    advImgs: {
-      pic1: 'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg',
-      pic2: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
-      pic3: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
-      pic4: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
-    },
+    icons: [
+      { icon: 'faHeart', id: '1' },
+      { icon: 'faExchangeAlt', id: '2' },
+      { icon: 'faEye', id: '3' },
+      { icon: 'faShoppingBasket', id: '4' },
+    ],
+    advImgs: [
+      {
+        pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
+        id: '1',
+        active: true,
+      },
+      {
+        pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
+        id: '2',
+        active: false,
+      },
+      {
+        pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
+        id: '3',
+        active: false,
+      },
+    ],
   },
 };
 
