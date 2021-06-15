@@ -85,13 +85,7 @@ const Gallery = ({ gallery }) => {
           </div>
           <div className={styles.galleryFeature}>
             <div className={styles.advertisement}>
-              <img
-                src={
-                  'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg'
-                  // gallery.advertisementImg
-                }
-                alt='advertisement'
-              />
+              <img src={gallery.advertisement} alt='advertisement' />
             </div>
           </div>
         </div>

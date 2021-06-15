@@ -740,6 +740,7 @@ const initialState = {
     },
   ],
   gallery: {
+    advertisement: 'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg',
     sale: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
     name: 'Aenean Ru Bristique 1',
     stars: 2,
