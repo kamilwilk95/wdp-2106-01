@@ -11,7 +11,7 @@ import { BiBasket } from 'react-icons/bi';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
 
-import Stars from '../../common/Promotion/PromotionContainer';
+import Promotion from '../../common/Promotion/PromotionContainer';
 
 const Gallery = ({ gallery }) => {
   return (
@@ -57,7 +57,7 @@ const Gallery = ({ gallery }) => {
               </div>
               <div className={styles.image}>
                 <img src={gallery.sale} alt='furniture-sale' />
-                <Stars />
+                <Promotion />
               </div>
             </div>
             <div className={styles.slider}>

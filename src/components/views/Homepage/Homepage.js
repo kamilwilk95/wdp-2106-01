@@ -7,8 +7,8 @@ import styles from './Homepage.module.scss';
 import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import Feedbacks from '../../features/Feedbacks/FeedbacksContainer';
+import Gallery from '../../features/Gallery/GalleryContainer';
 
-import Gallery from '../../features/Gallery/Gallery';
 const Homepage = () => (
   <div className={styles.root}>
     <FeatureBoxes />
