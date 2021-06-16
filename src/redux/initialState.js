@@ -700,6 +700,37 @@ const initialState = {
       id: 5,
       src: 'https://cdn.pixabay.com/photo/2015/12/08/00/26/desk-1081708_1280.jpg',
     },
+    {
+      id: 6,
+      src:
+        'https://images.pexels.com/photos/2082095/pexels-photo-2082095.jpeg?auto=compress&cs=tinysrgb&dpr=2&w=500',
+    },
+    {
+      id: 7,
+      src:
+        'https://images.pexels.com/photos/6045341/pexels-photo-6045341.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+    },
+    {
+      id: 8,
+      src: 'https://cdn.pixabay.com/photo/2016/11/29/08/43/blank-1868502_1280.jpg',
+    },
+    {
+      id: 9,
+      src:
+        'https://cdn.pixabay.com/photo/2016/11/23/14/29/living-room-1853203_1280.jpg',
+    },
+    {
+      id: 10,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 11,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 12,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
   ],
   promotion: {
     leftImage:
