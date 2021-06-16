@@ -1,0 +1,13 @@
+@import "../../../styles/settings.scss";
+
+.stars {
+  a {
+    text-decoration: none;
+    color: $productbox-stars-color;
+  }
+}
+
+
+.stars a .four {
+  background-color: yellow;
+}
