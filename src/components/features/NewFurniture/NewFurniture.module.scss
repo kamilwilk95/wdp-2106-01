@@ -49,7 +49,7 @@
             font-size: 18px;
             display: block;
             transition: $head-transition;
-            
+
             &.active,
             &:hover {
               &::before {
@@ -100,4 +100,17 @@
       }
     }
   }
+}
+
+.fadeIn {
+  opacity: 1;
+  transition: opacity 1s;
+  -webkit-transition: opacity 1s;
+  -moz-transition: opacity 1s;
+  -ms-transition: opacity 1s;
+  -o-transition: opacity 1s;
+}
+.fadeOut {
+  opacity: 0;
+  transition: opacity 1s;
 }

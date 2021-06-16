@@ -7,23 +7,28 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
+    activePageStyle: styles.fadeIn,
   };
 
   handlePageChange(newPage) {
-    this.setState({ activePage: newPage });
+    this.setState({ activePageStyle: styles.fadeOut });
+    setTimeout(() => {
+      this.setState({ activePage: newPage, activePageStyle: styles.fadeIn });
+    }, 1000);
   }
 
   handleCategoryChange(newCategory) {
-    this.setState({ activeCategory: newCategory });
+    this.setState({ activePageStyle: styles.fadeOut });
+    setTimeout(() => {
+      this.setState({ activeCategory: newCategory, activePageStyle: styles.fadeIn });
+    }, 1000);
   }
 
   render() {
     const { categories, products } = this.props;
-    const { activeCategory, activePage } = this.state;
-
+    const { activeCategory, activePage, activePageStyle } = this.state;
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
-
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
@@ -64,9 +69,9 @@ class NewFurniture extends React.Component {
               </div>
             </div>
           </div>
-          <div className='row'>
+          <div className={'row ' + activePageStyle}>
             {categoryProducts.slice(activePage * 8, (activePage + 1) * 8).map(item => (
-              <div key={item.id} className='col-3'>
+              <div key={item.id} className='col-12 col-sm-6 col-md-4 col-lg-3'>
                 <ProductBoxContainer {...item} />
               </div>
             ))}

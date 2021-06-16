@@ -21,9 +21,12 @@ const ProductBox = ({
   favourite,
   addedToCompare,
   setFavouriteValue,
+  setAddToCompareValue,
+  photo,
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
+      <img className={styles.image} src={photo} alt='furniture' />
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
@@ -51,16 +54,24 @@ const ProductBox = ({
       <div className={styles.outlines}>
         <Button
           onClick={
-            favourite === true
+            favourite
               ? e => (setFavouriteValue(id, false), e.preventDefault())
               : e => (setFavouriteValue(id, true), e.preventDefault())
           }
-          className={favourite ? styles.active : styles.fav}
+          className={favourite ? styles.active : ''}
           variant='outline'
         >
           <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
         </Button>
-        <Button className={addedToCompare ? styles.active : ''} variant='outline'>
+        <Button
+          onClick={
+            addedToCompare
+              ? e => (setAddToCompareValue(id, false), e.preventDefault())
+              : e => (setAddToCompareValue(id, true), e.preventDefault())
+          }
+          className={addedToCompare ? styles.active : ''}
+          variant='outline'
+        >
           <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
         </Button>
       </div>
@@ -91,6 +102,8 @@ ProductBox.propTypes = {
   favourite: PropTypes.bool,
   addedToCompare: PropTypes.bool,
   setFavouriteValue: PropTypes.func,
+  setAddToCompareValue: PropTypes.func,
+  photo: PropTypes.string,
 };
 
 export default ProductBox;

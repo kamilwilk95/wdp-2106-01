@@ -9,7 +9,6 @@
   }
 
   .phoneNumber {
-
     @include mobile {
       order: 3;
       flex: 100%;
@@ -66,14 +65,14 @@
         background-color: $header-bg;
         display: flex;
         align-items: center;
-        justify-content: center;
+        justify-content: space-between;
         font-size: 14px;
         color: $company-cartcount-color;
         position: absolute;
         top: 50%;
         right: 0;
         transform: translate(50%, -50%);
-
+        padding: 5px;
       }
 
       &:hover {

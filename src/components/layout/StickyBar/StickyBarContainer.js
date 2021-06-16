@@ -1,15 +1,17 @@
 import { connect } from 'react-redux';
 import {
-  createAction_changeFavouriteValue,
   createAction_changeAddToCompareValue,
+  getNew,
 } from '../../../redux/productsRedux.js';
-import ProductBox from './ProductBox.js';
+import StickyBar from './StickyBar.js';
+
+const mapStateToProps = state => ({
+  products: getNew(state),
+});
 
 const mapDispatchToProps = dispatch => ({
-  setFavouriteValue: (id, value) =>
-    dispatch(createAction_changeFavouriteValue(id, value)),
   setAddToCompareValue: (id, value) =>
     dispatch(createAction_changeAddToCompareValue(id, value)),
 });
 
-export default connect(null, mapDispatchToProps)(ProductBox);
+export default connect(mapStateToProps, mapDispatchToProps)(StickyBar);

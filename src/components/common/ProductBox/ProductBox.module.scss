@@ -4,10 +4,10 @@
   background-color: $productbox-bg;
   border: 1px solid $productbox-border-color;
   margin-bottom: 2rem;
-  
+
   .photo {
     position: relative;
-    padding: 80% 10px 0 10px;
+    display: flex;
     background: {
       color: $productbox-photo-bg;
       size: contain;
@@ -16,6 +16,13 @@
     }
     overflow: hidden;
     align-items: flex-end;
+    justify-content: center;
+
+    .image {
+      object-fit: cover;
+      max-height: 250px;
+    }
+
     .sale {
       position: absolute;
       top: -30px;
@@ -28,6 +35,9 @@
     }
 
     .buttons {
+      width: 100%;
+      bottom: 0;
+      position: absolute;
       visibility: hidden;
       display: flex;
       justify-content: space-between;
@@ -94,7 +104,7 @@
       text-decoration-color: $productbox-stars-color;
 
       &:after {
-        content: '';
+        content: "";
         width: 100%;
         height: 2px;
         display: block;
@@ -106,10 +116,8 @@
       }
     }
   }
-
   .active{
-    background-color: $button-bg;
-    color: $button-color;
+    background-color: $darkGray;
+    color: $white;
   }
 }
-
