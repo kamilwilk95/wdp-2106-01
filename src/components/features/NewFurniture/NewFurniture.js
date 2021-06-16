@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBoxContainer from '../../common/ProductBox/ProductBoxContainer.js';
 
@@ -77,7 +76,6 @@ class NewFurniture extends React.Component {
     );
   }
 }
-
 NewFurniture.propTypes = {
   children: PropTypes.node,
   categories: PropTypes.arrayOf(
