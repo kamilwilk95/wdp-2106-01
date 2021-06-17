@@ -6,7 +6,7 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faExchangeAlt, faShoppingBasket } from '@fortawesome/free-solid-svg-icons';
 
 import Button from '../Button/Button';
-import Stars from '../Stars/Stars';
+import StairsContainer from '../Stars/StairsContainer';
 
 const ProductBox = ({
   name,
@@ -15,6 +15,7 @@ const ProductBox = ({
   oldprice,
   promo,
   stars,
+  myStarsChoice,
   favourite,
   addedToCompare,
   setFavouriteValue,
@@ -35,7 +36,7 @@ const ProductBox = ({
     <div className={styles.content}>
       <h5>{name}</h5>
       <div className={styles.stars}>
-        <Stars stars={stars} />
+        <StairsContainer stars={stars} myStarsChoice={myStarsChoice} id={id} />
       </div>
     </div>
     <div className={styles.line}></div>
@@ -87,6 +88,7 @@ ProductBox.propTypes = {
   price: PropTypes.number,
   oldprice: PropTypes.number,
   promo: PropTypes.string,
+  myStarsChoice: PropTypes.number,
   stars: PropTypes.number,
   favourite: PropTypes.bool,
   addedToCompare: PropTypes.bool,

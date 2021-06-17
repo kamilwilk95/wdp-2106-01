@@ -1,41 +1,128 @@
-import React from 'react';
+import React, { useState } from 'react';
 import styles from './Stars.module.scss';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import PropTypes from 'prop-types';
-
-const one = {
-  color: 'pink',
-};
-const two = {
-  color: 'pink',
-};
-const three = {
-  color: 'pink',
-};
-const four = {
-  color: 'pink',
-};
-const five = {
-  color: 'pink',
-};
+import '../../../styles/settings.scss';
+import { FaStar, FaRegStar } from 'react-icons/fa';
 
 function Stars(props) {
+  const defaultStarsData = [
+    { id: 1, hover: false },
+    { id: 2, hover: false },
+    { id: 3, hover: false },
+    { id: 4, hover: false },
+    { id: 5, hover: false },
+  ];
+  const [data, setData] = useState(defaultStarsData);
+  const [touch, setTouch] = useState(false);
+  function changeStars(id) {
+    const newStarsData = [...defaultStarsData];
+    const exactsIndexs = defaultStarsData.filter(element => element.id <= id);
+    const arrayWithExactsIndexs = [];
+    exactsIndexs.filter(element => arrayWithExactsIndexs.push(element.id));
+    for (let i of newStarsData) {
+      if (arrayWithExactsIndexs.includes(i.id)) {
+        newStarsData[i.id - 1] = {
+          ...i,
+          hover: true,
+        };
+      }
+    }
+    setData(newStarsData);
+  }
+  function returnToBasicForm() {
+    setData(defaultStarsData);
+  }
+  function touched() {
+    setTouch(true);
+  }
+  function noTouched() {
+    setTouch(false);
+  }
+
   return (
-    <div className={styles.stars}>
-      {[
-        { id: 1, name: { one } },
-        { id: 2, name: { two } },
-        { id: 3, name: { three } },
-        { id: 4, name: { four } },
-        { id: 5, name: { five } },
-      ].map(i => (
-        <a key={i.id} href='#' style={i.name}>
-          {i.id <= props.stars ? (
-            <FontAwesomeIcon icon={faStar}>{i.id} stars</FontAwesomeIcon>
+    <div
+      className={styles.stars}
+      onMouseEnter={() => touched()}
+      onMouseLeave={() => noTouched()}
+      onDoubleClick={e => (
+        props.delateMyStarsChoice(props.stars, props.id), e.preventDefault()
+      )}
+    >
+      {data.map(i => (
+        <a key={i.id} href='#'>
+          {props.myStarsChoice !== 0 ? (
+            touch ? (
+              i.hover ? (
+                <FaStar
+                  onClick={e => (
+                    props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
+                  )}
+                  onMouseEnter={() => changeStars(i.id)}
+                  onMouseLeave={() => returnToBasicForm()}
+                  className={i.hover ? styles.hover : styles.normal}
+                >
+                  {i.id} stars
+                </FaStar>
+              ) : (
+                <FaRegStar
+                  className={styles.normal}
+                  onMouseEnter={() => changeStars(i.id)}
+                  onMouseLeave={() => returnToBasicForm()}
+                >
+                  {i.id} stars
+                </FaRegStar>
+              )
+            ) : i.id <= props.myStarsChoice ? (
+              <FaStar
+                onClick={e => (
+                  props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
+                )}
+                className={styles.hover}
+              >
+                {i.id} stars
+              </FaStar>
+            ) : (
+              <FaRegStar className={styles.normal}>{i.id} stars</FaRegStar>
+            )
+          ) : touch ? (
+            i.hover ? (
+              <FaStar
+                onClick={e => (
+                  props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
+                )}
+                onMouseEnter={() => changeStars(i.id)}
+                onMouseLeave={() => returnToBasicForm()}
+                className={i.hover ? styles.hover : styles.normal}
+              >
+                {i.id} stars
+              </FaStar>
+            ) : (
+              <FaRegStar
+                className={styles.normal}
+                onMouseEnter={() => changeStars(i.id)}
+                onMouseLeave={() => returnToBasicForm()}
+              >
+                {i.id} stars
+              </FaRegStar>
+            )
+          ) : i.id <= props.stars ? (
+            <FaStar
+              onClick={e => (
+                props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
+              )}
+              className={styles.normal}
+            >
+              {i.id} stars
+            </FaStar>
           ) : (
-            <FontAwesomeIcon icon={farStar}>{i.id} stars</FontAwesomeIcon>
+            <FaRegStar
+              onClick={e => (
+                props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
+              )}
+              className={styles.normal}
+            >
+              {i.id} stars
+            </FaRegStar>
           )}
         </a>
       ))}
@@ -45,6 +132,10 @@ function Stars(props) {
 
 Stars.propTypes = {
   stars: PropTypes.number,
+  delateMyStarsChoice: PropTypes.func,
+  id: PropTypes.string,
+  myStarsChoice: PropTypes.number,
+  changeMyStarsChoice: PropTypes.func,
 };
 
 export default Stars;

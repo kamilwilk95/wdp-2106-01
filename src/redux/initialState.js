@@ -13,11 +13,11 @@ const initialState = {
       category: 'bed',
       price: 30,
       stars: 2,
-      myStarsChoice: 0,
+      myStarsChoice: 5,
       promo: 'sale',
       newFurniture: true,
       favourite: false,
-      addedToCompare: false,
+      addedToCompare: true,
       photo: 'https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg',
     },
     {
