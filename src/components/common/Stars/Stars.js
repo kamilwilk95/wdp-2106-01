@@ -12,8 +12,11 @@ function Stars(props) {
     { id: 4, hover: false },
     { id: 5, hover: false },
   ];
+
   const [data, setData] = useState(defaultStarsData);
+
   const [touch, setTouch] = useState(false);
+
   function changeStars(id) {
     const newStarsData = [...defaultStarsData];
     const exactsIndexs = defaultStarsData.filter(element => element.id <= id);
@@ -29,12 +32,15 @@ function Stars(props) {
     }
     setData(newStarsData);
   }
+
   function returnToBasicForm() {
     setData(defaultStarsData);
   }
+
   function touched() {
     setTouch(true);
   }
+
   function noTouched() {
     setTouch(false);
   }
