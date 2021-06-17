@@ -7,7 +7,7 @@ import Carousel from 'react-elastic-carousel';
 
 const Feedbacks = ({ feedbacks }) => (
   <div className={styles.root}>
-    <div className='container pb-3'>
+    <div className='container pb-3 carousel'>
       <div className='row'>
         <div className={'col-12'}>
           <div className='row no-gutters align-items-end line'>
