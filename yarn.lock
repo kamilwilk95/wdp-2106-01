@@ -7996,6 +7996,13 @@
     "query-string" "^4.1.0"
     "sort-keys" "^1.0.0"
 
+"npm-merge-driver-install@^2.0.1":
+  "integrity" "sha512-fYmv9ylp/OrA+3juab9SYBNI8iF6QvL2VMVVw3QwOhFloeb+3+8HHgIemgmB/JqaxgKBDO+v9nd5TmVl0aGUIg=="
+  "resolved" "https://registry.npmjs.org/npm-merge-driver-install/-/npm-merge-driver-install-2.0.1.tgz"
+  "version" "2.0.1"
+  dependencies:
+    "is-ci" "^2.0.0"
+
 "npm-run-all@^4.1.5":
   "integrity" "sha512-Oo82gJDAVcaMdi3nuoKFavkIHBRVqQ1qvMb+9LHk/cF4P6B2m8aP04hGf7oL6wZ9BuGwX1onlLhpuoofSyoQDQ=="
   "resolved" "https://registry.npmjs.org/npm-run-all/-/npm-run-all-4.1.5.tgz"
