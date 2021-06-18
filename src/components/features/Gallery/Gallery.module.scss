@@ -1,0 +1,182 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  margin: 20px 0;
+
+  .flex {
+    display: flex;
+    justify-content: space-between;
+    height: 600px;
+
+    .galleryFeature {
+      width: 49%;
+
+      .slider {
+        border-bottom: 1px solid $gray-5;
+        border-left: 1px solid $gray-5;
+        border-right: 1px solid $gray-5;
+        display: flex;
+        justify-content: space-between;
+        padding: 5px;
+        height: 80px;
+
+        .slide {
+          img {
+            height: 70px;
+            width: 70px;
+            object-fit: cover;
+          }
+
+          .inactive {
+            height: 70px;
+            opacity: 0.75;
+            background: $white;
+            left: 0;
+            top: 0;
+          }
+        }
+
+        button {
+          background: $darkGray;
+          height: 40px;
+          width: 30px;
+          height: 100%;
+
+          &:hover {
+            background: $darkOrange;
+          }
+
+          .icon {
+            color: $white;
+          }
+        }
+      }
+    }
+  }
+
+  .heading {
+    position: relative;
+    border-bottom: 4px solid #e2e2e2;
+
+    h3 {
+      color: $primary;
+      text-transform: uppercase;
+      font-size: 20px;
+      line-height: 38px;
+      margin: 0;
+      letter-spacing: 1px;
+    }
+
+    &::before {
+      content: "";
+      position: absolute;
+      top: 37px;
+      left: 0;
+      width: 45px;
+      border-bottom: 4px solid $primary;
+    }
+  }
+
+  .menuBtns {
+    margin-top: 20px;
+    display: flex;
+    width: 100%;
+
+    .btn {
+      flex-grow: 1;
+      padding: 10px;
+      border-top: 1px solid $gray-3;
+      border-left: 1px solid $gray-3;
+      border-bottom: 1px solid $gray-3;
+      text-align: center;
+
+      &:nth-child(2) {
+        border-top: 4px solid $primary;
+        background: $gray-2;
+      }
+      &:last-of-type {
+        border-right: 1px solid $gray-3;
+      }
+    }
+  }
+
+  .gallery {
+    padding: 0;
+    display: flex;
+    align-items: center;
+
+    .galleryBtns {
+      display: flex;
+      flex-direction: column;
+      position: absolute;
+      z-index: 100;
+
+      .tooltip {
+        position: relative;
+        display: inline-block;
+        margin: 2px 5px;
+      }
+
+      .tooltip .tooltiptext {
+        visibility: hidden;
+        width: 120px;
+        background-color: black;
+        color: #fff;
+        text-align: center;
+        padding: 5px 0;
+        border-radius: 3px;
+        top: -1px;
+        left: 106%;
+        z-index: 200;
+        font-size: 15px;
+
+        position: absolute;
+        z-index: 1;
+      }
+
+      .tooltip:hover .tooltiptext {
+        visibility: visible;
+      }
+    }
+
+    a {
+      .icon {
+        background: $gray-2;
+        padding: 5px;
+        border: 1px solid $darkGray;
+        font-size: 30px;
+        color: $darkGray;
+
+        &:hover {
+          color: $darkOrange;
+          border: 1px solid $darkOrange;
+        }
+      }
+    }
+  }
+
+  .image {
+    position: relative;
+    width: 100%;
+    height: 407px;
+    border-left: 1px solid $gray-3;
+    border-right: 1px solid $gray-3;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+
+  .advertisement {
+    width: 100%;
+    height: 100%;
+
+    img {
+      width: 100%;
+      height: 100%;
+      object-fit: cover;
+    }
+  }
+}
