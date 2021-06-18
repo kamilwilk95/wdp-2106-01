@@ -61,7 +61,7 @@ export default function reducer(statePart = [], action = {}) {
         ...newArray[elementsIndex],
         addedToCompare: action.payload,
       };
-      const e = newArray.filter(element => element.addToCompare === true);
+      const e = newArray.filter(element => element.addedToCompare === true);
       if (e.length <= 4) {
         return newArray;
       } else if (e.length >= 5) {

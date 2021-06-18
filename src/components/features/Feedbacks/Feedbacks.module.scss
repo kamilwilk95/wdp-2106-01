@@ -4,13 +4,16 @@
   justify-content: center;
   display: flex;
   padding-top: 64px;
-  padding-bottom: 30px;
   font-weight: 500;
   color: $footer-copyright-color;
 
+  .col-13 {
+    justify-content: space-around;
+    }
+
   .heading {
     position: relative;
-    width: 100%;
+    width: 94%;
     border-bottom: 4px solid $furniture-border-color;
 
     h3 {
@@ -32,40 +35,6 @@
     }
   }
 
-  .dots {
-    position: absolute;
-    right: 0;
-    top: 0;
-    flex-direction: row;
-
-    ul {
-      margin: 0;
-      padding: 0 0 0 1rem;
-      list-style: none;
-      background-color: $furniture-dots-bg;
-      transform: translateY(15px);
-
-      li {
-        display: inline-block;
-        margin-left: 0.5rem;
-
-        a {
-          display: block;
-          width: 13px;
-          height: 13px;
-          border-radius: 6px;
-          background-color: $furniture-border-color;
-          font-size: 0;
-
-          &.active,
-          &:hover {
-            background-color: $primary;
-          }
-        }
-      }
-    }
-  }
-
   .icon {
     position: relative;
     margin-top: 40px;
@@ -82,13 +51,10 @@
     background-image: none;
     background-color: $header-topbar-bg;
     border-radius: 5px;
+    object-fit: cover;
   }
-
-  span {
     .name {
       font-weight: 700;
-      color: $text-color;
+      color: $footer-copyright-color;
     }
-  }
-
 }

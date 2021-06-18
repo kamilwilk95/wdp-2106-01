@@ -766,7 +766,7 @@ const initialState = {
       id: 'feedback1',
       text:
         'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip',
-      foto: '',
+      photo: '',
       name: 'John Doe',
       description: 'Furniture client',
     },
@@ -774,7 +774,7 @@ const initialState = {
       id: 'feedback2',
       text:
         'Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium doloremque laudantium, totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi architecto beatae vitae dicta',
-      foto: '',
+      photo: '',
       name: 'John Smith',
       description: 'New bed owner',
     },
@@ -782,7 +782,7 @@ const initialState = {
       id: 'feedback3',
       text:
         'At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident',
-      foto: '',
+      photo: '',
       name: 'Kristoff Koloski',
       description: 'Kitchen designer',
     },
