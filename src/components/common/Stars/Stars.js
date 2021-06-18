@@ -13,9 +13,8 @@ function Stars(props) {
     { id: 5, hover: false },
   ];
 
-  const [data, setData] = useState(defaultStarsData);
-
   const [touch, setTouch] = useState(false);
+  const [data, setData] = useState(defaultStarsData);
 
   function changeStars(id) {
     const newStarsData = [...defaultStarsData];
@@ -45,6 +44,89 @@ function Stars(props) {
     setTouch(false);
   }
 
+  function basicLook(i) {
+    return i.id <= props.stars ? (
+      <FaStar
+        onClick={e => (props.changeMyStarsChoice(i.id, props.id), e.preventDefault())}
+        className={styles.normal}
+      >
+        {i.id} stars
+      </FaStar>
+    ) : (
+      <FaRegStar
+        onClick={e => (props.changeMyStarsChoice(i.id, props.id), e.preventDefault())}
+        className={styles.normal}
+      >
+        {i.id} stars
+      </FaRegStar>
+    );
+  }
+
+  function isHoverFromBasicLook(i) {
+    return i.hover ? (
+      <FaStar
+        onClick={e => (props.changeMyStarsChoice(i.id, props.id), e.preventDefault())}
+        onMouseEnter={() => changeStars(i.id)}
+        onMouseLeave={() => returnToBasicForm()}
+        className={i.hover ? styles.hover : styles.normal}
+      >
+        {i.id} stars
+      </FaStar>
+    ) : (
+      <FaRegStar
+        className={styles.normal}
+        onMouseEnter={() => changeStars(i.id)}
+        onMouseLeave={() => returnToBasicForm()}
+      >
+        {i.id} stars
+      </FaRegStar>
+    );
+  }
+
+  function checkStars(i) {
+    return i.id <= props.myStarsChoice ? (
+      <FaStar
+        onClick={e => (props.changeMyStarsChoice(i.id, props.id), e.preventDefault())}
+        className={styles.hover}
+      >
+        {i.id} stars
+      </FaStar>
+    ) : (
+      <FaRegStar className={styles.normal}>{i.id} stars</FaRegStar>
+    );
+  }
+
+  function uncheckStars(i) {
+    return i.hover ? (
+      <FaStar
+        onClick={e => (props.changeMyStarsChoice(i.id, props.id), e.preventDefault())}
+        onMouseEnter={() => changeStars(i.id)}
+        onMouseLeave={() => returnToBasicForm()}
+        className={i.hover ? styles.hover : styles.normal}
+      >
+        {i.id} stars
+      </FaStar>
+    ) : (
+      <FaRegStar
+        className={styles.normal}
+        onMouseEnter={() => changeStars(i.id)}
+        onMouseLeave={() => returnToBasicForm()}
+      >
+        {i.id} stars
+      </FaRegStar>
+    );
+  }
+
+  function getStars(i) {
+    return props.myStarsChoice !== 0
+      ? touch
+        ? uncheckStars(i)
+        : checkStars(i)
+      : touch
+      ? isHoverFromBasicLook(i)
+      : basicLook(i);
+  }
+
   return (
     <div
       className={styles.stars}
@@ -56,80 +138,7 @@ function Stars(props) {
     >
       {data.map(i => (
         <a key={i.id} href='#'>
-          {props.myStarsChoice !== 0 ? (
-            touch ? (
-              i.hover ? (
-                <FaStar
-                  onClick={e => (
-                    props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
-                  )}
-                  onMouseEnter={() => changeStars(i.id)}
-                  onMouseLeave={() => returnToBasicForm()}
-                  className={i.hover ? styles.hover : styles.normal}
-                >
-                  {i.id} stars
-                </FaStar>
-              ) : (
-                <FaRegStar
-                  className={styles.normal}
-                  onMouseEnter={() => changeStars(i.id)}
-                  onMouseLeave={() => returnToBasicForm()}
-                >
-                  {i.id} stars
-                </FaRegStar>
-              )
-            ) : i.id <= props.myStarsChoice ? (
-              <FaStar
-                onClick={e => (
-                  props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
-                )}
-                className={styles.hover}
-              >
-                {i.id} stars
-              </FaStar>
-            ) : (
-              <FaRegStar className={styles.normal}>{i.id} stars</FaRegStar>
-            )
-          ) : touch ? (
-            i.hover ? (
-              <FaStar
-                onClick={e => (
-                  props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
-                )}
-                onMouseEnter={() => changeStars(i.id)}
-                onMouseLeave={() => returnToBasicForm()}
-                className={i.hover ? styles.hover : styles.normal}
-              >
-                {i.id} stars
-              </FaStar>
-            ) : (
-              <FaRegStar
-                className={styles.normal}
-                onMouseEnter={() => changeStars(i.id)}
-                onMouseLeave={() => returnToBasicForm()}
-              >
-                {i.id} stars
-              </FaRegStar>
-            )
-          ) : i.id <= props.stars ? (
-            <FaStar
-              onClick={e => (
-                props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
-              )}
-              className={styles.normal}
-            >
-              {i.id} stars
-            </FaStar>
-          ) : (
-            <FaRegStar
-              onClick={e => (
-                props.changeMyStarsChoice(i.id, props.id), e.preventDefault()
-              )}
-              className={styles.normal}
-            >
-              {i.id} stars
-            </FaRegStar>
-          )}
+          {getStars(i)}
         </a>
       ))}
     </div>
