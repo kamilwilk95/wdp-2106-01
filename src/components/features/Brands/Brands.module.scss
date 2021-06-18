@@ -5,14 +5,14 @@
   .container {
     position: relative;
     .button {
-        height: 60px;
-        display: flex;
-        align-items: center;
+      height: 60px;
+      display: flex;
+      align-items: center;
     }
   }
   .container::after {
     position: absolute;
-    content: '';
+    content: "";
     bottom: -12px;
     left: 50%;
     width: 98%;
@@ -22,7 +22,7 @@
   }
   .container::before {
     position: absolute;
-    content: '';
+    content: "";
     top: -12px;
     left: 50%;
     width: 98%;
@@ -31,4 +31,3 @@
     background-color: $feature-border-color;
   }
 }
-
