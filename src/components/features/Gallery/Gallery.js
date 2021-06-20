@@ -60,21 +60,25 @@ const Gallery = ({ gallery }) => {
                 <Promotion />
               </div>
             </div>
-            <div className={styles.slider}>
+            <div className={styles.buttonField}>
               <button className={styles.sliderBtnLeft}>
                 <AiOutlineLeft className={styles.icon} />
               </button>
+            </div>
+            <div className={styles.slider}>
               {gallery.advImgs.map(photo => (
                 <div className={styles.slide} key={photo.id}>
-                  <div className={styles.slide}>
-                    <img
-                      className={photo.active ? '' : ' ' + styles.inactive}
-                      src={photo.pic}
-                      alt={'furniture-sale-' + photo.id}
-                    />
-                  </div>
+                  {/* <div className={styles.slide}> */}
+                  <img
+                    className={photo.active ? '' : ' ' + styles.inactive}
+                    src={photo.pic}
+                    alt={'furniture-sale-' + photo.id}
+                  />
+                  {/* </div> */}
                 </div>
               ))}
+            </div>
+            <div className={styles.buttonField}>
               <button className={styles.sliderBtnRight}>
                 <AiOutlineRight className={styles.icon} />
               </button>
