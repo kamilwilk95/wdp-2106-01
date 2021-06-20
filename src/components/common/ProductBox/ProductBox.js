@@ -1,5 +1,6 @@
 import React from 'react';
 import PropTypes from 'prop-types';
+import { Link } from 'react-router-dom';
 
 import styles from './ProductBox.module.scss';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
@@ -24,7 +25,9 @@ const ProductBox = ({
 }) => (
   <div className={styles.root}>
     <div className={styles.photo}>
-      <img className={styles.image} src={photo} alt='furniture' />
+      <Link to={`/product/${id}`}>
+        <img className={styles.image} src={photo} alt='furniture' />
+      </Link>
       {promo && <div className={styles.sale}>{promo}</div>}
       <div className={styles.buttons}>
         <Button variant='small'>Quick View</Button>
