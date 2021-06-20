@@ -1,6 +1,5 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
 import ProductBox from '../../common/ProductBox/ProductBox';
 import Swipeable from '../../layout/Swipeable/Swipeable';
@@ -9,14 +8,13 @@ class NewFurniture extends React.Component {
   state = {
     activePage: 0,
     activeCategory: 'bed',
-    index: 0,
     activePageStyle: styles.fadeIn,
   };
 
   handlePageChange(newPage) {
     this.setState({ activePageStyle: styles.fadeOut });
     setTimeout(() => {
-      this.setState({ activePage: newPage, activePageStyle: styles.fadeIn });
+      this.setState({ activePage: newPage.index, activePageStyle: styles.fadeIn });
     }, 1000);
   }
 
@@ -40,26 +38,11 @@ class NewFurniture extends React.Component {
     const { categories, products } = this.props;
     const { activeCategory, activePage } = this.state;
     const categoryProducts = products.filter(item => item.category === activeCategory);
-    const pagesCount = Math.ceil(categoryProducts.length / 8);
-    this.splitToChunks(categoryProducts);
-    const dots = [];
-    for (let i = 0; i < pagesCount; i++) {
-      dots.push(
-        <li>
-          <a
-            onClick={() => this.handlePageChange(i)}
-            className={i === activePage && styles.active}
-          >
-            page {i}
-          </a>
-        </li>
-      );
-    }
     return (
       <div className={styles.root}>
         <div className='container'>
           <div className={styles.panelBar}>
-            <div className='row no-gutters align-items-end'>
+            <div className={'row no-gutters ' + styles.headerWidth}>
               <div className={'col-auto ' + styles.heading}>
                 <h3>New furniture</h3>
               </div>
@@ -70,7 +53,8 @@ class NewFurniture extends React.Component {
                       <a
                         className={item.id === activeCategory && styles.active}
                         onClick={() => (
-                          this.handleCategoryChange(item.id), this.handlePageChange(0)
+                          this.handleCategoryChange(item.id),
+                          this.setState({ activePage: 0 })
                         )}
                       >
                         {item.name}
@@ -79,15 +63,12 @@ class NewFurniture extends React.Component {
                   ))}
                 </ul>
               </div>
-              <div className={'col-auto ' + styles.dots}>
-                <ul>{dots}</ul>
-              </div>
             </div>
           </div>
           <Swipeable
             containerClassName={styles.swipeWrap}
-            currentValue={activePage}
-            parentCallback={this.handlePageChange.bind(this)}
+            rightAction={this.handlePageChange.bind(this)}
+            leftAction={this.handlePageChange.bind(this)}
           >
             {this.splitToChunks(categoryProducts).map(element =>
               element.map(product => (

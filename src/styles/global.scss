@@ -22,3 +22,31 @@ $max-mobile-width: 576px;
     @content;
   }
 }
+
+.swiper{
+  position:relative;
+  .rec.rec-dot {
+    display: block;
+      &:focus {
+      box-shadow: 0 0 1px 3px $primary;
+    }
+      &:hover {
+      box-shadow: 0 0 1px 3px $primary;
+    }
+    };
+    .rec.rec-dot.rec-dot_active{
+      background-color: $primary;
+      box-shadow: 0 0 1px 3px $primary;
+    };
+    .rec.rec-arrow {
+      display: none;
+    }
+    .rec.rec-pagination{
+    position: absolute;
+    top:-60px;
+    right:5px;
+  }
+}
+
+
+

@@ -1,40 +1,30 @@
-import React, { useState } from 'react';
-import { Swiper, SwiperSlide } from 'swiper/react';
-import 'swiper/swiper-bundle.css';
+import React from 'react';
 import PropTypes from 'prop-types';
+import Carousel from 'react-elastic-carousel';
+import '../../../styles/global.scss';
 
 function Swipeable(props) {
-  const [index, setIndex] = useState(0);
-  const handleAddValue = () => {
-    const newValue = index + 1;
-    setIndex(newValue);
-    return index + 1;
-  };
-  const handleDelateValue = () => {
-    const newValue = index - 1;
-    setIndex(newValue);
-    return index - 1;
-  };
   return (
-    <div>
-      <Swiper
-        observer={true}
-        observeParents={true}
-        onSlideNextTransitionEnd={() => props.parentCallback(handleAddValue())}
-        onSlidePrevTransitionEnd={() => props.parentCallback(handleDelateValue())}
+    <div className='swiper  pb-3 '>
+      <Carousel
+        itemsToShow={1}
+        initialActiveIndex={0}
+        onNextEnd={pageIndex => props.rightAction(pageIndex)}
+        onPrevEnd={pageIndex => props.rightAction(pageIndex)}
       >
         {props.children.map(child => (
-          <SwiperSlide key={child.key} className={props.containerClassName}>
+          <div key={child.key} className={props.containerClassName}>
             {child}
-          </SwiperSlide>
+          </div>
         ))}
-      </Swiper>
+      </Carousel>
     </div>
   );
 }
 
 Swipeable.propTypes = {
-  parentCallback: PropTypes.func,
+  rightAction: PropTypes.func,
+  leftAction: PropTypes.func,
   children: PropTypes.node,
   containerClassName: PropTypes.string,
 };
