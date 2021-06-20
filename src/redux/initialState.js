@@ -787,50 +787,194 @@ const initialState = {
       description: 'Kitchen designer',
     },
   ],
-  gallery: {
-    advertisement: 'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg',
-    sale: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
-    name: 'Aenean Ru Bristique 1',
-    stars: 2,
-    icons: [
+  gallery: [
+    {
+      sectionName: 'Features',
+      advertisement:
+        'https://images.pexels.com/photos/3837464/pexels-photo-3837464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      sale:
+        'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      name: 'Aenean Ru Bristique 2',
+      stars: 2,
+      advImgs: [
+        {
+          pic:
+            'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '1',
+          active: true,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: '2',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: '3',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '4',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: '5',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: '6',
+          active: false,
+        },
+      ],
+    },
+    {
+      sectionName: 'Top seller',
+      advertisement: 'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg',
+      sale: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
+      name: 'Aenean Ru Bristique 1',
+      stars: 2,
+      advImgs: [
+        {
+          pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
+          id: '1',
+          active: true,
+        },
+        {
+          pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
+          id: '2',
+          active: false,
+        },
+        {
+          pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
+          id: '3',
+          active: false,
+        },
+        {
+          pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
+          id: '4',
+          active: false,
+        },
+        {
+          pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
+          id: '5',
+          active: false,
+        },
+        {
+          pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
+          id: '6',
+          active: false,
+        },
+      ],
+    },
+    {
+      sectionName: 'Sale off',
+      advertisement:
+        'https://images.pexels.com/photos/5625130/pexels-photo-5625130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+      sale:
+        'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      name: 'Aenean Ru Bristique 3',
+      stars: 2,
+      advImgs: [
+        {
+          pic:
+            'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '1',
+          active: true,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: '2',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/276566/pexels-photo-276566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '3',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '4',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: '5',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/276566/pexels-photo-276566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '6',
+          active: false,
+        },
+      ],
+    },
+    {
+      sectionName: 'Top rated',
+      advertisement:
+        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9c34xWY8BMLEK5Q-yCwcCqI9HtTi6o-D6eQ&usqp=CAU',
+      sale:
+        'https://images.pexels.com/photos/890669/pexels-photo-890669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+      name: 'Aenean Ru Bristique 3',
+      stars: 2,
+      advImgs: [
+        {
+          pic:
+            'https://images.pexels.com/photos/890669/pexels-photo-890669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '1',
+          active: true,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/631411/pexels-photo-631411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '2',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/280471/pexels-photo-280471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '3',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/890669/pexels-photo-890669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '4',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/631411/pexels-photo-631411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '5',
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/280471/pexels-photo-280471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: '6',
+          active: false,
+        },
+      ],
+    },
+    /*[
       { icon: 'faHeart', id: '1' },
       { icon: 'faExchangeAlt', id: '2' },
       { icon: 'faEye', id: '3' },
       { icon: 'faShoppingBasket', id: '4' },
-    ],
-    advImgs: [
-      {
-        pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
-        id: '1',
-        active: true,
-      },
-      {
-        pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
-        id: '2',
-        active: false,
-      },
-      {
-        pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
-        id: '3',
-        active: false,
-      },
-      {
-        pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
-        id: '4',
-        active: false,
-      },
-      {
-        pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
-        id: '5',
-        active: false,
-      },
-      {
-        pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
-        id: '6',
-        active: false,
-      },
-    ],
-  },
+    ],*/
+  ],
 };
 
 export default initialState;
