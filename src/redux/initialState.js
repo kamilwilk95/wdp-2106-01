@@ -787,6 +787,32 @@ const initialState = {
       description: 'Kitchen designer',
     },
   ],
+  blog: [
+    {
+      id: 1,
+      name: 'Products that fight static',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      date: '15 Jan 2016',
+      comments: '4 comments',
+    },
+    {
+      id: 2,
+      name: 'Products that fight static',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      date: '15 Jan 2016',
+      comments: '4 comments',
+    },
+    {
+      id: 3,
+      name: 'Products that fight static',
+      text:
+        'Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.',
+      date: '15 Jan 2016',
+      comments: '4 comments',
+    },
+  ],
   gallery: {
     advertisement: 'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg',
     sale: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
