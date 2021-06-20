@@ -1,4 +1,5 @@
 @import "../../../styles/settings.scss";
+@import "../../../styles/global.scss";
 
 .root {
   .footerMenu {
@@ -44,6 +45,12 @@
     }
   }
 
+  @include tablet {
+    img {
+      width: 160px;
+    }
+  }
+
   .bottomBar {
     background-color: $footer-claim-bg;
 
@@ -83,3 +90,4 @@
     }
   }
 }
+

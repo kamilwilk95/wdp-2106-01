@@ -103,6 +103,7 @@
     }
   }
 }
+
 .fadeIn {
   opacity: 1;
   transition: opacity 1s;
@@ -114,8 +115,8 @@
   flex-wrap: wrap;
 }
 .fadeOut {
-    opacity: 0;
-    transition: opacity 1s
+  opacity: 0;
+  transition: opacity 1s;
 }
 
 .swipeWrap{

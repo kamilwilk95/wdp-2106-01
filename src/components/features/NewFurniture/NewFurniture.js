@@ -1,8 +1,8 @@
 import React from 'react';
 import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
-import ProductBox from '../../common/ProductBox/ProductBox';
 import Swipeable from '../../layout/Swipeable/Swipeable';
+import ProductBoxContainer from '../../common/ProductBox/ProductBoxContainer.js';
 
 class NewFurniture extends React.Component {
   state = {
@@ -73,7 +73,7 @@ class NewFurniture extends React.Component {
             {this.splitToChunks(categoryProducts).map(element =>
               element.map(product => (
                 <div key={product.id} className='col-3'>
-                  <ProductBox {...product} />
+                  <ProductBoxContainer {...product} />
                 </div>
               ))
             )}
@@ -83,7 +83,6 @@ class NewFurniture extends React.Component {
     );
   }
 }
-
 NewFurniture.propTypes = {
   children: PropTypes.node,
   categories: PropTypes.arrayOf(

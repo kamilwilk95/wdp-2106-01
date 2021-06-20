@@ -117,9 +117,8 @@
       }
     }
   }
-
-  .active {
-    background-color: #2a2a2a;
-    color: #ffffff;
+  .active{
+    background-color: $darkGray;
+    color: $white;
   }
 }
