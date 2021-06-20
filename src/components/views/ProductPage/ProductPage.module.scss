@@ -16,6 +16,7 @@
       justify-content: space-between;
       align-items: center;
       padding: 20px 0;
+
       h3 {
         text-transform: uppercase;
         margin: 0;
@@ -26,6 +27,7 @@
     }
 
     .productDescription {
+      position: relative;
       height: 700px;
       display: flex;
       flex-flow: row nowrap;
@@ -33,6 +35,35 @@
       background: $white;
       border: 1px solid $gray-5;
 
+      .btns {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 15px;
+
+        button {
+          background: $white;
+          height: 40px;
+          width: 28px;
+          height: 100%;
+          border: 1px solid $darkGray;
+          margin-left: 5px;
+
+          &:hover {
+            background: $darkOrange;
+
+            .icon {
+              color: white;
+              border: 1px solid $darkOrange;
+            }
+          }
+
+          .icon {
+            font-weight: 800;
+            color: $darkGray;
+          }
+        }
+      }
       .image {
         padding: 15px;
         width: 44%;

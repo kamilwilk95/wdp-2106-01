@@ -4,6 +4,8 @@ import React from 'react';
 import styles from './ProductPage.module.scss';
 
 import Stars from '../../common/Stars/Stars';
+import { AiOutlineLeft } from 'react-icons/ai';
+import { AiOutlineRight } from 'react-icons/ai';
 
 const ProductPage = () => (
   <div className={styles.root}>
@@ -21,6 +23,14 @@ const ProductPage = () => (
             />
           </div>
           <div className={styles.description}>
+            <div className={styles.btns}>
+              <button>
+                <AiOutlineLeft className={styles.icon} />
+              </button>
+              <button>
+                <AiOutlineRight className={styles.icon} />
+              </button>
+            </div>
             <div className={styles.header}>
               <h3>Sunday Magic Bear Sofa</h3>
               <div className={styles.rating}>
