@@ -1,8 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-
 import styles from './NewFurniture.module.scss';
-import ProductBoxContainer from '../../common/ProductBox/ProductBoxContainer';
+import ProductBoxContainer from '../../common/ProductBox/ProductBoxContainer.js';
 
 class NewFurniture extends React.Component {
   state = {
@@ -28,10 +27,8 @@ class NewFurniture extends React.Component {
   render() {
     const { categories, products } = this.props;
     const { activeCategory, activePage, activePageStyle } = this.state;
-
     const categoryProducts = products.filter(item => item.category === activeCategory);
     const pagesCount = Math.ceil(categoryProducts.length / 8);
-
     const dots = [];
     for (let i = 0; i < pagesCount; i++) {
       dots.push(
@@ -84,7 +81,6 @@ class NewFurniture extends React.Component {
     );
   }
 }
-
 NewFurniture.propTypes = {
   children: PropTypes.node,
   categories: PropTypes.arrayOf(
