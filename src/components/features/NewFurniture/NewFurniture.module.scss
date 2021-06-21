@@ -8,7 +8,9 @@
     :global(.row) > * {
       border-bottom: 4px solid $furniture-border-color;
     }
-
+    .headerWidth{
+      width: 94% ;
+    }
     .heading {
       position: relative;
 
@@ -109,8 +111,16 @@
   -moz-transition: opacity 1s;
   -ms-transition: opacity 1s;
   -o-transition: opacity 1s;
+  display: flex;
+  flex-wrap: wrap;
 }
 .fadeOut {
   opacity: 0;
   transition: opacity 1s;
+}
+
+.swipeWrap{
+  display: flex;
+  flex-wrap: wrap;
+  width: 1300px;
 }
