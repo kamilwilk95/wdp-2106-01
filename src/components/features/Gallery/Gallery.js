@@ -1,15 +1,15 @@
 import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
-import { AiOutlineHeart } from 'react-icons/ai';
-import { AiFillEye } from 'react-icons/ai';
 import { FaExchangeAlt } from 'react-icons/fa';
 import { BiBasket } from 'react-icons/bi';
-import { AiOutlineLeft } from 'react-icons/ai';
-import { AiOutlineRight } from 'react-icons/ai';
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faStar } from '@fortawesome/free-solid-svg-icons';
-import { faStar as farStar } from '@fortawesome/free-regular-svg-icons';
+import {
+  AiOutlineRight,
+  AiOutlineLeft,
+  AiFillEye,
+  AiOutlineHeart,
+} from 'react-icons/ai';
+import Promotion from '../../common/Promotion/Promotion';
 
 function Gallery({ gallery, setActive }) {
   const [activeCategory, setCategory] = useState('Features');
@@ -80,59 +80,26 @@ function Gallery({ gallery, setActive }) {
                   </div>
                   <div className={styles.image} key={photoIndex}>
                     <img src={value} alt={'furniture-sale-' + photoIndex} />
-                    <div className={styles.content}>
-                      <div className={styles.triangle1}></div>
-                      {section.priceTop ? (
-                        <div className={styles.discount}>
-                          <div>
-                            <p>{section.priceActuall}</p>
-                            <p>{section.priceTop}</p>
-                          </div>
-                        </div>
-                      ) : null}
-                      <h5>{section.name}</h5>
-                      <div className={styles.stars}>
-                        {[1, 2, 3, 4, 5].map(i => (
-                          <a key={i} href='#'>
-                            {i <= section.stars ? (
-                              <FontAwesomeIcon icon={faStar}>{i} stars</FontAwesomeIcon>
-                            ) : (
-                              <FontAwesomeIcon icon={farStar}>
-                                {i} stars
-                              </FontAwesomeIcon>
-                            )}
-                          </a>
-                        ))}
-                      </div>
-                    </div>
+                    <Promotion
+                      name={section.name}
+                      stars={section.stars}
+                      priceActuall={section.priceActuall}
+                      priceTop={section.priceTop}
+                    />
                   </div>
                   <div className={styles.slider}>
-                    {photoIndex == 1 ? (
-                      <button
-                        className={styles.sliderBtnLeft}
-                        type='button'
-                        disabled
-                        onClick={() =>
-                          photoIndex == 1
-                            ? setPhotoIndex(1)
-                            : setPhotoIndex(photoIndex - 1)
-                        }
-                      >
-                        <AiOutlineLeft className={styles.icon} />
-                      </button>
-                    ) : (
-                      <button
-                        className={styles.sliderBtnLeft}
-                        onClick={() =>
-                          photoIndex == 1
-                            ? (setPhotoIndex(1), setActive(1, true, activeCategory))
-                            : (setPhotoIndex(parseInt(photoIndex) + -1),
-                              setActive(photoIndex - 1, true, activeCategory))
-                        }
-                      >
-                        <AiOutlineLeft className={styles.icon} />
-                      </button>
-                    )}
+                    <button
+                      className={styles.sliderBtnLeft}
+                      disabled={photoIndex == 1}
+                      onClick={() =>
+                        photoIndex == 1
+                          ? (setPhotoIndex(1), setActive(1, true, activeCategory))
+                          : (setPhotoIndex(parseInt(photoIndex) + -1),
+                            setActive(photoIndex - 1, true, activeCategory))
+                      }
+                    >
+                      <AiOutlineLeft className={styles.icon} />
+                    </button>
 
                     {section.advImgs.map(photo => (
                       <div className={styles.slide} key={photo.id}>
@@ -156,6 +123,7 @@ function Gallery({ gallery, setActive }) {
                     ))}
                     <button
                       className={styles.sliderBtnRight}
+                      disabled={photoIndex == 6}
                       onClick={() =>
                         photoIndex == 6
                           ? (setPhotoIndex(6), setActive(6, true, activeCategory))
