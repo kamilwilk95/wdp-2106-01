@@ -19,7 +19,7 @@ const ProductPage = () => (
           <div className={styles.image}>
             <img
               src='https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg'
-              alt='product-photo'
+              alt='product'
             />
           </div>
           <div className={styles.description}>
@@ -41,6 +41,10 @@ const ProductPage = () => (
             <div className={styles.price}>
               <p>$350.00</p>
               <p>$250.00</p>
+            </div>
+            <div className={styles.buttons}>
+              <div className={styles.row}></div>
+              <div className={styles.row}></div>
             </div>
           </div>
         </div>
