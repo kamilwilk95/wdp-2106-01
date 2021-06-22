@@ -6,6 +6,11 @@ import styles from './ProductPage.module.scss';
 import Stars from '../../common/Stars/Stars';
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
+import { IoMdResize } from 'react-icons/io';
+import { AiOutlineHeart } from 'react-icons/ai';
+import { AiOutlineMail } from 'react-icons/ai';
+import { FaExchangeAlt } from 'react-icons/fa';
+import { BiBasket } from 'react-icons/bi';
 
 const ProductPage = () => (
   <div className={styles.root}>
@@ -21,6 +26,7 @@ const ProductPage = () => (
               src='https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg'
               alt='product'
             />
+            <IoMdResize className={styles.icon} />
           </div>
           <div className={styles.description}>
             <div className={styles.btns}>
@@ -43,8 +49,35 @@ const ProductPage = () => (
               <p>$250.00</p>
             </div>
             <div className={styles.buttons}>
-              <div className={styles.row}></div>
-              <div className={styles.row}></div>
+              <div className={styles.row1}>
+                <button>
+                  <BiBasket /> ADD TO CART
+                </button>
+                <AiOutlineHeart className={styles.button} />
+                <AiOutlineMail className={styles.button} />
+                <FaExchangeAlt className={styles.button} />
+              </div>
+              <div className={styles.row2}>
+                <p>Quantity:</p>
+                <input type='text'></input>
+                <btn className={styles.button}>+</btn>
+                <btn className={styles.button}>-</btn>
+              </div>
+            </div>
+            <div className={styles.text}>
+              <h4>Quick overview</h4>
+              <p>
+                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod
+                tempor incididunt ut labore et dolore magna aliqua.
+              </p>
+            </div>
+            <div className={styles.avabilability}>
+              <p>
+                <span>Avabilability:</span> in Stock
+              </p>
+              <p>
+                <span>Category:</span>Furniture
+              </p>
             </div>
           </div>
         </div>
