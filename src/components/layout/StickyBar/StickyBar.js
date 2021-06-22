@@ -7,9 +7,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 function StickyBar(props) {
   const listOfComparingProducts = props.products.filter(
-    element => element.addedToCompare === true
+    element => element.addToCompare === true
   );
-  //console.log(listOfComparingProducts);
 
   return (
     <div
