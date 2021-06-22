@@ -749,6 +749,7 @@ const initialState = {
       src: 'https://cdn.pixabay.com/photo/2015/12/08/00/26/desk-1081708_1280.jpg',
     },
   ],
+
   promotion: {
     leftImage:
       'https://media.istockphoto.com/photos/interior-with-armchair-and-coffee-table-3d-rendering-picture-id1158575634?k=6&m=1158575634&s=612x612&w=0&h=Fkh9dLz9W8TKkKwJstagndsCu92badT0y6m-w8iqB-g=',
@@ -790,190 +791,181 @@ const initialState = {
   gallery: [
     {
       sectionName: 'Features',
-      advertisement:
-        'https://images.pexels.com/photos/3837464/pexels-photo-3837464.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      sale:
-        'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       name: 'Aenean Ru Bristique 2',
       stars: 2,
+      priceActuall: '$150.00',
+      priceTop: '$110.00',
       advImgs: [
         {
           pic:
-            'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '1',
+            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 1,
           active: true,
         },
         {
           pic:
-            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          id: '2',
-          active: false,
-        },
-        {
-          pic:
-            'https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          id: '3',
-          active: false,
-        },
-        {
-          pic:
             'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '4',
-          active: false,
-        },
-        {
-          pic:
-            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          id: '5',
+          id: 2,
           active: false,
         },
         {
           pic:
             'https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          id: '6',
+          id: 3,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 4,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/945688/pexels-photo-945688.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 5,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/2440471/pexels-photo-2440471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 6,
           active: false,
         },
       ],
     },
     {
       sectionName: 'Top seller',
-      advertisement: 'https://i.ibb.co/3rjWWmJ/pexels-arina-krasnikova-5424972-1.jpg',
-      sale: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
       name: 'Aenean Ru Bristique 1',
       stars: 2,
+      priceActuall: '$160.00',
+      priceTop: '$120.00',
       advImgs: [
         {
-          pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
-          id: '1',
+          pic:
+            'https://images.pexels.com/photos/2995012/pexels-photo-2995012.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 1,
           active: true,
         },
         {
+          pic:
+            'https://images.pexels.com/photos/3797991/pexels-photo-3797991.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 2,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/4846455/pexels-photo-4846455.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 3,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/4846106/pexels-photo-4846106.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 4,
+          active: false,
+        },
+        {
           pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
-          id: '2',
+          id: 5,
           active: false,
         },
         {
-          pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
-          id: '3',
-          active: false,
-        },
-        {
-          pic: 'https://i.ibb.co/RjH10Wd/pexels-ksenia-chernaya-3965520-1.jpg',
-          id: '4',
-          active: false,
-        },
-        {
-          pic: 'https://i.ibb.co/b7m6BP3/pexels-cats-coming-707579-1.jpg',
-          id: '5',
-          active: false,
-        },
-        {
-          pic: 'https://i.ibb.co/yP3ZHX7/pexels-rachel-claire-4846455-1.jpg',
-          id: '6',
+          pic:
+            'https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 6,
           active: false,
         },
       ],
     },
     {
       sectionName: 'Sale off',
-      advertisement:
-        'https://images.pexels.com/photos/5625130/pexels-photo-5625130.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-      sale:
-        'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
       name: 'Aenean Ru Bristique 3',
       stars: 2,
+      priceActuall: '$180.00',
+      priceTop: '$100.00',
       advImgs: [
         {
           pic:
-            'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '1',
+            'https://images.pexels.com/photos/5997967/pexels-photo-5997967.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 1,
           active: true,
         },
         {
           pic:
-            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          id: '2',
+            'https://images.pexels.com/photos/4846086/pexels-photo-4846086.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 2,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/276566/pexels-photo-276566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '3',
+            'https://images.pexels.com/photos/5825695/pexels-photo-5825695.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 3,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/3757055/pexels-photo-3757055.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '4',
+            'https://images.pexels.com/photos/6438762/pexels-photo-6438762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 4,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
-          id: '5',
+            'https://images.pexels.com/photos/6198655/pexels-photo-6198655.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 5,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/276566/pexels-photo-276566.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '6',
+            'https://images.pexels.com/photos/3457299/pexels-photo-3457299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 6,
           active: false,
         },
       ],
     },
     {
       sectionName: 'Top rated',
-      advertisement:
-        'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ9c34xWY8BMLEK5Q-yCwcCqI9HtTi6o-D6eQ&usqp=CAU',
-      sale:
-        'https://images.pexels.com/photos/890669/pexels-photo-890669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-      name: 'Aenean Ru Bristique 3',
+      name: 'Aenean Ru Bristique 4',
       stars: 2,
       advImgs: [
         {
           pic:
-            'https://images.pexels.com/photos/890669/pexels-photo-890669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '1',
+            'https://images.pexels.com/photos/6312072/pexels-photo-6312072.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 1,
           active: true,
         },
         {
           pic:
-            'https://images.pexels.com/photos/631411/pexels-photo-631411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '2',
+            'https://images.pexels.com/photos/6480202/pexels-photo-6480202.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 2,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/280471/pexels-photo-280471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '3',
+            'https://images.pexels.com/photos/6198652/pexels-photo-6198652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 3,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/890669/pexels-photo-890669.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '4',
+            'https://images.pexels.com/photos/6143349/pexels-photo-6143349.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 4,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/631411/pexels-photo-631411.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '5',
+            'https://images.pexels.com/photos/6580232/pexels-photo-6580232.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 5,
           active: false,
         },
         {
           pic:
-            'https://images.pexels.com/photos/280471/pexels-photo-280471.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
-          id: '6',
+            'https://images.pexels.com/photos/6585622/pexels-photo-6585622.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 6,
           active: false,
         },
       ],
     },
-    /*[
-      { icon: 'faHeart', id: '1' },
-      { icon: 'faExchangeAlt', id: '2' },
-      { icon: 'faEye', id: '3' },
-      { icon: 'faShoppingBasket', id: '4' },
-    ],*/
   ],
 };
 
