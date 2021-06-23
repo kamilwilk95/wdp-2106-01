@@ -779,6 +779,30 @@ const initialState = {
       id: 12,
       src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
     },
+    {
+      id: 13,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 14,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 15,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 16,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 17,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
+    {
+      id: 18,
+      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+    },
   ],
   promotion: {
     leftImage:
