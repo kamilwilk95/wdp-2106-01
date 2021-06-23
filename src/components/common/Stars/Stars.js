@@ -118,13 +118,19 @@ function Stars(props) {
   }
 
   function getStars(i) {
-    return props.myStarsChoice !== 0
-      ? touch
-        ? uncheckStars(i)
-        : checkStars(i)
-      : touch
-      ? isHoverFromBasicLook(i)
-      : basicLook(i);
+    if (props.myStarsChoice !== 0) {
+      if (touch) {
+        return uncheckStars(i);
+      } else {
+        return checkStars(i);
+      }
+    } else {
+      if (touch) {
+        return isHoverFromBasicLook(i);
+      } else {
+        return basicLook(i);
+      }
+    }
   }
 
   return (
