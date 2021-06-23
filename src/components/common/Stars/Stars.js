@@ -119,12 +119,14 @@ function Stars(props) {
 
   function getStars(i) {
     return props.myStarsChoice !== 0
-      ? touch
+      ? /* eslint-disable */
+        touch
         ? uncheckStars(i)
         : checkStars(i)
       : touch
       ? isHoverFromBasicLook(i)
       : basicLook(i);
+    /* eslint-enable */
   }
 
   return (
