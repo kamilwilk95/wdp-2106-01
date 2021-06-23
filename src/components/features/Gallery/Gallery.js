@@ -88,7 +88,9 @@ function Gallery({ gallery, setActive }) {
                 <li key={item}>
                   <a
                     className={item === activeCategory ? styles.active : styles.hidden}
-                    onClick={() => (setCategory(item), setPhotoIndex('1'))}
+                    onClick={() => (
+                      setCategory(item), setPhotoIndex('1'), setActivePage(0)
+                    )}
                   >
                     {item}
                   </a>
