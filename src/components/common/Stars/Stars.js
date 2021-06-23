@@ -123,8 +123,10 @@ function Stars(props) {
         ? uncheckStars(i)
         : checkStars(i)
       : touch
-      ? isHoverFromBasicLook(i)
+      ? /* eslint-disable */
+        isHoverFromBasicLook(i)
       : basicLook(i);
+    /* eslint-enable */
   }
 
   return (
