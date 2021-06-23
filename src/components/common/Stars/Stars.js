@@ -123,10 +123,8 @@ function Stars(props) {
         ? uncheckStars(i)
         : checkStars(i)
       : touch
-      ? // eslint-disable-next-line indent
-        isHoverFromBasicLook(i)
-      : // eslint-disable-next-line indent
-        basicLook(i);
+      ? isHoverFromBasicLook(i)
+      : basicLook(i);
   }
 
   return (
