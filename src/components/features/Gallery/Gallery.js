@@ -53,26 +53,7 @@ function Gallery({ gallery, setActive }) {
   }
   const [n, setN] = useState(sliderSize());
   useEffect(() => {
-    function changeSlider() {
-      if (window.innerWidth > 1200) {
-        setN(6);
-      } else if (window.innerWidth < 1199 && window.innerWidth > 992) {
-        setN(5);
-      } else if (window.innerWidth < 991 && window.innerWidth > 768) {
-        setN(3);
-      } else if (window.innerWidth < 767 && window.innerWidth > 576) {
-        setN(2);
-      } else if (window.innerWidth < 575 && window.innerWidth > 514) {
-        setN(5);
-      } else if (window.innerWidth < 513 && window.innerWidth > 428) {
-        setN(4);
-      } else if (window.innerWidth < 427 && window.innerWidth > 346) {
-        setN(3);
-      } else if (window.innerWidth < 345 && window.innerWidth > 266) {
-        setN(2);
-      }
-    }
-    window.addEventListener('resize', changeSlider);
+    window.addEventListener('resize', () => setN(sliderSize));
   }, []);
   const pagesCount = Math.ceil(allPhotos.length / n);
   return (
