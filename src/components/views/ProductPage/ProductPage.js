@@ -1,9 +1,11 @@
 import React from 'react';
-// import PropTypes from 'prop-types';
+import PropTypes from 'prop-types';
 
 import styles from './ProductPage.module.scss';
 
 import Stars from '../../common/Stars/Stars';
+import Carousel from 'react-elastic-carousel';
+
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
 import { IoMdResize } from 'react-icons/io';
@@ -11,8 +13,13 @@ import { AiOutlineHeart } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaExchangeAlt } from 'react-icons/fa';
 import { BiBasket } from 'react-icons/bi';
+import { FaFacebookF } from 'react-icons/fa';
+import { AiFillGoogleCircle } from 'react-icons/ai';
+import { SiYahoo } from 'react-icons/si';
+import { FaLinkedinIn } from 'react-icons/fa';
+import { FaPinterestP } from 'react-icons/fa';
 
-const ProductPage = () => (
+const ProductPage = ({ gallery }) => (
   <div className={styles.root}>
     <div className={styles.grayRectangle}>
       <div className='container'>
@@ -21,12 +28,33 @@ const ProductPage = () => (
           <p>Home &gt; Furniture &gt; Chair</p>
         </div>
         <div className={styles.productDescription}>
-          <div className={styles.image}>
-            <img
-              src='https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg'
-              alt='product'
-            />
-            <IoMdResize className={styles.icon} />
+          <div className={styles.gallery}>
+            <div className={styles.image}>
+              <img
+                src='https://i.ibb.co/Kw9mJ44/pexels-martin-p-chy-1866149-1.jpg'
+                alt='product'
+              />
+              <IoMdResize className={styles.icon} />
+            </div>
+            <div className={styles.slider}>
+              <button className={styles.sliderBtnLeft}>
+                <AiOutlineLeft className={styles.icon} />
+              </button>
+              {gallery.advImgs.map(photo => (
+                <div className={styles.slide} key={photo.id}>
+                  <div className={styles.slide}>
+                    <img
+                      className={photo.active ? '' : ' ' + styles.inactive}
+                      src={photo.pic}
+                      alt={'furniture-sale-' + photo.id}
+                    />
+                  </div>
+                </div>
+              ))}
+              <button className={styles.sliderBtnRight}>
+                <AiOutlineRight className={styles.icon} />
+              </button>
+            </div>
           </div>
           <div className={styles.description}>
             <div className={styles.btns}>
@@ -60,8 +88,8 @@ const ProductPage = () => (
               <div className={styles.row2}>
                 <p>Quantity:</p>
                 <input type='text'></input>
-                <btn className={styles.button}>+</btn>
-                <btn className={styles.button}>-</btn>
+                <button className={styles.button}>+</button>
+                <button className={styles.button}>-</button>
               </div>
             </div>
             <div className={styles.text}>
@@ -79,6 +107,28 @@ const ProductPage = () => (
                 <span>Category:</span>Furniture
               </p>
             </div>
+            <div className={styles.socialMedia}>
+              <button>
+                <FaFacebookF className={styles.iconf} />
+                <p>Share</p>
+              </button>
+              <button>
+                <AiFillGoogleCircle className={styles.icong} />
+                <p>Google+</p>
+              </button>
+              <button>
+                <SiYahoo className={styles.icony} />
+                <p>Yahoo</p>
+              </button>
+              <button>
+                <FaLinkedinIn className={styles.iconl} />
+                <p>Linked In</p>
+              </button>
+              <button>
+                <FaPinterestP className={styles.iconp} />
+                <p>Pinterest</p>
+              </button>
+            </div>
           </div>
         </div>
       </div>
@@ -86,6 +136,8 @@ const ProductPage = () => (
   </div>
 );
 
-ProductPage.propTypes = {};
+ProductPage.propTypes = {
+  gallery: PropTypes.object,
+};
 
 export default ProductPage;

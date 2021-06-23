@@ -65,30 +65,79 @@
         }
       }
 
-      .image {
+      .gallery {
         position: relative;
-        margin: 15px;
         width: 44%;
-        z-index: 999;
 
-        img {
-          width: 100%;
-          object-fit: contain;
+        .image {
+          position: relative;
+          margin: 15px;
+          // width: 44%;
+          z-index: 999;
+
+          img {
+            width: 100%;
+            object-fit: contain;
+          }
+
+          .icon {
+            position: absolute;
+            background: $white;
+            font-size: 40px;
+            padding: 10px;
+            color: $darkGray;
+            border: 1px solid $darkGray;
+            cursor: pointer;
+            right: 0;
+            top: 0;
+          }
         }
 
-        .icon {
+        .slider {
+          bottom: 0;
           position: absolute;
-          background: $white;
-          font-size: 40px;
-          padding: 10px;
-          color: $darkGray;
-          border: 1px solid $darkGray;
-          cursor: pointer;
-          right: 0;
-          top: 0;
+          border-bottom: 1px solid $gray-5;
+          border-left: 1px solid $gray-5;
+          border-right: 1px solid $gray-5;
+          display: flex;
+          justify-content: space-between;
+          padding: 5px;
+          height: 80px;
+          width: 44%;
+
+          .slide {
+            img {
+              height: 70px;
+              width: 70px;
+              object-fit: cover;
+              margin-right: 10px;
+            }
+
+            .inactive {
+              height: 70px;
+              opacity: 0.75;
+              background: $white;
+              left: 0;
+              top: 0;
+            }
+          }
+
+          button {
+            background: $darkGray;
+            height: 40px;
+            width: 30px;
+            height: 100%;
+
+            &:hover {
+              background: $darkOrange;
+            }
+
+            .icon {
+              color: $white;
+            }
+          }
         }
       }
-
       .description {
         margin-right: 15px;
         width: 54%;
@@ -220,6 +269,56 @@
           }
           &:last-of-type {
             margin-top: -15px;
+          }
+        }
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+
+        button {
+          margin: 15px 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid $darkGray;
+          background: $white;
+          color: $gray-5;
+          border-radius: 2px;
+          border: 1px solid $gray-5;
+          font-size: 20px;
+
+          .iconf {
+            color: rgb(47, 47, 224);
+          }
+          .icong {
+            color: rgb(122, 2, 2);
+          }
+          .icony {
+            color: rgb(0, 119, 255);
+          }
+          .iconl {
+            color: rgb(73, 0, 0);
+          }
+          .iconp {
+            color: rgb(81, 139, 245);
+          }
+
+          p {
+            margin: 0;
+            margin-left: 5px;
+            align-items: center;
+            font-size: 13px;
+            padding: 2px 0;
+          }
+        }
+        button:hover {
+          border: 1px solid $darkGray;
+
+          p {
+            color: $darkGray;
           }
         }
       }
