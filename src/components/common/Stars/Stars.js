@@ -123,8 +123,8 @@ function Stars(props) {
         ? uncheckStars(i)
         : checkStars(i)
       : touch
-      ? isHoverFromBasicLook(i)
-      : basicLook(i);
+        ? isHoverFromBasicLook(i)
+        : basicLook(i);
   }
 
   return (
