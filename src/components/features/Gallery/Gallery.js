@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useEffect, useState } from 'react';
 import PropTypes from 'prop-types';
 import styles from './Gallery.module.scss';
 import { FaExchangeAlt } from 'react-icons/fa';
@@ -13,6 +13,7 @@ import Promotion from '../../common/Promotion/Promotion';
 
 function Gallery({ gallery, setActive }) {
   const [activeCategory, setCategory] = useState('Features');
+  const [activePage, setActivePage] = useState(0);
   const categories = [];
   for (let i of gallery) {
     if (i.sectionName != undefined) {
@@ -22,13 +23,58 @@ function Gallery({ gallery, setActive }) {
   const [photoIndex, setPhotoIndex] = useState(1);
   gallery.map(section => section.advImgs.filter(element => photoIndex == element.id));
   let arrayWithValues;
+  let allPhotos;
   for (let i of gallery) {
     if (i.sectionName == activeCategory) {
+      allPhotos = i.advImgs;
       arrayWithValues = i.advImgs.filter(element => photoIndex == element.id);
     }
   }
   const value = arrayWithValues[0].pic;
 
+  function sliderSize() {
+    if (window.innerWidth > 1200) {
+      return 6;
+    } else if (window.innerWidth < 1199 && window.innerWidth > 992) {
+      return 5;
+    } else if (window.innerWidth < 991 && window.innerWidth > 768) {
+      return 3;
+    } else if (window.innerWidth < 767 && window.innerWidth > 576) {
+      return 2;
+    } else if (window.innerWidth < 575 && window.innerWidth > 514) {
+      return 5;
+    } else if (window.innerWidth < 513 && window.innerWidth > 428) {
+      return 4;
+    } else if (window.innerWidth < 427 && window.innerWidth > 346) {
+      return 3;
+    } else if (window.innerWidth < 345 && window.innerWidth > 266) {
+      return 2;
+    }
+  }
+  const [n, setN] = useState(sliderSize());
+  useEffect(() => {
+    function changeSlider() {
+      if (window.innerWidth > 1200) {
+        setN(6);
+      } else if (window.innerWidth < 1199 && window.innerWidth > 992) {
+        setN(5);
+      } else if (window.innerWidth < 991 && window.innerWidth > 768) {
+        setN(3);
+      } else if (window.innerWidth < 767 && window.innerWidth > 576) {
+        setN(2);
+      } else if (window.innerWidth < 575 && window.innerWidth > 514) {
+        setN(5);
+      } else if (window.innerWidth < 513 && window.innerWidth > 428) {
+        setN(4);
+      } else if (window.innerWidth < 427 && window.innerWidth > 346) {
+        setN(3);
+      } else if (window.innerWidth < 345 && window.innerWidth > 266) {
+        setN(2);
+      }
+    }
+    window.addEventListener('resize', changeSlider);
+  }, []);
+  const pagesCount = Math.ceil(allPhotos.length / n);
   return (
     <div className={styles.root}>
       <div className='container'>
@@ -89,47 +135,36 @@ function Gallery({ gallery, setActive }) {
                   </div>
                   <div className={styles.slider}>
                     <button
-                      className={styles.sliderBtnLeft}
-                      disabled={photoIndex == 1}
-                      onClick={() =>
-                        photoIndex == 1
-                          ? (setPhotoIndex(1), setActive(1, true, activeCategory))
-                          : (setPhotoIndex(parseInt(photoIndex) + -1),
-                            setActive(photoIndex - 1, true, activeCategory))
-                      }
+                      disabled={activePage == 0}
+                      onClick={() => setActivePage(activePage - 1)}
                     >
                       <AiOutlineLeft className={styles.icon} />
                     </button>
-
-                    {section.advImgs.map(photo => (
-                      <div className={styles.slide} key={photo.id}>
-                        <div className={styles.slide}>
-                          <img
-                            className={
-                              photo.active
-                                ? styles.activeElement
-                                : ' ' + styles.inactiveElement
-                            }
-                            key={photo.pic}
-                            src={photo.pic}
-                            alt={'furniture-sale-' + photo.id}
-                            onClick={() => (
-                              setPhotoIndex(photo.id),
-                              setActive(photo.id, true, activeCategory)
-                            )}
-                          />
+                    {section.advImgs
+                      .slice(activePage * n, (activePage + 1) * n)
+                      .map(photo => (
+                        <div className={styles.slide} key={photo.id}>
+                          <div className={styles.slide}>
+                            <img
+                              className={
+                                photo.active
+                                  ? styles.activeElement
+                                  : ' ' + styles.inactiveElement
+                              }
+                              key={photo.pic}
+                              src={photo.pic}
+                              alt={'furniture-sale-' + photo.id}
+                              onClick={() => (
+                                setPhotoIndex(photo.id),
+                                setActive(photo.id, true, activeCategory)
+                              )}
+                            />
+                          </div>
                         </div>
-                      </div>
-                    ))}
+                      ))}
                     <button
-                      className={styles.sliderBtnRight}
-                      disabled={photoIndex == 6}
-                      onClick={() =>
-                        photoIndex == 6
-                          ? (setPhotoIndex(6), setActive(6, true, activeCategory))
-                          : (setPhotoIndex(parseInt(photoIndex) + 1),
-                            setActive(photoIndex + 1, true, activeCategory))
-                      }
+                      disabled={activePage + 1 == pagesCount}
+                      onClick={() => setActivePage(activePage + 1)}
                     >
                       <AiOutlineRight className={styles.icon} />
                     </button>

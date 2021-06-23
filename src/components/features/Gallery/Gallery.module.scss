@@ -6,11 +6,11 @@
   .flex {
     display: flex;
     justify-content: space-between;
-    height: 600px;
+    height: 622px;
 
     .galleryFeature {
-      width: 49%;
       position:relative;
+      width: 49%;
 
       .slider {
         border-bottom: 1px solid $gray-5;
@@ -26,6 +26,7 @@
 
         .slide {
           img {
+            
             height: 70px;
             width: 70px;
             object-fit: cover;
@@ -58,6 +59,9 @@
 
           .icon {
             color: $white;
+          }
+          &:active{
+            background: $darkGray;
           }
         }
         button:disabled:hover{
@@ -239,6 +243,67 @@
       a:hover{
         color:$darkGray;
       }
+    }
+  }
+  @media (max-width: 991px) {
+    .menuBtns{
+      .hidden{
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-right:0;
+        padding-left:0;
+      }
+    }
+    .advertisement {
+      .triangle2{
+        p{
+          font-size: 30px;
+        }
+        a{
+          width:100px;
+          height:50px;
+          font-size:10px;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .menuBtns{
+      font-size:12px;
+      .hidden{
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-right:0;
+        padding-left:0;
+      }
+    }
+  }
+  @media (max-width: 575px){
+    .flex {
+      .galleryFeature {
+        display: none;
+      }
+      .galleryFeature:first-of-type {
+        display: block;
+        width: 100%;
+
+        .slider {
+          width: 100%;
+        }
+      }
+    }
+    .menuBtns{
+      font-size:20px;
+    }
+  }
+  @media (max-width: 427px){
+    .menuBtns{
+      font-size:15px;
+    }
+  }
+  @media (max-width: 326px){
+    .menuBtns{
+      font-size:12px;
     }
   }
 }

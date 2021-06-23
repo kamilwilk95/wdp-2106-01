@@ -858,6 +858,42 @@ const initialState = {
           id: 6,
           active: false,
         },
+        {
+          pic:
+            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 7,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/2440471/pexels-photo-2440471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 8,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/945688/pexels-photo-945688.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 9,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 10,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: 11,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/4846106/pexels-photo-4846106.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 12,
+          active: false,
+        },
       ],
     },
     {
@@ -900,6 +936,42 @@ const initialState = {
           pic:
             'https://images.pexels.com/photos/6492397/pexels-photo-6492397.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
           id: 6,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/2079246/pexels-photo-2079246.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940',
+          id: 7,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/1669799/pexels-photo-1669799.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 8,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/1866149/pexels-photo-1866149.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 9,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/945688/pexels-photo-945688.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 10,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/2440471/pexels-photo-2440471.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 11,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/189333/pexels-photo-189333.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 12,
           active: false,
         },
       ],
@@ -947,6 +1019,42 @@ const initialState = {
           id: 6,
           active: false,
         },
+        {
+          pic:
+            'https://images.pexels.com/photos/6438762/pexels-photo-6438762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 7,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/6198655/pexels-photo-6198655.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 8,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/6438762/pexels-photo-6438762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 9,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/5997967/pexels-photo-5997967.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 10,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/3457299/pexels-photo-3457299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 11,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/6198652/pexels-photo-6198652.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 12,
+          active: false,
+        },
       ],
     },
     {
@@ -988,6 +1096,42 @@ const initialState = {
           pic:
             'https://images.pexels.com/photos/6585622/pexels-photo-6585622.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
           id: 6,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/6198655/pexels-photo-6198655.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 7,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/3457299/pexels-photo-3457299.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 8,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/6438762/pexels-photo-6438762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 9,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/6198655/pexels-photo-6198655.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 10,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/6438762/pexels-photo-6438762.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 11,
+          active: false,
+        },
+        {
+          pic:
+            'https://images.pexels.com/photos/5997967/pexels-photo-5997967.jpeg?auto=compress&cs=tinysrgb&dpr=1&w=500',
+          id: 12,
           active: false,
         },
       ],
