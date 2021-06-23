@@ -2,10 +2,15 @@ import { connect } from 'react-redux';
 
 import Gallery from './Gallery';
 
-import { getAll } from '../../../redux/galleryRedux.js';
+import { createAction_setActive, getAll } from '../../../redux/galleryRedux.js';
 
 const mapStateToProps = state => ({
   gallery: getAll(state),
 });
 
-export default connect(mapStateToProps)(Gallery);
+const mapDispatchToProps = dispatch => ({
+  setActive: (id, value, category) =>
+    dispatch(createAction_setActive(id, value, category)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(Gallery);

@@ -66,14 +66,23 @@
     border-top: 21px solid $darkGray;
     border-right: 21px solid transparent;
   }
+}
+@media (min-width:100px) and (max-width:390px) and (min-width:575px) and (max-width: 767px) {
+  .content{
+    width:200px;
+    .discount{
+      width: 100px;
+      height: 100px;
+      bottom: 110px;
+      p {
+        &:first-of-type {
+          font-size: 18px !important;
+        }
 
-  .triangle2 {
-    position: absolute;
-    bottom: 0;
-    right: 0;
-    width: 0;
-    height: 0;
-    border-bottom: 21px solid $darkGray;
-    border-left: 21px solid transparent;
+        &:last-of-type {
+          font-size: 13px !important;
+        }
+      }
+    }
   }
 }
