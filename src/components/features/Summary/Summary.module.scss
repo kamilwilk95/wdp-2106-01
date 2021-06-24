@@ -1,0 +1,89 @@
+@import "../../../styles/settings.scss";
+
+.root {
+  height: 440px;
+  width: 100%;
+  margin: 40px 0;
+  border: 1px solid $gray-5;
+
+  .summaryBar {
+    display: inline;
+
+    button {
+      font-size: 15px;
+      border: none;
+      border-bottom: 1px solid $gray-5;
+      border-right: 1px solid $gray-5;
+      text-transform: uppercase;
+      background: $white;
+      padding: 10px 12px;
+    }
+    .active {
+      color: $darkOrange;
+      border-bottom: none;
+    }
+  }
+
+  .rating {
+    color: $gray-6;
+
+    p,
+    h3 {
+      font-size: 12px;
+      margin: 0;
+      padding: 15px;
+    }
+
+    h3 {
+      font-size: 15px;
+    }
+
+    .stars {
+      display: inline-block;
+    }
+
+    .rate {
+      display: inline-block;
+    }
+
+    .form {
+      label {
+        display: block;
+        font-size: 12px;
+        margin: 0;
+        padding: 15px;
+      }
+
+      .comment {
+        margin: 0 15px;
+        width: calc(100% - 30px);
+        height: 80px;
+      }
+
+      .name {
+        display: flex;
+        justify-content: space-between;
+        width: 100%;
+        margin-bottom: 15px;
+
+        input {
+          width: 45%;
+          margin: 15px;
+          height: 40px;
+        }
+
+        button {
+          font-size: 12px;
+          border: none;
+          border-radius: 2px;
+          height: 40px;
+          text-transform: uppercase;
+          background: $darkGray;
+          color: $white;
+          padding: 5px 20px;
+          margin: 15px;
+        }
+      }
+    }
+  }
+}

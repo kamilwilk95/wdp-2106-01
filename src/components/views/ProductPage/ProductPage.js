@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
 
 import Stars from '../../common/Stars/Stars';
+import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
@@ -17,6 +18,7 @@ import { AiFillGoogleCircle } from 'react-icons/ai';
 import { SiYahoo } from 'react-icons/si';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaPinterestP } from 'react-icons/fa';
+import Summary from '../../features/Summary/Summary';
 
 const ProductPage = ({ gallery }) => (
   <div className={styles.root}>
@@ -35,24 +37,28 @@ const ProductPage = ({ gallery }) => (
               />
               <IoMdResize className={styles.icon} />
             </div>
-            <div className={styles.slider}>
-              <button className={styles.sliderBtnLeft}>
-                <AiOutlineLeft className={styles.icon} />
-              </button>
-              {gallery.advImgs.map(photo => (
-                <div className={styles.slide} key={photo.id}>
-                  {/* <div className={styles.slide}> */}
-                  <img
-                    className={photo.active ? '' : ' ' + styles.inactive}
-                    src={photo.pic}
-                    alt={'furniture-sale-' + photo.id}
-                  />
-                  {/* </div> */}
-                </div>
-              ))}
-              <button className={styles.sliderBtnRight}>
-                <AiOutlineRight className={styles.icon} />
-              </button>
+            <div className={styles.gallerySlider}>
+              <div className={styles.buttonField}>
+                <button className={styles.sliderBtnLeft}>
+                  <AiOutlineLeft className={styles.icon} />
+                </button>
+              </div>
+              <div className={styles.slider}>
+                {gallery.advImgs.map(photo => (
+                  <div className={styles.slide} key={photo.id}>
+                    <img
+                      className={photo.active ? '' : ' ' + styles.inactive}
+                      src={photo.pic}
+                      alt={'furniture-sale-' + photo.id}
+                    />
+                  </div>
+                ))}
+              </div>
+              <div className={styles.buttonField}>
+                <button className={styles.sliderBtnRight}>
+                  <AiOutlineRight className={styles.icon} />
+                </button>
+              </div>
             </div>
           </div>
           <div className={styles.description}>
@@ -100,10 +106,10 @@ const ProductPage = ({ gallery }) => (
             </div>
             <div className={styles.avabilability}>
               <p>
-                <span>Avabilability:</span> in Stock
+                <span>Avabilability:</span> <p> in Stock</p>
               </p>
               <p>
-                <span>Category:</span>Furniture
+                <span>Category:</span> <p>Furniture</p>
               </p>
             </div>
             <div className={styles.socialMedia}>
@@ -129,6 +135,10 @@ const ProductPage = ({ gallery }) => (
               </button>
             </div>
           </div>
+        </div>
+        <div className={styles.summary}>
+          <Summary />
+          <NewFurniture />
         </div>
       </div>
     </div>
