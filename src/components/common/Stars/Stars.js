@@ -118,7 +118,6 @@ function Stars(props) {
   }
 
   function getStars(i) {
-<<<<<<< HEAD
     if (props.myStarsChoice !== 0) {
       if (touch) {
         return uncheckStars(i);
@@ -132,15 +131,6 @@ function Stars(props) {
         return basicLook(i);
       }
     }
-=======
-    return props.myStarsChoice !== 0
-      ? touch
-        ? uncheckStars(i)
-        : checkStars(i)
-      : touch
-        ? isHoverFromBasicLook(i)
-        : basicLook(i);
->>>>>>> 7345ddc (stars)
   }
 
   return (
