@@ -3,3 +3,368 @@
 .root {
   padding: $base-padding 0;
 }
+
+@import "../../../styles/settings.scss";
+
+.root {
+  padding: 0;
+  height: 2100px;
+
+  .grayRectangle {
+    background: $gray-6;
+    width: 100%;
+    height: 300px;
+
+    .topBar {
+      color: $white;
+      display: flex;
+      flex-flow: row wrap;
+      justify-content: space-between;
+      align-items: center;
+      padding: 20px 0;
+
+      h3 {
+        text-transform: uppercase;
+        margin: 0;
+      }
+      p {
+        margin: 0;
+      }
+    }
+
+    .productDescription {
+      position: relative;
+      height: 600px;
+      display: flex;
+      flex-flow: row nowrap;
+      width: 100%;
+      background: $white;
+      border: 1px solid $gray-5;
+
+      .btns {
+        position: absolute;
+        top: 0;
+        right: 0;
+        margin: 15px;
+
+        button {
+          background: $white;
+          height: 40px;
+          width: 28px;
+          height: 100%;
+          border: 1px solid $darkGray;
+          margin-left: 5px;
+
+          &:hover {
+            background: $darkOrange;
+
+            .icon {
+              color: white;
+              border: 1px solid $darkOrange;
+            }
+          }
+
+          .icon {
+            font-weight: 800;
+            color: $darkGray;
+          }
+        }
+      }
+
+      .gallery {
+        width: 44%;
+        height: calc(100%-90px);
+
+        .image {
+          position: relative;
+          display: flex;
+          justify-content: center;
+          height: 480px;
+          margin: 15px;
+          z-index: 999;
+          object-fit: cover;
+          overflow: hidden;
+
+          img {
+            z-index: 0;
+            height: 100%;
+          }
+
+          .icon {
+            position: absolute;
+            background: $white;
+            font-size: 40px;
+            padding: 10px;
+            color: $darkGray;
+            border: 1px solid $darkGray;
+            cursor: pointer;
+            right: 0;
+            bottom: 0;
+          }
+        }
+
+        .gallerySlider {
+          display: flex;
+          position: absolute;
+          width: 44%;
+          bottom: 90px;
+
+          .slider {
+            margin: auto;
+            overflow-x: hidden;
+            position: absolute;
+            display: flex;
+            justify-content: space-between;
+            padding: 5px 40px 5px 40px;
+            height: 80px;
+            width: 90%;
+
+            .slide {
+              img {
+                margin: 0 5px 0 5px;
+                height: 70px;
+                width: 70px;
+                object-fit: cover;
+              }
+
+              .inactive {
+                height: 70px;
+                opacity: 0.75;
+                background: $white;
+                left: 0;
+                top: 0;
+              }
+            }
+          }
+
+          .buttonField {
+            position: absolute;
+            display: inline-block;
+            background: $white;
+            height: 80px;
+            width: 40px;
+
+            button {
+              position: absolute;
+              top: 50%;
+              transform: translateY(-50%);
+              // background: $darkGray;
+              height: 30px;
+              width: 30px;
+              margin: 0 5px;
+              z-index: 999;
+              border: 1px solid $darkGray;
+
+              &:hover {
+                background: $darkOrange;
+                border: 1px solid $darkOrange;
+                color: $white;
+              }
+
+              &:hover .icon {
+                color: $white;
+              }
+
+              .icon {
+                color: $darkGray;
+              }
+            }
+
+            &:last-of-type {
+              right: 0;
+            }
+          }
+        }
+      }
+
+      .description {
+        margin-right: 15px;
+        width: 54%;
+
+        .header {
+          border-bottom: 1px solid $gray-5;
+
+          h3 {
+            font-size: 20px;
+            margin: 15px;
+            font-weight: 800;
+          }
+
+          .rating {
+            position: relative;
+            margin: 15px;
+
+            p {
+              font-size: 11px;
+              position: absolute;
+              left: 90px;
+              top: 6px;
+            }
+          }
+        }
+      }
+
+      .price {
+        padding: 15px 15px 0 15px;
+        border-bottom: 1px solid $gray-5;
+
+        p {
+          display: inline-block;
+          color: $gray-5;
+
+          &:last-of-type {
+            margin-left: 10px;
+            padding: 5px;
+            color: $white;
+            background: $darkGray;
+          }
+        }
+      }
+
+      .buttons {
+        padding: 15px;
+        border-bottom: 1px solid $gray-5;
+
+        .row1 {
+          button {
+            height: 40px;
+            padding: 5px;
+            background: $darkOrange;
+            color: $white;
+          }
+
+          .button {
+            margin-left: 5px;
+            font-size: 40px;
+            padding: 10px;
+            color: $darkGray;
+            border: 1px solid $darkGray;
+            cursor: pointer;
+
+            &:hover {
+              color: $darkOrange;
+              border: 1px solid $darkOrange;
+            }
+          }
+        }
+        .row2 {
+          width: 150px;
+          padding: 30px 0 15px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+
+          p {
+            display: inline-block;
+            margin-top: 13px;
+            margin-right: 10px;
+          }
+          input {
+            height: 46px;
+            width: 100px;
+            color: $darkGray;
+          }
+
+          .button {
+            top: 10px;
+            margin-left: 5px;
+            font-size: 20px;
+            font-weight: 600;
+            padding: 7px 15px;
+            color: $darkGray;
+            border: 1px solid $darkGray;
+            cursor: pointer;
+
+            &:hover {
+              color: $darkOrange;
+              border: 1px solid $darkOrange;
+            }
+          }
+        }
+      }
+
+      .text {
+        padding: 15px;
+        border-bottom: 1px solid $gray-5;
+
+        h4 {
+          font-size: 15px;
+        }
+        p {
+          font-size: 13px;
+        }
+      }
+
+      .avabilability {
+        padding: 15px 15px 0 15px;
+        border-bottom: 1px solid $gray-5;
+
+        p {
+          font-size: 13px;
+
+          span {
+            font-weight: 600;
+          }
+          &:last-of-type {
+            margin-top: -19px;
+          }
+
+          p {
+            display: block;
+            margin-left: 100px;
+          }
+        }
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+
+        button {
+          margin: 15px 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          border: 1px solid $darkGray;
+          background: $white;
+          color: $gray-5;
+          border-radius: 2px;
+          border: 1px solid $gray-5;
+          font-size: 20px;
+
+          .iconf {
+            color: rgb(47, 47, 224);
+          }
+          .icong {
+            color: rgb(122, 2, 2);
+          }
+          .icony {
+            color: rgb(0, 119, 255);
+          }
+          .iconl {
+            color: rgb(73, 0, 0);
+          }
+          .iconp {
+            color: rgb(81, 139, 245);
+          }
+
+          p {
+            margin: 0;
+            margin-left: 5px;
+            align-items: center;
+            font-size: 13px;
+            padding: 2px 0;
+          }
+        }
+        button:hover {
+          border: 1px solid $darkGray;
+
+          p {
+            color: $darkGray;
+          }
+        }
+      }
+    }
+  }
+}
