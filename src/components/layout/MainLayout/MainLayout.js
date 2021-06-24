@@ -7,32 +7,9 @@ import Brands from '../../features/Brands/BrandsContainer';
 import StickyBarContainer from '../StickyBar/StickyBarContainer';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
 
-const MainLayout = ({ children }) => {
-  const [dimensions, setDimensions] = React.useState({
-    width: window.innerWidth,
-    mode: '',
-  });
+const MainLayout = ({ children, mode, changeMode }) => {
   React.useEffect(() => {
-    function handleResize() {
-      if (dimensions.width < 768) {
-        setDimensions({
-          width: window.innerWidth,
-          mode: 'mobile',
-        });
-      } else if (dimensions.width >= 768 && dimensions.width < 992) {
-        setDimensions({
-          width: window.innerWidth,
-          mode: 'tablet',
-        });
-      } else if (dimensions.width >= 992) {
-        setDimensions({
-          width: window.innerWidth,
-          mode: 'desktop',
-        });
-      }
-    }
-
-    window.addEventListener('resize', handleResize);
+    window.addEventListener('resize', changeMode);
   });
   return (
     <div>
@@ -42,12 +19,15 @@ const MainLayout = ({ children }) => {
       <LatestBlog />
       <Brands />
       <Footer />
+      <div>{mode}</div>
     </div>
   );
 };
 
 MainLayout.propTypes = {
   children: PropTypes.node,
+  mode: PropTypes.string,
+  changeMode: PropTypes.func,
 };
 
 export default MainLayout;
