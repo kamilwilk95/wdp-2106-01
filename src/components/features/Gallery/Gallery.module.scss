@@ -6,9 +6,10 @@
   .flex {
     display: flex;
     justify-content: space-between;
-    height: 600px;
+    height: 622px;
 
     .galleryFeature {
+      position:relative;
       width: 49%;
 
       .slider {
@@ -19,6 +20,9 @@
         justify-content: space-between;
         padding: 5px;
         height: 80px;
+        width: 100%;
+        position: absolute;
+        bottom:38px;
 
         .slide {
           img {
@@ -27,10 +31,16 @@
             object-fit: cover;
           }
 
-          .inactive {
+          .inactiveElement {
             height: 70px;
-            opacity: 0.75;
+            opacity: 0.5;
             background: $white;
+            left: 0;
+            top: 0;
+          }
+          .activeElement {
+            height: 70px;
+            opacity: 1;
             left: 0;
             top: 0;
           }
@@ -49,6 +59,16 @@
           .icon {
             color: $white;
           }
+          &:active{
+            background: $darkGray;
+          }
+        }
+        button:disabled:hover{
+          background: $darkGray;
+          opacity:0.7;
+        }
+        button:disabled{
+          opacity:0.7;
         }
       }
     }
@@ -81,22 +101,30 @@
     margin-top: 20px;
     display: flex;
     width: 100%;
-
-    .btn {
+    list-style-type: none;
+    padding:0;
+    margin-bottom: 10px;
+    cursor: pointer;
+    a:hover{
+      text-decoration: none;
+    }
+    .active {
       flex-grow: 1;
       padding: 10px;
       border-top: 1px solid $gray-3;
       border-left: 1px solid $gray-3;
       border-bottom: 1px solid $gray-3;
       text-align: center;
-
-      &:nth-child(2) {
-        border-top: 4px solid $primary;
-        background: $gray-2;
-      }
-      &:last-of-type {
-        border-right: 1px solid $gray-3;
-      }
+      border-top: 4px solid $primary;
+      background: $gray-2;
+    }
+    .hidden{
+      flex-grow: 1;
+      padding: 10px;
+      border-top: 1px solid $gray-3;
+      border-left: 1px solid $gray-3;
+      border-bottom: 1px solid $gray-3;
+      text-align: center;
     }
   }
 
@@ -104,6 +132,11 @@
     padding: 0;
     display: flex;
     align-items: center;
+    animation: fadeIn 3s;
+    @keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
 
     .galleryBtns {
       display: flex;
@@ -161,6 +194,11 @@
     height: 407px;
     border-left: 1px solid $gray-3;
     border-right: 1px solid $gray-3;
+    animation: fadeIn 3s;
+    @keyframes fadeIn {
+      0% {opacity:0;}
+      100% {opacity:1;}
+    }
 
     img {
       width: 100%;
@@ -172,11 +210,99 @@
   .advertisement {
     width: 100%;
     height: 100%;
+    position:relative;
 
     img {
       width: 100%;
       height: 100%;
       object-fit: cover;
+    }
+    .triangle2{
+      position:absolute;
+      top:10%;
+      left:10%;
+      p{
+        font-size: 50px;
+        color:$white;
+      }
+      span{
+        color:$primary;
+      }
+      a{
+        display: block;
+        text-align: center;
+        padding-top: 20px;
+        text-decoration: none;
+        width:160px;
+        height:60px;
+        background:$primary;
+        color:$white;
+        font-size:15px;
+      }
+      a:hover{
+        color:$darkGray;
+      }
+    }
+  }
+  @media (max-width: 991px) {
+    .menuBtns{
+      .hidden{
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-right:0;
+        padding-left:0;
+      }
+    }
+    .advertisement {
+      .triangle2{
+        p{
+          font-size: 30px;
+        }
+        a{
+          width:100px;
+          height:50px;
+          font-size:10px;
+        }
+      }
+    }
+  }
+  @media (max-width: 767px) {
+    .menuBtns{
+      font-size:12px;
+      .hidden{
+        padding-top:10px;
+        padding-bottom:10px;
+        padding-right:0;
+        padding-left:0;
+      }
+    }
+  }
+  @media (max-width: 575px){
+    .flex {
+      .galleryFeature {
+        display: none;
+      }
+      .galleryFeature:first-of-type {
+        display: block;
+        width: 100%;
+
+        .slider {
+          width: 100%;
+        }
+      }
+    }
+    .menuBtns{
+      font-size:20px;
+    }
+  }
+  @media (max-width: 427px){
+    .menuBtns{
+      font-size:15px;
+    }
+  }
+  @media (max-width: 326px){
+    .menuBtns{
+      font-size:12px;
     }
   }
 }

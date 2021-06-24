@@ -22,65 +22,77 @@ const ProductBox = ({
   setFavouriteValue,
   setAddToCompareValue,
   photo,
-}) => (
-  <div className={styles.root}>
-    <div className={styles.photo}>
-      <Link to={`/product/${id}`}>
-        <img className={styles.image} src={photo} alt='furniture' />
-      </Link>
-      {promo && <div className={styles.sale}>{promo}</div>}
-      <div className={styles.buttons}>
-        <Button variant='small'>Quick View</Button>
-        <Button variant='small'>
-          <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
-        </Button>
-      </div>
-    </div>
-    <div className={styles.content}>
-      <h5>{name}</h5>
-      <StairsContainer stars={stars} myStarsChoice={myStarsChoice} id={id} />
-    </div>
-    <div className={styles.line}></div>
-    <div className={styles.actions}>
-      <div className={styles.outlines}>
-        <Button
-          onClick={
-            favourite
-              ? e => (setFavouriteValue(id, false), e.preventDefault())
-              : e => (setFavouriteValue(id, true), e.preventDefault())
-          }
-          className={favourite ? styles.active : ''}
-          variant='outline'
-        >
-          <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
-        </Button>
-        <Button
-          onClick={
-            addedToCompare
-              ? e => (setAddToCompareValue(id, false), e.preventDefault())
-              : e => (setAddToCompareValue(id, true), e.preventDefault())
-          }
-          className={addedToCompare ? styles.active : ''}
-          variant='outline'
-        >
-          <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
-        </Button>
-      </div>
-      {oldprice ? (
-        <div className={styles.price_old}>
-          <div className={styles.price_old_value}>${oldprice}</div>
+}) => {
+  function letOnClcikFav(e) {
+    if (favourite) {
+      setFavouriteValue(id, false);
+      e.preventDefault();
+    } else {
+      setFavouriteValue(id, true);
+      e.preventDefault();
+    }
+  }
+  function letOnClcikAtc(e) {
+    if (addedToCompare) {
+      setAddToCompareValue(id, false);
+      e.preventDefault();
+    } else {
+      setAddToCompareValue(id, true);
+      e.preventDefault();
+    }
+  }
+  return (
+    <div className={styles.root}>
+      <div className={styles.photo}>
+        <Link to={`/product/${id}`}>
+          <img className={styles.image} src={photo} alt='furniture' />
+        </Link>
+        {promo && <div className={styles.sale}>{promo}</div>}
+        <div className={styles.buttons}>
+          <Button variant='small'>Quick View</Button>
+          <Button variant='small'>
+            <FontAwesomeIcon icon={faShoppingBasket}></FontAwesomeIcon> ADD TO CART
+          </Button>
         </div>
-      ) : (
-        ''
-      )}
-      <div className={styles.price}>
-        <Button noHover variant='small'>
-          $ {price}
-        </Button>
+      </div>
+      <div className={styles.content}>
+        <h5>{name}</h5>
+        <StairsContainer stars={stars} myStarsChoice={myStarsChoice} id={id} />
+      </div>
+      <div className={styles.line}></div>
+      <div className={styles.actions}>
+        <div className={styles.outlines}>
+          <Button
+            onClick={e => letOnClcikFav(e)}
+            className={favourite ? styles.active : ''}
+            variant='outline'
+          >
+            <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+          </Button>
+          <Button
+            onClick={e => letOnClcikAtc(e)}
+            className={addedToCompare ? styles.active : ''}
+            variant='outline'
+          >
+            <FontAwesomeIcon icon={faExchangeAlt}>Add to compare</FontAwesomeIcon>
+          </Button>
+        </div>
+        {oldprice ? (
+          <div className={styles.price_old}>
+            <div className={styles.price_old_value}>${oldprice}</div>
+          </div>
+        ) : (
+          ''
+        )}
+        <div className={styles.price}>
+          <Button noHover variant='small'>
+            $ {price}
+          </Button>
+        </div>
       </div>
     </div>
-  </div>
-);
+  );
+};
 
 ProductBox.propTypes = {
   children: PropTypes.node,
