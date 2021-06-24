@@ -19,7 +19,6 @@ const MainLayout = ({ children, mode, changeMode }) => {
       <LatestBlog />
       <Brands />
       <Footer />
-      <div>{mode}</div>
     </div>
   );
 };

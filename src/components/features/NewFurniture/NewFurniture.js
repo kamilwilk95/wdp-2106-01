@@ -24,9 +24,20 @@ class NewFurniture extends React.Component {
       this.setState({ activeCategory: newCategory, activePageStyle: styles.fadeIn });
     }, 1000);
   }
+  setChunk() {
+    let chunk;
+    if (this.props.mode === 'desktop') {
+      chunk = 8;
+    } else if (this.props.mode === 'tablet') {
+      chunk = 2;
+    } else if (this.props.mode === 'mobile') {
+      chunk = 1;
+    }
+    return chunk;
+  }
   splitToChunks(array) {
     let result = [];
-    const chunk = 8;
+    let chunk = this.setChunk();
     for (let i = 0 * 8, j = array.length; i < j; i += chunk) {
       let temparray = array.slice(i, i + chunk);
       result.push(temparray);
@@ -102,6 +113,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  mode: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {

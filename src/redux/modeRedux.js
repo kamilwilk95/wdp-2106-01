@@ -18,9 +18,9 @@ export const createActionChangeMode = payload => ({
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case CHANGE_MODE:
-      if (window.innerWidth < 768) {
+      if (window.innerWidth < 540) {
         return action.payload.mobile;
-      } else if (window.innerWidth >= 768 && window.innerWidth < 992) {
+      } else if (window.innerWidth >= 540 && window.innerWidth < 992) {
         return action.payload.tablet;
       } else if (window.innerWidth >= 992) {
         return action.payload.desktop;
