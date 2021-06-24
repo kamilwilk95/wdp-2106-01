@@ -96,21 +96,19 @@
         .slider {
           bottom: 0;
           position: absolute;
-          border-bottom: 1px solid $gray-5;
-          border-left: 1px solid $gray-5;
-          border-right: 1px solid $gray-5;
           display: flex;
           justify-content: space-between;
           padding: 5px;
           height: 80px;
-          width: 44%;
+          width: 100%;
+          overflow-x: hidden;
 
           .slide {
             img {
               height: 70px;
               width: 70px;
               object-fit: cover;
-              margin-right: 10px;
+              margin: 0 5px;
             }
 
             .inactive {
@@ -135,6 +133,12 @@
             .icon {
               color: $white;
             }
+          }
+
+          .sliderBtnRight {
+            position: absolute;
+            bottom: 0;
+            right: 0;
           }
         }
       }

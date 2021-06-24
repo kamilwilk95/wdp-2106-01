@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import styles from './ProductPage.module.scss';
 
 import Stars from '../../common/Stars/Stars';
-import Carousel from 'react-elastic-carousel';
 
 import { AiOutlineLeft } from 'react-icons/ai';
 import { AiOutlineRight } from 'react-icons/ai';
@@ -42,13 +41,13 @@ const ProductPage = ({ gallery }) => (
               </button>
               {gallery.advImgs.map(photo => (
                 <div className={styles.slide} key={photo.id}>
-                  <div className={styles.slide}>
-                    <img
-                      className={photo.active ? '' : ' ' + styles.inactive}
-                      src={photo.pic}
-                      alt={'furniture-sale-' + photo.id}
-                    />
-                  </div>
+                  {/* <div className={styles.slide}> */}
+                  <img
+                    className={photo.active ? '' : ' ' + styles.inactive}
+                    src={photo.pic}
+                    alt={'furniture-sale-' + photo.id}
+                  />
+                  {/* </div> */}
                 </div>
               ))}
               <button className={styles.sliderBtnRight}>
