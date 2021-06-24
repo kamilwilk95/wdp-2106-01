@@ -32,6 +32,8 @@ class NewFurniture extends React.Component {
       chunk = 2;
     } else if (this.props.mode === 'mobile') {
       chunk = 1;
+    } else {
+      chunk = 8;
     }
     return chunk;
   }

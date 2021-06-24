@@ -1192,7 +1192,7 @@ const initialState = {
       ],
     },
   ],
-  mode: 'tablet',
+  mode: '',
 };
 
 export default initialState;
