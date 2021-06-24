@@ -33,7 +33,13 @@ class NewFurniture extends React.Component {
     } else if (this.props.mode === 'mobile') {
       chunk = 1;
     } else {
-      chunk = 8;
+      if (window.innerWidth < 540) {
+        chunk = 1;
+      } else if (window.innerWidth >= 540 && window.innerWidth < 992) {
+        chunk = 2;
+      } else if (window.innerWidth >= 992) {
+        chunk = 8;
+      }
     }
     return chunk;
   }
