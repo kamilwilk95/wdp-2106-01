@@ -20,6 +20,7 @@ const reducers = {
   gallery: galleryReducer,
   blog: blogReducer,
   promo: promoReducer,
+  deals: promoReducer,
 };
 
 // add blank reducers for initial state properties without reducers
