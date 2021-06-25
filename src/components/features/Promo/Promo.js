@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import styles from './Promo.module.scss';
 import Button from '../../common/Button/Button';
 import Stars from '../../common/Stars/Stars';
-import Carousel from 'react-elastic-carousel';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -25,9 +24,7 @@ const Promo = ({ promo, deals }) => {
             <div className={styles.head}>
               <h5>HOT DEALS</h5>
             </div>
-            <Carousel>
-              <img className={styles.dealsImg} src={deals[0].src} alt='promo' />
-            </Carousel>
+            <img className={styles.dealsImg} src={deals[0].src} alt='promo' />
             <Button className={styles.cartButton} noHover variant='small'>
               {' '}
               <FontAwesomeIcon icon={faShoppingBasket}>Favorite</FontAwesomeIcon> Add to
@@ -78,6 +75,15 @@ const Promo = ({ promo, deals }) => {
           </div>
           <div className={'col-8 ' + styles.boxes}>
             <img src={promo[0].src} alt='promo' />
+            <div className={styles.indoor}>
+              <h4>
+                INDOOR <span>FURNITURE</span>
+              </h4>
+              <h5>SAVE UP TO 50% TO ALL FURNITURE</h5>
+            </div>
+            <Button className={styles.indoorButton} noHover variant='outline'>
+              Shop now
+            </Button>
             <div>
               <Button variant='small' className={styles.button}>
                 <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>

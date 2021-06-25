@@ -2,7 +2,7 @@
 @import "../../../styles/global.scss";
 
 .root {
-    height: 500px;
+    height: 450px;
     .boxes {
         height: 400px;
         margin-top: 20px;
@@ -19,13 +19,38 @@
                 padding-top: 10px;
                 margin: 0 5px;
                 border-radius: 50%;
-                background-color: black;
-                opacity: 0.7;
+                background-color: $darkGray;
+                opacity: 0.9;
                 font-size: 12px;
                 font-weight: bold;
-                color: white;
+                color: $feature-bg;
                 text-align: center;
             }
+        }
+        .indoor {
+            position: absolute;  
+            width: 96%;
+            top: 50%;  
+            left: 50%;  
+            transform: translate(-50%, -50%);
+            background-color: $darkGray;
+            padding: 10px 0;
+            opacity: 0.9;
+            h5, h4 {
+                text-align: center;
+                color: $feature-bg; 
+                font-size: 26px;
+                span {
+                    font-weight: bold;
+                }    
+            }
+        }
+        .indoorButton {
+            position: absolute;
+            top: 235px;
+            right: 350px;       
+            background-color: $feature-bg;
+            border: none;
         }
         .cartButton {
             position: absolute;
@@ -56,15 +81,15 @@
             justify-content: center;
         }
         .bottomTitle {
-            color: black;
+            color: $darkGray;
             text-align: center;
         }
         .dealsImg {
             height: 70%;
         }
         .head {
-            background-color: black;
-            color: white;
+            background-color: $darkGray;
+            color: $feature-bg;
             h5 {
                 margin: 0;
                 padding: 2px 10px;
@@ -113,6 +138,6 @@
   
     .active{
         background-color: $darkGray;
-        color: $white;
+        color: $feature-bg;
       }
 }
