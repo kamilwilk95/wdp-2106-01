@@ -4,6 +4,7 @@ import PropTypes from 'prop-types';
 import styles from './Promo.module.scss';
 import Button from '../../common/Button/Button';
 import Stars from '../../common/Stars/Stars';
+import Carousel from 'react-elastic-carousel';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -24,7 +25,9 @@ const Promo = ({ promo, deals }) => {
             <div className={styles.head}>
               <h5>HOT DEALS</h5>
             </div>
-            <img className={styles.dealsImg} src={deals[0].src} alt='promo' />
+            <Carousel>
+              <img className={styles.dealsImg} src={deals[0].src} alt='promo' />
+            </Carousel>
             <Button className={styles.cartButton} noHover variant='small'>
               {' '}
               <FontAwesomeIcon icon={faShoppingBasket}>Favorite</FontAwesomeIcon> Add to

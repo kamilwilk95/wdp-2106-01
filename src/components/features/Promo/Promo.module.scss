@@ -3,14 +3,25 @@
 
 .root {
     height: 450px;
+    padding-top: 10px;
     .boxes {
         height: 400px;
         margin-top: 20px;
         position: relative;
+        &:hover {
+            .cartButton {
+              visibility: visible;
+            }
+            .divSpan {
+                visibility: visible;
+            }
+          }
         .divSpan {
             position: absolute;
             top: 180px;
             left: 60px;
+            visibility: hidden;
+            transition: $head-transition;
             span {
                 display: inline-block;
                 width: 60px;
@@ -56,6 +67,7 @@
             position: absolute;
             top: 80px;
             left: 130px;
+            visibility: hidden;
         }
         .outlines {
             padding-top: 10px;
@@ -90,6 +102,8 @@
         .head {
             background-color: $darkGray;
             color: $feature-bg;
+            margin: 0 auto;
+            width: 94%;
             h5 {
                 margin: 0;
                 padding: 2px 10px;
@@ -135,9 +149,8 @@
         }
     }
   }
-  
-    .active{
-        background-color: $darkGray;
-        color: $feature-bg;
-      }
+  .active{
+    background-color: $darkGray;
+    color: $feature-bg;
+  }
 }
