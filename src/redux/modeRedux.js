@@ -1,5 +1,8 @@
 /* selectors*/
 export const getMode = ({ mode }) => mode;
+export const mobile = 'mobile';
+export const tablet = 'tablet';
+export const desktop = 'desktop';
 
 // action name creator
 const reducerName = 'modeReducer';
@@ -9,8 +12,7 @@ const createActionName = name => `app/${reducerName}/${name}`;
 export const CHANGE_MODE = createActionName('CHANGE_MODE');
 
 // action creators
-export const createActionChangeMode = payload => ({
-  payload: { tablet: 'tablet', mobile: 'mobile', desktop: 'desktop' },
+export const createActionChangeMode = () => ({
   type: CHANGE_MODE,
 });
 
@@ -19,11 +21,11 @@ export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case CHANGE_MODE:
       if (window.innerWidth < 540) {
-        return action.payload.mobile;
+        return mobile;
       } else if (window.innerWidth >= 540 && window.innerWidth < 992) {
-        return action.payload.tablet;
+        return tablet;
       } else if (window.innerWidth >= 992) {
-        return action.payload.desktop;
+        return desktop;
       }
       break;
     default:

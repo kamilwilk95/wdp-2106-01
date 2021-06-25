@@ -7,10 +7,11 @@ import Brands from '../../features/Brands/BrandsContainer';
 import StickyBarContainer from '../StickyBar/StickyBarContainer';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
 
-const MainLayout = ({ children, mode, changeMode }) => {
+const MainLayout = ({ children, changeMode }) => {
   React.useEffect(() => {
     window.addEventListener('resize', changeMode);
   });
+  window.removeEventListener('resize', changeMode);
   return (
     <div>
       <Header />

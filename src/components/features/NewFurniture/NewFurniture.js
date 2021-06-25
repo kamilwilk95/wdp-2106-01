@@ -3,6 +3,9 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import Swipeable from '../../layout/Swipeable/Swipeable';
 import ProductBoxContainer from '../../common/ProductBox/ProductBoxContainer.js';
+import { mobile } from '../../../redux/modeRedux.js';
+import { desktop } from '../../../redux/modeRedux.js';
+import { tablet } from '../../../redux/modeRedux.js';
 
 class NewFurniture extends React.Component {
   state = {
@@ -26,11 +29,11 @@ class NewFurniture extends React.Component {
   }
   setChunk() {
     let chunk;
-    if (this.props.mode === 'desktop') {
+    if (this.props.mode === desktop) {
       chunk = 8;
-    } else if (this.props.mode === 'tablet') {
+    } else if (this.props.mode === tablet) {
       chunk = 2;
-    } else if (this.props.mode === 'mobile') {
+    } else if (this.props.mode === mobile) {
       chunk = 1;
     } else {
       if (window.innerWidth < 540) {
@@ -44,8 +47,8 @@ class NewFurniture extends React.Component {
     return chunk;
   }
   splitToChunks(array) {
-    let result = [];
-    let chunk = this.setChunk();
+    const result = [];
+    const chunk = this.setChunk();
     for (let i = 0 * 8, j = array.length; i < j; i += chunk) {
       let temparray = array.slice(i, i + chunk);
       result.push(temparray);
@@ -122,6 +125,9 @@ NewFurniture.propTypes = {
     })
   ),
   mode: PropTypes.string,
+  mobile: PropTypes.string,
+  tablet: PropTypes.string,
+  desktop: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {
