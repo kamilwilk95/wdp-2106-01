@@ -29,6 +29,12 @@ export default function reducer(statePart = [], action = {}) {
       }
       break;
     default:
-      return statePart;
+      if (window.innerWidth < 540) {
+        return mobile;
+      } else if (window.innerWidth >= 540 && window.innerWidth < 992) {
+        return tablet;
+      } else if (window.innerWidth >= 992) {
+        return desktop;
+      }
   }
 }
