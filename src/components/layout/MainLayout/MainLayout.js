@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import PropTypes from 'prop-types';
 
 import Header from '../Header/Header';
@@ -8,10 +8,13 @@ import StickyBarContainer from '../StickyBar/StickyBarContainer';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
 
 const MainLayout = ({ children, changeMode }) => {
-  React.useEffect(() => {
+  useEffect(() => {
     window.addEventListener('resize', changeMode);
+
+    return () => {
+      window.removeEventListener('resize', changeMode);
+    };
   });
-  window.removeEventListener('resize', changeMode);
   return (
     <div>
       <Header />

@@ -3,9 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import Swipeable from '../../layout/Swipeable/Swipeable';
 import ProductBoxContainer from '../../common/ProductBox/ProductBoxContainer.js';
-import { mobile } from '../../../redux/modeRedux.js';
-import { desktop } from '../../../redux/modeRedux.js';
-import { tablet } from '../../../redux/modeRedux.js';
+import { mobile, desktop, tablet } from '../../../redux/modeRedux.js';
 
 class NewFurniture extends React.Component {
   state = {
@@ -117,9 +115,6 @@ NewFurniture.propTypes = {
     })
   ),
   mode: PropTypes.string,
-  mobile: PropTypes.string,
-  tablet: PropTypes.string,
-  desktop: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {
