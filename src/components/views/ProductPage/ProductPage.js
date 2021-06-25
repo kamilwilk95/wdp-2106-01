@@ -13,9 +13,9 @@ import { IoMdResize } from 'react-icons/io';
 import { AiOutlineHeart } from 'react-icons/ai';
 import { AiOutlineMail } from 'react-icons/ai';
 import { FaExchangeAlt } from 'react-icons/fa';
-import { BiBasket } from 'react-icons/bi';
+import { FaShoppingBasket } from 'react-icons/fa';
 import { FaFacebookF } from 'react-icons/fa';
-import { AiFillGoogleCircle } from 'react-icons/ai';
+import { TiSocialGooglePlus } from 'react-icons/ti';
 import { SiYahoo } from 'react-icons/si';
 import { FaLinkedinIn } from 'react-icons/fa';
 import { FaPinterestP } from 'react-icons/fa';
@@ -84,7 +84,10 @@ const ProductPage = ({ products }) => (
             <div className={styles.buttons}>
               <div className={styles.row1}>
                 <button>
-                  <BiBasket /> ADD TO CART
+                  <span>
+                    <FaShoppingBasket />
+                  </span>
+                  ADD TO CART
                 </button>
                 <AiOutlineHeart className={styles.button} />
                 <AiOutlineMail className={styles.button} />
@@ -118,7 +121,7 @@ const ProductPage = ({ products }) => (
                 <p>Share</p>
               </button>
               <button>
-                <AiFillGoogleCircle className={styles.icong} />
+                <TiSocialGooglePlus className={styles.icong} />
                 <p>Google+</p>
               </button>
               <button>
@@ -126,12 +129,12 @@ const ProductPage = ({ products }) => (
                 <p>Yahoo</p>
               </button>
               <button>
-                <FaLinkedinIn className={styles.iconl} />
-                <p>Linked In</p>
-              </button>
-              <button>
                 <FaPinterestP className={styles.iconp} />
                 <p>Pinterest</p>
+              </button>
+              <button>
+                <FaLinkedinIn className={styles.iconl} />
+                <p>Linked In</p>
               </button>
             </div>
           </div>
