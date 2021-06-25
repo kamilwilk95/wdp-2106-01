@@ -10,6 +10,8 @@ import {
   faChevronLeft,
   faChevronRight,
   faExchangeAlt,
+  faEye,
+  faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
 
@@ -23,6 +25,29 @@ const Promo = ({ promo, deals }) => {
               <h5>HOT DEALS</h5>
             </div>
             <img className={styles.dealsImg} src={deals[0].src} alt='promo' />
+            <Button className={styles.cartButton} noHover variant='small'>
+              {' '}
+              <FontAwesomeIcon icon={faShoppingBasket}>Favorite</FontAwesomeIcon> Add to
+              Cart
+            </Button>
+            <div className={styles.divSpan}>
+              <span>
+                25 <br />
+                days
+              </span>
+              <span>
+                10 <br />
+                hours
+              </span>
+              <span>
+                45 <br />
+                mins
+              </span>
+              <span>
+                30 <br />
+                secs
+              </span>
+            </div>
             <h5 className={styles.bottomTitle}>Aean Ru Bristique</h5>
             <div className={styles.starsDiv}>
               <Stars />
@@ -30,7 +55,7 @@ const Promo = ({ promo, deals }) => {
             <div className={styles.line}></div>
             <div className={styles.outlines}>
               <Button variant='outline'>
-                <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>
+                <FontAwesomeIcon icon={faEye}>Favorite</FontAwesomeIcon>
               </Button>
               <Button variant='outline'>
                 <FontAwesomeIcon icon={faHeart}>Favorite</FontAwesomeIcon>

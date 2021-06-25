@@ -6,6 +6,36 @@
     .boxes {
         height: 400px;
         margin-top: 20px;
+        position: relative;
+        .divSpan {
+            position: absolute;
+            top: 180px;
+            left: 60px;
+            span {
+                display: inline-block;
+                width: 60px;
+                height: 60px;
+                line-height: 20px;
+                padding-top: 10px;
+                margin: 0 5px;
+                border-radius: 50%;
+                background-color: black;
+                opacity: 0.7;
+                font-size: 12px;
+                font-weight: bold;
+                color: white;
+                text-align: center;
+            }
+        }
+        .cartButton {
+            position: absolute;
+            top: 80px;
+            left: 130px;
+        }
+        .outlines {
+            padding-top: 10px;
+            padding-left: 20px;
+        }
         .line {
             margin: 10px;
             border-bottom: 1px solid $productbox-color;
@@ -54,9 +84,9 @@
         .price {
             display: inline-block;
         } 
-       .price_old {
-         padding-left: 60px;
-         display: inline-block;
+        .price_old {
+        padding-left: 60px;
+        display: inline-block;
      
          .price_old_value {
            font-size: 17px;
