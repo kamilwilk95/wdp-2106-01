@@ -70,115 +70,157 @@
         }
       }
 
-      .gallery {
-        width: 44%;
-        height: calc(100%-90px);
+      .galleryFeature {
+        width: 40%;
 
-        .image {
-          position: relative;
+        .slider {
           display: flex;
-          justify-content: center;
-          height: 480px;
-          margin: 15px;
-          z-index: 999;
-          object-fit: cover;
+          justify-content: flex-start;
+          padding: 5px;
+          height: 95px;
+          width: 41.5%;
+          position: absolute;
+          bottom: 0;
           overflow: hidden;
 
-          img {
-            z-index: 0;
-            height: 100%;
+          .slide {
+            height: 85px;
+            margin: 0 5px;
+            img {
+              height: 85px;
+              width: 70px;
+              object-fit: cover;
+            }
+
+            .inactiveElement {
+              height: 85px;
+              opacity: 0.5;
+              background: $white;
+              left: 0;
+              top: 0;
+            }
+            .activeElement {
+              height: 85px;
+              opacity: 1;
+              left: 0;
+              top: 0;
+            }
           }
 
+          button {
+            z-index: 99;
+            position: absolute;
+            background: $white;
+            top: 50%;
+            left: 5px;
+            transform: translateY(-50%);
+            border: 1px solid $darkGray;
+            color: $darkGray;
+
+            &:hover {
+              background: $darkOrange;
+              border: 1px solid $darkOrange;
+            }
+
+            .icon {
+              color: $darkGray;
+            }
+            &:hover .icon {
+              color: $white;
+            }
+
+            &:last-of-type {
+              z-index: 100;
+              bottom: 0;
+              right: 0;
+              left: 93%;
+              height: 28px;
+              width: 30px;
+            }
+          }
+          button:disabled:hover {
+            background: $darkOrange;
+            border: 1px solid $darkOrange;
+            opacity: 0.7;
+          }
+          button:disabled {
+            opacity: 0.7;
+          }
+        }
+
+        .gallery {
+          padding: 0;
+          display: flex;
+          align-items: center;
+          animation: fadeIn 3s;
+
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+
+          a {
+            .icon {
+              background: $gray-2;
+              padding: 5px;
+              border: 1px solid $darkGray;
+              font-size: 30px;
+              color: $darkGray;
+
+              &:hover {
+                color: $darkOrange;
+                border: 1px solid $darkOrange;
+              }
+            }
+          }
+        }
+
+        .image {
+          margin-left: 15px;
+          padding: 15px;
+          position: relative;
+          width: 100%;
+          height: 517px;
+          animation: fadeIn 3s;
+
+          @keyframes fadeIn {
+            0% {
+              opacity: 0;
+            }
+            100% {
+              opacity: 1;
+            }
+          }
+
+          img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+          }
           .icon {
+            margin: 20px;
             position: absolute;
             background: $white;
             font-size: 40px;
             padding: 10px;
-            margin: 5px;
             color: $darkGray;
             border: 1px solid $darkGray;
             cursor: pointer;
             right: 0;
             bottom: 0;
-
-            &:hover {
-              color: $darkOrange;
-              border: 1px solid $darkOrange;
-            }
           }
         }
+      }
 
-        .gallerySlider {
-          display: flex;
-          position: absolute;
-          width: 44%;
-          bottom: 90px;
-
-          .slider {
-            margin: auto;
-            overflow-x: hidden;
-            position: absolute;
-            display: flex;
-            justify-content: space-between;
-            padding: 5px 20px 5px 20px;
-            height: 80px;
-            width: 95%;
-
-            .slide {
-              img {
-                margin: 0 5px 0 5px;
-                height: 70px;
-                width: 70px;
-                object-fit: cover;
-              }
-
-              .inactive {
-                height: 70px;
-                opacity: 0.75;
-                background: $white;
-                left: 0;
-                top: 0;
-              }
-            }
-          }
-
-          .buttonField {
-            position: absolute;
-            display: inline-block;
-            height: 80px;
-            width: 40px;
-
-            button {
-              position: absolute;
-              top: 50%;
-              transform: translateY(-50%);
-              height: 30px;
-              width: 30px;
-              margin: 0 5px;
-              z-index: 999;
-              background: $white;
-              border: 1px solid $darkGray;
-
-              &:hover {
-                background: $darkOrange;
-                border: 1px solid $darkOrange;
-                color: $white;
-              }
-
-              &:hover .icon {
-                color: $white;
-              }
-
-              .icon {
-                color: $darkGray;
-              }
-            }
-
-            &:last-of-type {
-              right: 0;
-            }
-          }
-        }
+      .description {
+        position: absolute;
+        height: 100%;
+        width: 57%;
+        right: 0;
       }
     }
   }

@@ -2,10 +2,15 @@ import { connect } from 'react-redux';
 
 import ProductPage from './ProductPage';
 
-import { getAll } from '../../../redux/productsRedux.js';
+import { createAction_setActive, getAll } from '../../../redux/galleryRedux.js';
 
 const mapStateToProps = state => ({
-  products: getAll(state),
+  gallery: getAll(state),
 });
 
-export default connect(mapStateToProps)(ProductPage);
+const mapDispatchToProps = dispatch => ({
+  setActive: (id, value, category) =>
+    dispatch(createAction_setActive(id, value, category)),
+});
+
+export default connect(mapStateToProps, mapDispatchToProps)(ProductPage);
