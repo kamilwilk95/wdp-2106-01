@@ -44,7 +44,7 @@ const Promo = ({ promo, deals }) => {
     <div className={styles.root}>
       <div className={'container ' + styles.container}>
         <div className='row'>
-          <div className={'col-4 carouselPromo ' + styles.boxes}>
+          <div className={'d-none d-lg-block col-md-4 carouselPromo ' + styles.boxes}>
             <Carousel autoPlay='true' interval='1000'>
               {deals.map(deal => (
                 <div key={deal.id} className={styles.carouselBox}>
@@ -107,7 +107,7 @@ const Promo = ({ promo, deals }) => {
               ))}
             </Carousel>
           </div>
-          <div className={'col-8 ' + styles.boxes}>
+          <div className={'col-xs-12 col-lg-8 ' + styles.boxes}>
             {promo.slice(activePage * n, (activePage + 1) * n).map(promo => (
               <div key={promo.id} className={activePageStyle}>
                 <div className={styles.mapBox}>
