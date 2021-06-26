@@ -6,11 +6,13 @@ import Footer from '../Footer/Footer';
 import Brands from '../../features/Brands/BrandsContainer';
 import StickyBarContainer from '../StickyBar/StickyBarContainer';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
+import Promo from '../../features/Promo/PromoContainer';
 
 const MainLayout = ({ children }) => (
   <div>
     <Header />
     <StickyBarContainer />
+    <Promo />
     {children}
     <LatestBlog />
     <Brands />
