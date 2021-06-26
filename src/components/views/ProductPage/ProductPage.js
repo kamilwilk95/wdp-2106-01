@@ -3,10 +3,26 @@ import PropTypes from 'prop-types';
 
 import styles from './ProductPage.module.scss';
 
-import { AiOutlineRight, AiOutlineLeft } from 'react-icons/ai';
+import {
+  AiOutlineRight,
+  AiOutlineLeft,
+  AiOutlineHeart,
+  AiOutlineMail,
+} from 'react-icons/ai';
+import {
+  FaExchangeAlt,
+  FaShoppingBasket,
+  FaFacebookF,
+  FaTwitter,
+  FaLinkedinIn,
+  FaPinterestP,
+} from 'react-icons/fa';
 import { IoMdResize } from 'react-icons/io';
+import { TiSocialGooglePlus } from 'react-icons/ti';
 
-const ProductPage = ({ gallery, setActive }) => {
+import StairsContainer from '../../common/Stars/StairsContainer';
+
+const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
   const [activeCategory] = useState('Features');
   const [activePage, setActivePage] = useState(0);
   const categories = [];
@@ -106,7 +122,76 @@ const ProductPage = ({ gallery, setActive }) => {
               </div>
             </div>
             <div className={styles.description}>
-              <div></div>
+              <div className={styles.btns}>
+                <button>
+                  <AiOutlineLeft className={styles.icon} />
+                </button>
+                <button>
+                  <AiOutlineRight className={styles.icon} />
+                </button>
+              </div>
+              <div className={styles.header}>
+                <h3>Sunday Magic Bear Sofa</h3>
+                <div className={styles.rating}>
+                  <StairsContainer stars={2} myStarsChoice={0} />
+                  <p>(0 viewers) Add your review</p>
+                </div>
+              </div>
+              <div className={styles.price}>
+                <p>$350.00</p>
+                <p>$250.00</p>
+              </div>
+              <div className={styles.buttons}>
+                <div className={styles.row1}>
+                  <button>
+                    <span>
+                      <FaShoppingBasket />
+                    </span>
+                    ADD TO CART
+                  </button>
+                  <AiOutlineHeart className={styles.button} />
+                  <AiOutlineMail className={styles.button} />
+                  <FaExchangeAlt className={styles.button} />
+                </div>
+                <div className={styles.row2}></div>
+              </div>
+              <div className={styles.text}>
+                <h4>Quick overview</h4>
+                <p>
+                  Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                  eiusmod tempor incididunt ut labore et dolore magna aliqua.
+                </p>
+              </div>
+              <div className={styles.avabilability}>
+                <p>
+                  <b>Avabilability:</b> <span> In Stock</span>
+                </p>
+                <p>
+                  <b>Category:</b> <span>Furniture</span>
+                </p>
+              </div>
+              <div className={styles.socialMedia}>
+                <button>
+                  <FaFacebookF className={styles.iconf} />
+                  <p>Share</p>
+                </button>
+                <button>
+                  <TiSocialGooglePlus className={styles.icong} />
+                  <p>Google+</p>
+                </button>
+                <button>
+                  <FaTwitter className={styles.icont} />
+                  <p>Twitter</p>
+                </button>
+                <button>
+                  <FaPinterestP className={styles.iconp} />
+                  <p>Pinterest</p>
+                </button>
+                <button>
+                  <FaLinkedinIn className={styles.iconl} />
+                  <p>Linked In</p>
+                </button>
+              </div>
             </div>
           </div>
         </div>
@@ -117,6 +202,8 @@ const ProductPage = ({ gallery, setActive }) => {
 
 ProductPage.propTypes = {
   gallery: PropTypes.object,
+  myStarsChoice: PropTypes.number,
+  stars: PropTypes.number,
   setActive: PropTypes.func,
 };
 

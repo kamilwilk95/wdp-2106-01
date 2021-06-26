@@ -56,10 +56,10 @@
 
           &:hover {
             background: $darkOrange;
+            border: 1px solid $darkOrange;
 
             .icon {
               color: white;
-              border: 1px solid $darkOrange;
             }
           }
 
@@ -221,6 +221,183 @@
         height: 100%;
         width: 57%;
         right: 0;
+        margin-right: 15px;
+        width: 54%;
+
+        .header {
+          border-bottom: 1px solid $gray-5;
+
+          h3 {
+            font-size: 20px;
+            margin: 15px;
+            font-weight: 600;
+          }
+
+          .rating {
+            position: relative;
+            margin: 15px;
+
+            p {
+              font-size: 11px;
+              position: absolute;
+              left: 90px;
+              top: 6px;
+              padding-left: 10px;
+              border-left: 1px solid $gray-5;
+            }
+          }
+        }
+      }
+
+      .price {
+        padding: 15px 15px 0 15px;
+        border-bottom: 1px solid $gray-5;
+
+        p {
+          display: inline-block;
+          color: $gray-5;
+          text-decoration: line-through;
+
+          &:last-of-type {
+            text-decoration: none;
+            margin-left: 10px;
+            padding: 3px 8px;
+            color: $white;
+            background: $darkGray;
+          }
+        }
+      }
+
+      .buttons {
+        padding: 15px;
+        border-bottom: 1px solid $gray-5;
+
+        .row1 {
+          button {
+            height: 40px;
+            padding: 5px 10px;
+            font-size: 13px;
+            background: $darkOrange;
+            color: $white;
+            border: none;
+
+            span {
+              font-size: 17px;
+              margin-right: 5px;
+            }
+          }
+
+          .button {
+            margin-left: 5px;
+            font-size: 40px;
+            padding: 10px;
+            color: $darkGray;
+            border: 1px solid $darkGray;
+            cursor: pointer;
+
+            &:hover {
+              color: $darkOrange;
+              border: 1px solid $darkOrange;
+            }
+          }
+        }
+
+        .row2 {
+          height: 100px;
+        }
+      }
+
+      .text {
+        padding: 15px;
+        border-bottom: 1px solid $gray-5;
+
+        h4 {
+          font-size: 15px;
+          font-weight: 600;
+        }
+        p {
+          font-size: 13px;
+          color: $gray-7;
+        }
+      }
+
+      .avabilability {
+        padding: 15px 15px 0 15px;
+        border-bottom: 1px solid $gray-5;
+
+        p {
+          position: relative;
+
+          b {
+            font-size: 13px;
+            font-weight: 600;
+          }
+
+          span {
+            position: absolute;
+            font-size: 13px;
+            color: $gray-7;
+            left: 110px;
+            top: 2px;
+          }
+
+          &:last-of-type {
+            margin-top: -10px;
+          }
+        }
+      }
+
+      .socialMedia {
+        display: flex;
+        justify-content: flex-start;
+        flex-flow: row wrap;
+
+        button {
+          padding: 2px 10px;
+          margin: 15px 5px;
+          display: flex;
+          justify-content: space-between;
+          align-items: center;
+          background: $white;
+          color: $gray-7;
+          border: 1px solid black;
+          font-size: 20px;
+
+          &:first-of-type {
+            color: $white;
+            background: rgb(63, 92, 146);
+            border: none;
+          }
+
+          .iconf {
+            font-size: 13px;
+            color: $white;
+          }
+          .icong {
+            font-size: 18px;
+            color: rgb(184, 0, 0);
+          }
+          .icont {
+            font-size: 12px;
+            color: rgb(81, 139, 245);
+          }
+          .iconp {
+            font-size: 13px;
+            color: rgb(124, 0, 0);
+          }
+          .iconl {
+            font-size: 13px;
+            color: rgb(0, 119, 255);
+          }
+
+          p {
+            margin: 0;
+            margin-left: 5px;
+            align-items: center;
+            font-size: 13px;
+            padding: 2px 0;
+          }
+        }
       }
     }
   }
