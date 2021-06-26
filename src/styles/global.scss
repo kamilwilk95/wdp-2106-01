@@ -76,6 +76,7 @@ $max-mobile-width: 576px;
 .carouselPromo {
   .rec.rec-dot {
     display: block;
+    background-color: $primary;
       &:focus {
       box-shadow: 0 0 1px 3px $primary;
     }
