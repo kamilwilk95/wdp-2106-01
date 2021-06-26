@@ -41,9 +41,12 @@
                 text-align: center;
             }
         }
+        .mapBox {
+            position: relative;
+        }
         .indoor {
             position: absolute;  
-            width: 96%;
+            width: 100%;
             top: 50%;  
             left: 50%;  
             transform: translate(-50%, -50%);
@@ -61,8 +64,8 @@
         }
         .indoorButton {
             position: absolute;
-            top: 235px;
-            right: 350px;       
+            top: 245px;
+            right: 330px;       
             background-color: $feature-bg;
             border: none;
         }
@@ -155,6 +158,20 @@
   .active{
     background-color: $darkGray;
     color: $feature-bg;
+  }
+  .fadeIn {
+    opacity: 1;
+    transition: opacity 1s;
+    -webkit-transition: opacity 1s;
+    -moz-transition: opacity 1s;
+    -ms-transition: opacity 1s;
+    -o-transition: opacity 1s;
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .fadeOut {
+    opacity: 0;
+    transition: opacity 1s;
   }
   
 .carouselPromo {
