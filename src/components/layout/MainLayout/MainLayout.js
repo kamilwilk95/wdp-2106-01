@@ -10,11 +10,10 @@ import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
 const MainLayout = ({ children, changeMode }) => {
   useEffect(() => {
     window.addEventListener('resize', changeMode);
-
     return () => {
       window.removeEventListener('resize', changeMode);
     };
-  });
+  }, [changeMode]);
   return (
     <div>
       <Header />
