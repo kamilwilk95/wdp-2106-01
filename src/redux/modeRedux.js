@@ -3,6 +3,15 @@ export const getMode = ({ mode }) => mode;
 export const mobile = 'mobile';
 export const tablet = 'tablet';
 export const desktop = 'desktop';
+const changeMode = () => {
+  if (window.innerWidth < 540) {
+    return mobile;
+  } else if (window.innerWidth >= 540 && window.innerWidth < 992) {
+    return tablet;
+  } else if (window.innerWidth >= 992) {
+    return desktop;
+  }
+};
 
 // action name creator
 const reducerName = 'modeReducer';
@@ -20,21 +29,8 @@ export const createActionChangeMode = () => ({
 export default function reducer(statePart = [], action = {}) {
   switch (action.type) {
     case CHANGE_MODE:
-      if (window.innerWidth < 540) {
-        return mobile;
-      } else if (window.innerWidth >= 540 && window.innerWidth < 992) {
-        return tablet;
-      } else if (window.innerWidth >= 992) {
-        return desktop;
-      }
-      break;
+      return changeMode();
     default:
-      if (window.innerWidth < 540) {
-        return mobile;
-      } else if (window.innerWidth >= 540 && window.innerWidth < 992) {
-        return tablet;
-      } else if (window.innerWidth >= 992) {
-        return desktop;
-      }
+      return changeMode();
   }
 }
