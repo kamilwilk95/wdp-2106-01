@@ -1,13 +1,8 @@
 @import "../../../styles/settings.scss";
 
 .root {
-  padding: $base-padding 0;
-}
-@import "../../../styles/settings.scss";
-
-.root {
   padding: 0;
-  height: 2100px;
+  height: 950px;
 
   .grayRectangle {
     background: $gray-6;
@@ -436,5 +431,9 @@
         }
       }
     }
+  }
+  .tabs {
+    margin: 50px 0;
+    border: 1px solid $gray-5;
   }
 }

@@ -1,0 +1,10 @@
+@import "../../../styles/settings.scss";
+
+.tabInner {
+  height: 180px;
+  color: $gray-6;
+
+  span {
+    font-size: 14px;
+  }
+}
