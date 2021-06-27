@@ -73,6 +73,23 @@
             font-size: 18px;
             border-radius: 3px;
         }
+        @include tablet {
+            .indoorButton {
+                right: 280px;       
+            }
+        }
+        @include mobile {
+            .indoor {
+                h5, h4 {
+                    font-size: 16px; 
+                }
+            }
+            .indoorButton {
+                top: 135px;
+                right: 100px;       
+                padding: 2px 12px;
+            }
+        }
         .cartButton {
             position: absolute;
             top: 80px;
@@ -181,4 +198,10 @@
     opacity: 0;
     transition: opacity 1s;
   }
+}
+
+@include mobile {
+    .root {
+        height: 200px;
+    }
 }

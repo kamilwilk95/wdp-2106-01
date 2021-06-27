@@ -118,7 +118,7 @@ const Promo = ({ promo, deals }) => {
                     </h4>
                     <h5>SAVE UP TO 50% TO ALL FURNITURE</h5>
                   </div>
-                  <Button className={styles.indoorButton} noHover variant='outline'>
+                  <Button className={styles.indoorButton} id='indoorButton' noHover>
                     Shop now
                   </Button>
                 </div>
