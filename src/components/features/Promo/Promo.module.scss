@@ -52,11 +52,12 @@
             transform: translate(-50%, -50%);
             background-color: $darkGray;
             padding: 10px 0;
-            opacity: 0.9;
+            opacity: 0.8;
             h5, h4 {
                 text-align: center;
                 color: $feature-bg; 
                 font-size: 26px;
+                padding: 10px 20px;
                 span {
                     font-weight: bold;
                 }    
@@ -64,10 +65,13 @@
         }
         .indoorButton {
             position: absolute;
-            top: 245px;
-            right: 330px;       
+            top: 250px;
+            right: 320px;       
             background-color: $feature-bg;
             border: none;
+            padding: 10px 20px;
+            font-size: 18px;
+            border-radius: 3px;
         }
         .cartButton {
             position: absolute;
@@ -78,6 +82,9 @@
         .outlines {
             padding-top: 10px;
             padding-left: 20px;
+            > * {
+                margin: 0 2px;
+            }
         }
         .line {
             margin: 10px;
@@ -125,12 +132,13 @@
             display: inline-flex;
             justify-content: center;
             align-items: center;
+            padding: 10px 20px;
         }
         .price {
             display: inline-block;
         } 
         .price_old {
-        padding-left: 46px;
+        padding-left: 20px;
         display: inline-block;
      
          .price_old_value {
