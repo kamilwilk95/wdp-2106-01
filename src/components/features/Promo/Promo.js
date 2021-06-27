@@ -45,7 +45,7 @@ const Promo = ({ promo, deals }) => {
       <div className={'container ' + styles.container}>
         <div className='row'>
           <div className={'d-none d-lg-block col-md-4 carouselPromo ' + styles.boxes}>
-            <Carousel>
+            <Carousel enableAutoPlay='true' easing='ease' autoPlaySpeed='3000'>
               {deals.map(deal => (
                 <div key={deal.id} className={styles.carouselBox}>
                   <div className={styles.head}>
