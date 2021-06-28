@@ -79,16 +79,7 @@ const useStyles = makeStyles(theme => ({
   },
 }));
 
-export default function Summary({
-  tab1,
-  tab2,
-  tab3,
-  tab4,
-  inner1,
-  inner2,
-  inner3,
-  inner4,
-}) {
+export default function Summary({ tabs }) {
   function TabPanel(props) {
     const { children, value, index, ...other } = props;
 
@@ -140,36 +131,21 @@ export default function Summary({
     <div className={classes.root}>
       <div className={classes.demo1}>
         <AntTabs value={value} onChange={handleChange} aria-label='ant example'>
-          <AntTab label={tab1} />
-          <AntTab label={tab2} />
-          <AntTab label={tab3} />
-          <AntTab label={tab4} />
+          {tabs.map(tab => (
+            <AntTab key={tab.id} label={tab.title} />
+          ))}
         </AntTabs>
         <Typography className={classes.padding} />
       </div>
-      <TabPanel className={styles.tabInner} value={value} index={0}>
-        <span>{inner1}</span>
-      </TabPanel>
-      <TabPanel className={styles.tabInner} value={value} index={1}>
-        <span>{inner2}</span>
-      </TabPanel>
-      <TabPanel className={styles.tabInner} value={value} index={2}>
-        <span>{inner3}</span>
-      </TabPanel>
-      <TabPanel className={styles.tabInner} value={value} index={3}>
-        <span>{inner4}</span>
-      </TabPanel>
+      {tabs.map(tab => (
+        <TabPanel key={tab.id} className={styles.tabInner} value={value} index={tab.id}>
+          <span>{tab.description}</span>
+        </TabPanel>
+      ))}
     </div>
   );
 }
 
 Summary.propTypes = {
-  tab1: PropTypes.string,
-  tab2: PropTypes.string,
-  tab3: PropTypes.string,
-  tab4: PropTypes.string,
-  inner1: PropTypes.string,
-  inner2: PropTypes.string,
-  inner3: PropTypes.string,
-  inner4: PropTypes.string,
+  tabs: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
 };
