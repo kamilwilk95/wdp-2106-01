@@ -21,7 +21,7 @@ import { IoMdResize } from 'react-icons/io';
 import { TiSocialGooglePlus } from 'react-icons/ti';
 
 import StairsContainer from '../../common/Stars/StairsContainer';
-import Summary from '../../common/Summary/SummaryContainer';
+import Summary from '../../common/Summary/Summary';
 
 const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
   // GALLERY FUNCTIONALITY
@@ -228,7 +228,7 @@ const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
 };
 
 ProductPage.propTypes = {
-  gallery: PropTypes.object,
+  gallery: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   myStarsChoice: PropTypes.number,
   stars: PropTypes.number,
   setActive: PropTypes.func,
