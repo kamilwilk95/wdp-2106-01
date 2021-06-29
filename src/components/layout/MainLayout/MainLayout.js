@@ -19,12 +19,10 @@ const MainLayout = ({ children, changeMode }) => {
       <StickyBarContainer />
       {children}
       <LatestBlog />
-      <Brands />
       <Footer />
     </div>
   );
 };
-
 
 MainLayout.propTypes = {
   children: PropTypes.node,
