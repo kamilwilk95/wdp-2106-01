@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import styles from './Promo.module.scss';
 import Button from '../../common/Button/Button';
 import Stars from '../../common/Stars/Stars';
-import Carousel from 'react-elastic-carousel';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -15,6 +14,8 @@ import {
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Promo = ({ promo, deals }) => {
   const n = 1;
@@ -45,7 +46,16 @@ const Promo = ({ promo, deals }) => {
       <div className={'container ' + styles.container}>
         <div className='row'>
           <div className={'d-none d-lg-block col-md-4 carouselPromo ' + styles.boxes}>
-            <Carousel enableAutoPlay='true' easing='ease' autoPlaySpeed='3000'>
+            <Carousel 
+              autoPlay={true}
+              interval={3000}
+              infiniteLoop={true}
+              showArrows={false}
+              stopOnHover={true}
+              showThumbs={false}
+              showStatus={false}
+              transitionTime={1000}
+            >
               {deals.map(deal => (
                 <div key={deal.id} className={styles.carouselBox}>
                   <div className={styles.head}>
