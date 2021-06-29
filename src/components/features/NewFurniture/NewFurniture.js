@@ -3,6 +3,7 @@ import PropTypes from 'prop-types';
 import styles from './NewFurniture.module.scss';
 import Swipeable from '../../layout/Swipeable/Swipeable';
 import ProductBoxContainer from '../../common/ProductBox/ProductBoxContainer.js';
+import { mobile, desktop, tablet } from '../../../redux/modeRedux.js';
 
 class NewFurniture extends React.Component {
   state = {
@@ -24,9 +25,20 @@ class NewFurniture extends React.Component {
       this.setState({ activeCategory: newCategory, activePageStyle: styles.fadeIn });
     }, 1000);
   }
+  setChunk() {
+    let chunk;
+    if (this.props.mode === desktop) {
+      chunk = 8;
+    } else if (this.props.mode === tablet) {
+      chunk = 2;
+    } else if (this.props.mode === mobile) {
+      chunk = 1;
+    }
+    return chunk;
+  }
   splitToChunks(array) {
-    let result = [];
-    const chunk = 8;
+    const result = [];
+    const chunk = this.setChunk();
     for (let i = 0 * 8, j = array.length; i < j; i += chunk) {
       let temparray = array.slice(i, i + chunk);
       result.push(temparray);
@@ -102,6 +114,7 @@ NewFurniture.propTypes = {
       newFurniture: PropTypes.bool,
     })
   ),
+  mode: PropTypes.string,
 };
 
 NewFurniture.defaultProps = {
