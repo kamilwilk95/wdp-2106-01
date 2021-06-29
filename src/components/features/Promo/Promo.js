@@ -1,10 +1,9 @@
-import React from 'react';
+import React, { useState } from 'react';
 import PropTypes from 'prop-types';
 
 import styles from './Promo.module.scss';
 import Button from '../../common/Button/Button';
 import Stars from '../../common/Stars/Stars';
-import Carousel from 'react-elastic-carousel';
 
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import {
@@ -15,14 +14,48 @@ import {
   faShoppingBasket,
 } from '@fortawesome/free-solid-svg-icons';
 import { faHeart } from '@fortawesome/free-regular-svg-icons';
+import 'react-responsive-carousel/lib/styles/carousel.min.css'; // requires a loader
+import { Carousel } from 'react-responsive-carousel';
 
 const Promo = ({ promo, deals }) => {
+  const n = 1;
+  const [activePage, setActivePage] = useState(0);
+  const [activePageStyle, setActivePageStyle] = useState(styles.fadeIn);
+  const next = e => {
+    e.preventDefault();
+    if (activePage >= 0 && activePage < promo.length / n - 1) {
+      setActivePage(activePage + 1);
+      setActivePageStyle(styles.fadeOut);
+      setTimeout(() => {
+        setActivePageStyle(styles.fadeIn);
+      }, 300);
+    }
+  };
+  const prev = e => {
+    e.preventDefault();
+    if (activePage > 0 && activePage <= promo.length / n - 1) {
+      setActivePage(activePage - 1);
+      setActivePageStyle(styles.fadeOut);
+      setTimeout(() => {
+        setActivePageStyle(styles.fadeIn);
+      }, 300);
+    }
+  };
   return (
     <div className={styles.root}>
       <div className={'container ' + styles.container}>
         <div className='row'>
-          <div className={'col-4 carouselPromo ' + styles.boxes}>
-            <Carousel>
+          <div className={'d-none d-lg-block col-md-4 ' + styles.boxes}>
+            <Carousel
+              autoPlay={true}
+              interval={3000}
+              infiniteLoop={true}
+              showArrows={false}
+              stopOnHover={true}
+              showThumbs={false}
+              showStatus={false}
+              transitionTime={1000}
+            >
               {deals.map(deal => (
                 <div key={deal.id} className={styles.carouselBox}>
                   <div className={styles.head}>
@@ -84,22 +117,28 @@ const Promo = ({ promo, deals }) => {
               ))}
             </Carousel>
           </div>
-          <div className={'col-8 ' + styles.boxes}>
-            <img src={promo[0].src} alt='promo' />
-            <div className={styles.indoor}>
-              <h4>
-                INDOOR <span>FURNITURE</span>
-              </h4>
-              <h5>SAVE UP TO 50% TO ALL FURNITURE</h5>
-            </div>
-            <Button className={styles.indoorButton} noHover variant='outline'>
-              Shop now
-            </Button>
+          <div className={'col-xs-12 col-lg-8 ' + styles.boxes}>
+            {promo.slice(activePage * n, (activePage + 1) * n).map(promo => (
+              <div key={promo.id} className={activePageStyle}>
+                <div className={styles.mapBox}>
+                  <img src={promo.src} alt='promo' />
+                  <div className={styles.indoor}>
+                    <h4>
+                      INDOOR <span>FURNITURE</span>
+                    </h4>
+                    <h5>SAVE UP TO 50% TO ALL FURNITURE</h5>
+                  </div>
+                  <Button className={styles.indoorButton} noHover variant='outline'>
+                    Shop now
+                  </Button>
+                </div>
+              </div>
+            ))}
             <div>
-              <Button variant='small' className={styles.button}>
+              <Button variant='small' className={styles.button} onClick={prev}>
                 <FontAwesomeIcon icon={faChevronLeft}></FontAwesomeIcon>
               </Button>
-              <Button variant='small' className={styles.button}>
+              <Button variant='small' className={styles.button} onClick={next}>
                 <FontAwesomeIcon icon={faChevronRight}></FontAwesomeIcon>
               </Button>
             </div>

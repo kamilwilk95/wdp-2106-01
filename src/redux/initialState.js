@@ -1205,7 +1205,8 @@ const initialState = {
     },
     {
       id: 3,
-      src: 'https://cdn.pixabay.com/photo/2014/09/15/21/46/couch-447484_1280.jpg',
+      src:
+        'https://cdn.pixabay.com/photo/2016/11/23/14/29/living-room-1853203_1280.jpg',
     },
   ],
   deals: [
