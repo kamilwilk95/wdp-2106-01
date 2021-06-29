@@ -1192,6 +1192,7 @@ const initialState = {
       ],
     },
   ],
+  mode: '',
   promo: [
     {
       id: 1,
