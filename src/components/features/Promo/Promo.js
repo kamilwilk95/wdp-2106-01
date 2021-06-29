@@ -45,8 +45,8 @@ const Promo = ({ promo, deals }) => {
     <div className={styles.root}>
       <div className={'container ' + styles.container}>
         <div className='row'>
-          <div className={'d-none d-lg-block col-md-4 carouselPromo ' + styles.boxes}>
-            <Carousel 
+          <div className={'d-none d-lg-block col-md-4 ' + styles.boxes}>
+            <Carousel
               autoPlay={true}
               interval={3000}
               infiniteLoop={true}
