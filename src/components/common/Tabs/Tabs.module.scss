@@ -1,10 +1,14 @@
 @import "../../../styles/settings.scss";
 
 .tabInner {
-  height: 200px;
+  // max-height: auto;
   color: $gray-6;
 
   span {
     font-size: 14px;
   }
 }
+
+// .comments {
+//   min-height: 700px;
+// }

@@ -8,6 +8,7 @@ import Typography from '@material-ui/core/Typography';
 import Box from '@material-ui/core/Box';
 
 import styles from './Tabs.module.scss';
+import Comments from '../Comments/Comments';
 
 const AntTabs = withStyles({
   indicator: {
@@ -145,8 +146,12 @@ export default function TabsComponent() {
           in culpa qui officia deserunt mollit anim id est laborum
         </p>
       </TabPanel>
-      <TabPanel className={styles.tabInner} value={value} index={1}>
-        <p>Rating</p>
+      <TabPanel
+        className={styles.tabInner + ' ' + styles.comments}
+        value={value}
+        index={1}
+      >
+        <Comments />
       </TabPanel>
       <TabPanel className={styles.tabInner} value={value} index={2}>
         <p>

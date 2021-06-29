@@ -8,7 +8,6 @@ import FeatureBoxes from '../../features/FeatureBoxes/FeatureBoxes';
 import NewFurniture from '../../features/NewFurniture/NewFurnitureContainer';
 import Feedbacks from '../../features/Feedbacks/FeedbacksContainer';
 import Gallery from '../../features/Gallery/GalleryContainer';
-import GalleryContainer from '../../features/Gallery/GalleryContainer';
 import Brands from '../../features/Brands/BrandsContainer';
 import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
 import Promo from '../../features/Promo/PromoContainer';
@@ -20,7 +19,7 @@ const Homepage = () => (
     <Promotions />
     <NewFurniture />
     <Feedbacks />
-    <GalleryContainer />
+    <Gallery />
     <LatestBlog />
     <Brands />
   </div>

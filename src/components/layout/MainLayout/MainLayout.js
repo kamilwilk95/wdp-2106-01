@@ -4,7 +4,6 @@ import PropTypes from 'prop-types';
 import Header from '../Header/Header';
 import Footer from '../Footer/Footer';
 import StickyBarContainer from '../StickyBar/StickyBarContainer';
-import LatestBlog from '../../features/LatestBlog/LatestBlogContainer';
 
 const MainLayout = ({ children, changeMode }) => {
   useEffect(() => {
@@ -18,7 +17,6 @@ const MainLayout = ({ children, changeMode }) => {
       <Header />
       <StickyBarContainer />
       {children}
-      <LatestBlog />
       <Footer />
     </div>
   );
