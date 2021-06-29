@@ -21,7 +21,7 @@ import { IoMdResize } from 'react-icons/io';
 import { TiSocialGooglePlus } from 'react-icons/ti';
 
 import StairsContainer from '../../common/Stars/StairsContainer';
-import Summary from '../../common/Summary/Summary';
+import Tabs from '../../common/Tabs/Tabs';
 
 const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
   // GALLERY FUNCTIONALITY
@@ -219,7 +219,7 @@ const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
             </div>
           </div>
           <div className={styles.tabs}>
-            <Summary />
+            <Tabs />
           </div>
         </div>
       </div>
