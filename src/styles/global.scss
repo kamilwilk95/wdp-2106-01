@@ -97,3 +97,18 @@ $max-mobile-width: 576px;
     right: 30px;
   }
 }
+
+
+.carousel {
+  .control-dots {
+    position: absolute;
+    top: -8px;
+    left: 130px;
+  }
+}
+
+.carousel .control-dots .dot.selected, .carousel .control-dots .dot:hover {
+  background: $primary;
+}
+
+
