@@ -21,8 +21,10 @@ import { IoMdResize } from 'react-icons/io';
 import { TiSocialGooglePlus } from 'react-icons/ti';
 
 import StairsContainer from '../../common/Stars/StairsContainer';
+import Tabs from '../../common/Tabs/Tabs';
 
 const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
+  // GALLERY FUNCTIONALITY
   const [activeCategory] = useState('Features');
   const [activePage, setActivePage] = useState(0);
   const categories = [];
@@ -61,6 +63,9 @@ const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
     window.addEventListener('resize', () => setN(sliderSize));
   }, []);
   const pagesCount = Math.ceil(allPhotos.length / n);
+
+  // AMOUNT WIDGET
+  const [activeValue, setValue] = useState(2);
 
   return (
     <div className={styles.root}>
@@ -153,7 +158,26 @@ const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
                   <AiOutlineMail className={styles.button} />
                   <FaExchangeAlt className={styles.button} />
                 </div>
-                <div className={styles.row2}></div>
+                <div className={styles.row2}>
+                  <p>Quantity:</p>
+                  <input type='text' value={activeValue} />
+                  <button
+                    className={styles.button}
+                    onClick={() => {
+                      if (activeValue < 10) setValue(activeValue + 1);
+                    }}
+                  >
+                    +
+                  </button>
+                  <button
+                    className={styles.button}
+                    onClick={() => {
+                      if (activeValue > 1) setValue(activeValue - 1);
+                    }}
+                  >
+                    -
+                  </button>
+                </div>
               </div>
               <div className={styles.text}>
                 <h4>Quick overview</h4>
@@ -194,6 +218,9 @@ const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
               </div>
             </div>
           </div>
+          <div className={styles.tabs}>
+            <Tabs />
+          </div>
         </div>
       </div>
     </div>
@@ -201,7 +228,7 @@ const ProductPage = ({ gallery, setActive, stars, myStarsChoice }) => {
 };
 
 ProductPage.propTypes = {
-  gallery: PropTypes.object,
+  gallery: PropTypes.oneOfType([PropTypes.object, PropTypes.array]),
   myStarsChoice: PropTypes.number,
   stars: PropTypes.number,
   setActive: PropTypes.func,
